@@ -8,7 +8,20 @@ public class Level0Generation : Generation
     {
         var C = Instantiate(Chunk, new Vector3(c.X, c.Y, c.Z), Quaternion.identity);
         var ChunkData = C.GetComponent<Chunk>();
-        ChunkData.SpawnStuff(ChunkData.Structs[Random.Range(0, ChunkData.Structs.Count)]);
+        ChunkData.Parent = this;
+        Debug.Log(ChunkData.Structs.Count);
+        try
+        {
+            ChunkData.SpawnStuff(ChunkData.Structs[0]);
+        }
+        catch (System.Exception)
+        {
+
+            //Debug.Log(ChunkData.Structs.Count);
+        }
+          
+        
+        
     }
     //Check if the player is far enough away to spawn new chunks
     public void Update()

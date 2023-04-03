@@ -16,13 +16,14 @@ public class Chunk : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
+    }
+    public void SpawnStuff(GameObject Struct)
+    {
         Rotations.Add(0);
         Rotations.Add(90);
         Rotations.Add(-90);
         Rotations.Add(180);
-    }
-    public void SpawnStuff(GameObject Struct)
-    {
         //Place the Layout
         var Layout = Instantiate(Struct, transform.position, Quaternion.identity);
         //Randomize The Layout's Rotation

@@ -8,7 +8,17 @@ public abstract class Generation : MonoBehaviour
     public GameObject Chunk;
     public delegate void Function(Coords c);
     //This is the overrarching Generative script, with many chunk duchies filled with serfs like saving, entity handling, and more.
-
+    public void Start()
+    {
+        for (int x = 0; x < 3; x++)
+        {
+            for (int y = 0; y < 3; y++)
+            {
+                GenerateChunk(new Coords(x, 0, y));
+                Debug.Log(x+" "+y);
+            }
+        }
+    }
     public abstract void GenerateChunk(Coords c);
 
     public void DoAtChunk(Function f, Coords c)
