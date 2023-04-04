@@ -9,6 +9,7 @@ public abstract class Generation : MonoBehaviour
     public Coords Center;
     public List<Chunk> Chunks;
     public delegate void Function(Coords c);
+    public PlayerStats Playerstats;
     //This is the overrarching Generative script, with many chunk duchies filled with serfs like saving, entity handling, and more.
     
     public abstract void GenerateChunk(Coords c);

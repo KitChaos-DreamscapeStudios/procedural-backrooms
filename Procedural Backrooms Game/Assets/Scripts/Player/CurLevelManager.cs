@@ -9,32 +9,49 @@ public class CurLevelManager : MonoBehaviour
     public List<AudioClip> CarpetWalkNoises;
     public string WalkArea;
     public List<AudioClip> CurStepNoises;
+    float footTimer;
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine("Step");
-        
+        //StartCoroutine("Step");
+        //Lame steps rn, will better
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!IsInvoking("FootStep"))
+        {
+            if (!movement.sprinting)
+            {
+                Invoke("FootStep", (2.5f - ((int)movement.speed / 6)));
+            }
+            else
+            {
+                Invoke("FootStep", (2.5f - ((int)movement.speed / 10)));
+            }
+           
+            
+
+        }
+       
         
     }
-    public IEnumerator Step()
+    void FootStep()
     {
         if (movement.FB != 0)
         {
-            footStep.clip = CurStepNoises[Random.Range(0, CurStepNoises.Count)];
-            footStep.Play();
-            yield return new WaitForSecondsRealtime((2.5f - (int)movement.speed)/10);
-            Step();
 
+           
+                var fs = Instantiate(footStep);
+                fs.clip = CurStepNoises[Random.Range(0, CurStepNoises.Count)];
+                fs.Play();
+                Destroy(fs, 3);
+                footTimer = 0;
+            
         }
-        else
-        {
-            Step();
-        }
+        
     }
+  
     
 }
