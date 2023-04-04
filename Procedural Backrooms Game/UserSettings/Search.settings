@@ -7,8 +7,8 @@ onBoardingDoNotAskAgain = true
 showPackageIndexes = false
 showStatusBar = false
 scopes = {
-	"last_search.7F95D817" = "light ("
-	"InspectorPreview.7F95D817" = "0"
+	"last_search.7F95D817" = "pl"
+	"InspectorPreview.7F95D817" = "1"
 	"currentGroup.7F95D817" = "scene"
 }
 providers = {
@@ -49,6 +49,7 @@ providers = {
 	}
 }
 recentSearches = [
+	"pl"
 	"light ("
 ]
 searchItemFavorites = [
