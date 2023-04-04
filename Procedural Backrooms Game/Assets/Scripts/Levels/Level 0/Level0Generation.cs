@@ -51,7 +51,7 @@ public class Level0Generation : Generation
         }
         else
         {
-            var C = Instantiate(LastChunk, new Vector3(c.X * 80, c.Y, c.Z * 80), Quaternion.identity);
+            var C = Instantiate(LastChunk.gameObject, new Vector3(c.X * 80, c.Y, c.Z * 80), Quaternion.identity);
             var ChunkData = C.GetComponent<Chunk>();
             ChunkData.Parent = this;
             Chunks.Add(ChunkData);
