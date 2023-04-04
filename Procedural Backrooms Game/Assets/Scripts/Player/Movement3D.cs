@@ -74,7 +74,7 @@ public class Movement3D : MonoBehaviour
         {
             if (FB != 0)
             {
-                cam.transform.eulerAngles = new Vector3(cam.transform.eulerAngles.x, cam.transform.eulerAngles.y, Mathf.Sin(TimerBob)*3);
+                cam.transform.eulerAngles = new Vector3(cam.transform.eulerAngles.x, cam.transform.eulerAngles.y, Mathf.Sin(TimerBob));
             }
             else
             {

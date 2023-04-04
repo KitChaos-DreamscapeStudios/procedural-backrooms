@@ -24,11 +24,11 @@ public class CurLevelManager : MonoBehaviour
         {
             if (!movement.sprinting)
             {
-                Invoke("FootStep", (2.5f - ((int)movement.speed / 6)));
+                Invoke("FootStep", (1.5f - ((int)movement.speed / 6)));
             }
             else
             {
-                Invoke("FootStep", (2.5f - ((int)movement.speed / 10)));
+                Invoke("FootStep", (2.5f - ((int)movement.speed / 8)));
             }
            
             
@@ -43,9 +43,9 @@ public class CurLevelManager : MonoBehaviour
         {
 
            
-                var fs = Instantiate(footStep);
-                fs.clip = CurStepNoises[Random.Range(0, CurStepNoises.Count)];
-                fs.Play();
+                var fs = Instantiate(footStep.gameObject);
+                fs.GetComponent<AudioSource>().clip = CurStepNoises[Random.Range(0, CurStepNoises.Count)];
+                fs.GetComponent<AudioSource>().Play();
                 Destroy(fs, 3);
                 footTimer = 0;
             

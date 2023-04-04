@@ -29,7 +29,8 @@ public class Level0Generation : Generation
     {
         var ToSpawn = ChunkForLevel[Random.Range(0, ChunkForLevel.Count)];
         
-        var Rand = Random.Range(0, maxInclusive: 1);
+        var Rand = Mathf.RoundToInt( Random.Range(0, maxInclusive: 10));
+        Debug.Log(Rand);
         if(Rand == 0)
         {
             var C = Instantiate(ToSpawn, new Vector3(c.X * 80, c.Y, c.Z * 80), Quaternion.identity);
@@ -47,7 +48,7 @@ public class Level0Generation : Generation
 
                 //Debug.Log(ChunkData.Structs.Count);
             }
-            LastChunk = C;
+            LastChunk = ToSpawn;
         }
         else
         {
