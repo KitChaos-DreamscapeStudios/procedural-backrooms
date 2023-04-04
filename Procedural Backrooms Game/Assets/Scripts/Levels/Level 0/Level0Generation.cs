@@ -6,6 +6,7 @@ public class Level0Generation : Generation
 {
     public void Start()
     {
+        LastChunk = ChunkForLevel[Random.Range(0, ChunkForLevel.Count)];
         Center = new Coords(0, 0, 0);
         for (int x = -2; x < 3; x++)
         {
@@ -17,31 +18,59 @@ public class Level0Generation : Generation
 
             }
         }
-        
+        Playerstats = GameObject.Find("Player").GetComponent<PlayerStats>();
+        Playerstats.LevelStats = this;
+       
 
         InvokeRepeating("CheckDespawn", 1, 1);
         InvokeRepeating(nameof(GenerateFromCenter), 1.1f, 1.1f);
     }
     public override void GenerateChunk(Coords c)
     {
-        var C = Instantiate(Chunk, new Vector3(c.X*80, c.Y, c.Z*80), Quaternion.identity);
+        var ToSpawn = ChunkForLevel[Random.Range(0, ChunkForLevel.Count)];
+        
+        var Rand = Random.Range(0, maxInclusive: 1);
+        if(Rand == 0)
+        {
+            var C = Instantiate(ToSpawn, new Vector3(c.X * 80, c.Y, c.Z * 80), Quaternion.identity);
+            var ChunkData = C.GetComponent<Chunk>();
+            ChunkData.Parent = this;
+            Chunks.Add(ChunkData);
+            // Debug.Log(ChunkData.Structs.Count);
+            try
+            {
+                ChunkData.SpawnStuff(ChunkData.Structs[0]);
+                ChunkData.coords = c;
+            }
+            catch (System.Exception)
+            {
+
+                //Debug.Log(ChunkData.Structs.Count);
+            }
+            LastChunk = C;
+        }
+        else
+        {
+            var C = Instantiate(LastChunk, new Vector3(c.X * 80, c.Y, c.Z * 80), Quaternion.identity);
+            var ChunkData = C.GetComponent<Chunk>();
+            ChunkData.Parent = this;
+            Chunks.Add(ChunkData);
+            // Debug.Log(ChunkData.Structs.Count);
+            try
+            {
+                ChunkData.SpawnStuff(ChunkData.Structs[0]);
+                ChunkData.coords = c;
+            }
+            catch (System.Exception)
+            {
+
+                //Debug.Log(ChunkData.Structs.Count);
+            }
+        }
+       
         //Debug.Log(C.transform.position);
         
-        var ChunkData = C.GetComponent<Chunk>();
-        ChunkData.Parent = this;
-        Chunks.Add(ChunkData);
-       // Debug.Log(ChunkData.Structs.Count);
-        try
-        {
-            ChunkData.SpawnStuff(ChunkData.Structs[0]);
-            ChunkData.coords = c;
-        }
-        catch (System.Exception)
-        {
-
-            //Debug.Log(ChunkData.Structs.Count);
-        }
-          
+        
         
         
     }
@@ -86,6 +115,7 @@ public class Level0Generation : Generation
 
         Chunks = Chunks.Where(item => item != null).ToList();
         Center = PlayerIn.coords;
+        Playerstats.SanityDrain = SanityDrain;
     }
     
     float DifferenceInCoords(Coords a, Coords b)

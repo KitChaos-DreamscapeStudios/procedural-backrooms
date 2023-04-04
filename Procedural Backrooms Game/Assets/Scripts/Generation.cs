@@ -5,11 +5,13 @@ using UnityEngine;
 public abstract class Generation : MonoBehaviour
 {
     public Chunk PlayerIn;
-    public GameObject Chunk;
+    public List<GameObject> ChunkForLevel;
     public Coords Center;
     public List<Chunk> Chunks;
     public delegate void Function(Coords c);
     public PlayerStats Playerstats;
+    public float SanityDrain = 1;
+    public GameObject LastChunk;
     //This is the overrarching Generative script, with many chunk duchies filled with serfs like saving, entity handling, and more.
     
     public abstract void GenerateChunk(Coords c);

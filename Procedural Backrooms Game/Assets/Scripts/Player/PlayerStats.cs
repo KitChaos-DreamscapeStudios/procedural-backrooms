@@ -4,19 +4,20 @@ using UnityEngine;
 using UnityEngine.UI;
 public class PlayerStats : MonoBehaviour
 {
+    public Generation LevelStats;
     //Internal Stats
     public float MaxHealth;
     public float HealthRegen;
 
 
     public float MaxSanity;
-    public float SanityDrainRes;
+    public float SanityDrainRes = 1;
 
 
-    public float ThirstDrain;
+    public float ThirstDrain = 1;
     public float ThirstDeath;
 
-    public float HungerDrain;
+    public float HungerDrain = 1;
     public float HungerDeath;
 
     public float MaxStamina;
@@ -33,6 +34,8 @@ public class PlayerStats : MonoBehaviour
     public Image SanityBar;
     public Image HungerBar;
     public Image ThirstBar;
+    //Level Stats
+    public float SanityDrain;
    
     // Start is called before the first frame update
     void Start()
@@ -43,11 +46,47 @@ public class PlayerStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Sanity >= MaxSanity)
+        {
+            Sanity = MaxSanity;
+        }
         HealthBar.fillAmount = Health / MaxHealth;
         StamBar.fillAmount = Stamina / MaxStamina;
         SanityBar.fillAmount = Sanity / MaxSanity;
         HungerBar.fillAmount = Hunger / 100;
         ThirstBar.fillAmount = Thirst / 100;
+        
+        Thirst -= (1 * Time.deltaTime) * ThirstDrain;//Add Statuses Laters.
+        Hunger -= (1 * Time.deltaTime) * HungerDrain;
+        Sanity -= (SanityDrain * Time.deltaTime);
+
+        if(Health < MaxHealth)
+        {
+            Health += HealthRegen * Time.deltaTime;
+            
+        }
+        if (GetComponent<Movement3D>().sprinting)
+        {
+            Stamina -= 2 * Time.deltaTime;
+        }
+        else if(Stamina < MaxStamina)
+        {
+            if(GetComponent<Movement3D>().FB == 0)
+            {
+                Stamina += StamRecoverySpeed * Time.deltaTime;
+            }
+            else
+            {
+                Stamina += (StamRecoverySpeed * Time.deltaTime)/2;
+            }
+            
+        }
+        if(Stamina <= 0)
+        {
+            Stamina = 0;
+            GetComponent<Movement3D>().sprinting = false;
+        }
+        
         
     }
    

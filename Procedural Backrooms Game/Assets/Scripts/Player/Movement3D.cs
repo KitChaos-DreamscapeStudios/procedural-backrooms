@@ -48,7 +48,7 @@ public class Movement3D : MonoBehaviour
         TimerBreathe += Time.deltaTime;
         TimerBob += (Time.deltaTime * 8)*speed/10;
         
-        if ((Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) && body.velocity != new Vector3(0, 0, 0))
+        if (((Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) && body.velocity != new Vector3(0, 0, 0))&& GetComponent<PlayerStats>().Stamina > 1)
         {
             sprinting = true;
         }

@@ -15,7 +15,8 @@ public class Chunk : MonoBehaviour
     public List<GameObject> WallLockedObjects;//Doors, Paintings, Vents. (Lock to walls)
     public GameObject Layout;
     public List<GameObject> SpawnedDisposables;
-    bool Xit;
+    public float SanityDrain;
+
    // public GameObject PlayerObj;
     // Start is called before the first frame update
     void Start()
@@ -61,6 +62,7 @@ public class Chunk : MonoBehaviour
         if (PlayerIn)
         {
             Parent.PlayerIn = this;
+            Parent.SanityDrain = SanityDrain;
         }
         
        
