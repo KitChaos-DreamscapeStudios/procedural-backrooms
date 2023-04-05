@@ -68,10 +68,12 @@ public class Movement3D : MonoBehaviour
         if (Input.GetKey(KeyCode.C))
         {
             cam.transform.localPosition = new Vector3(cam.transform.localPosition.x, -2.5f, cam.transform.localPosition.z);
+            gameObject.transform.localScale = new Vector3(1, 0.5f, 1);
             speed = 5;
         }
         else
         {
+            gameObject.transform.localScale = new Vector3(1, 1, 1);
             if (FB != 0)
             {
                 cam.transform.eulerAngles = new Vector3(cam.transform.eulerAngles.x, cam.transform.eulerAngles.y, Mathf.Sin(TimerBob));
