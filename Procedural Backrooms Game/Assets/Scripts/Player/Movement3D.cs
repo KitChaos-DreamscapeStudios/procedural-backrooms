@@ -92,9 +92,10 @@ public class Movement3D : MonoBehaviour
 
                 rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
                 rotationY = Mathf.Clamp(rotationY, minimumY, maximumY);
+               
+                    Camera.main.transform.eulerAngles = new Vector3(-rotationY, rotationX, Camera.main.transform.eulerAngles.z);
 
-                Camera.main.transform.eulerAngles = new Vector3(-rotationY, rotationX, Camera.main.transform.eulerAngles.z);
-                Orient.transform.eulerAngles = new Vector3(0, rotationX, 0);
+                                Orient.transform.eulerAngles = new Vector3(0, rotationX, 0);
             }
             else if (axes == RotationAxes.MouseX)
             {
@@ -109,9 +110,10 @@ public class Movement3D : MonoBehaviour
             }
             #endregion
             LR = Input.GetAxisRaw("Horizontal");
+            FB = Input.GetAxisRaw("Vertical");
         }
        
-        FB = Input.GetAxisRaw("Vertical");
+       
         body.angularVelocity = new Vector3(0, 0, 0);
         if(FB == 0 && LR == 0)
         {
