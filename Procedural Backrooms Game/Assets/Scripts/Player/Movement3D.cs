@@ -16,7 +16,7 @@ public class Movement3D : MonoBehaviour
     public GameObject cam;
     float TimerBreathe;
     float TimerBob;
-    
+    public Inventory inventory;
     
     #region Stolen Camera Script
     public enum RotationAxes { MouseXAndY = 0, MouseX = 1, MouseY = 2 }
@@ -47,67 +47,70 @@ public class Movement3D : MonoBehaviour
     {
         TimerBreathe += Time.deltaTime;
         TimerBob += (Time.deltaTime * 8)*speed/10;
-        
-        if (((Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) && body.velocity != new Vector3(0, 0, 0))&& GetComponent<PlayerStats>().Stamina > 1)
+        if (!inventory.InventScreen.activeSelf)
         {
-            sprinting = true;
-        }
-        else
-        {
-
-            sprinting = false; 
-        }
-        if (sprinting)
-        {
-            speed = 20;
-        }
-        else
-        {
-            speed = 10;
-        }
-        if (Input.GetKey(KeyCode.C))
-        {
-            cam.transform.localPosition = new Vector3(cam.transform.localPosition.x, -2.5f, cam.transform.localPosition.z);
-            gameObject.transform.localScale = new Vector3(1, 0.5f, 1);
-            speed = 5;
-        }
-        else
-        {
-            gameObject.transform.localScale = new Vector3(1, 1, 1);
-            if (FB != 0)
+            if (((Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) && body.velocity != new Vector3(0, 0, 0)) && GetComponent<PlayerStats>().Stamina > 1)
             {
-                cam.transform.eulerAngles = new Vector3(cam.transform.eulerAngles.x, cam.transform.eulerAngles.y, Mathf.Sin(TimerBob));
+                sprinting = true;
             }
             else
             {
-                cam.transform.localPosition = new Vector3(0, Mathf.Sin(TimerBreathe)*0.18f, 0);
+
+                sprinting = false;
             }
+            if (sprinting)
+            {
+                speed = 20;
+            }
+            else
+            {
+                speed = 10;
+            }
+            if (Input.GetKey(KeyCode.C))
+            {
+                cam.transform.localPosition = new Vector3(cam.transform.localPosition.x, -2.5f, cam.transform.localPosition.z);
+                gameObject.transform.localScale = new Vector3(1, 0.5f, 1);
+                speed = 5;
+            }
+            else
+            {
+                gameObject.transform.localScale = new Vector3(1, 1, 1);
+                if (FB != 0)
+                {
+                    cam.transform.eulerAngles = new Vector3(cam.transform.eulerAngles.x, cam.transform.eulerAngles.y, Mathf.Sin(TimerBob));
+                }
+                else
+                {
+                    cam.transform.localPosition = new Vector3(0, Mathf.Sin(TimerBreathe) * 0.18f, 0);
+                }
+            }
+
+            #region Stolen Camera Script
+            if (axes == RotationAxes.MouseXAndY)
+            {
+                float rotationX = Orient.transform.eulerAngles.y + Input.GetAxis("Mouse X") * sensitivityX;
+
+                rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
+                rotationY = Mathf.Clamp(rotationY, minimumY, maximumY);
+
+                Camera.main.transform.eulerAngles = new Vector3(-rotationY, rotationX, Camera.main.transform.eulerAngles.z);
+                Orient.transform.eulerAngles = new Vector3(0, rotationX, 0);
+            }
+            else if (axes == RotationAxes.MouseX)
+            {
+                transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivityX, 0);
+            }
+            else
+            {
+                rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
+                rotationY = Mathf.Clamp(rotationY, minimumY, maximumY);
+
+                transform.localEulerAngles = new Vector3(-rotationY, transform.localEulerAngles.y, 0);
+            }
+            #endregion
+            LR = Input.GetAxisRaw("Horizontal");
         }
        
-            #region Stolen Camera Script
-        if (axes == RotationAxes.MouseXAndY)
-        {
-            float rotationX = Orient.transform.eulerAngles.y + Input.GetAxis("Mouse X") * sensitivityX;
-
-            rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
-            rotationY = Mathf.Clamp(rotationY, minimumY, maximumY);
-
-            Camera.main.transform.eulerAngles = new Vector3(-rotationY, rotationX, Camera.main.transform.eulerAngles.z);
-            Orient.transform.eulerAngles = new Vector3(0, rotationX, 0);
-        }
-        else if (axes == RotationAxes.MouseX)
-        {
-            transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivityX, 0);
-        }
-        else
-        {
-            rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
-            rotationY = Mathf.Clamp(rotationY, minimumY, maximumY);
-
-            transform.localEulerAngles = new Vector3(-rotationY, transform.localEulerAngles.y, 0);
-        }
-        #endregion
-        LR = Input.GetAxisRaw("Horizontal");
         FB = Input.GetAxisRaw("Vertical");
         body.angularVelocity = new Vector3(0, 0, 0);
         if(FB == 0 && LR == 0)
