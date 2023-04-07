@@ -10,6 +10,7 @@ public class InventorySlot : MonoBehaviour
     public Image Icon;
     public Inventory inventory;
     public int SlotNum;
+    public Button button;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +20,44 @@ public class InventorySlot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(heldItem != null && button != null)
+        {
+            //button.onClick.RemoveAllListeners();
+           // button.onClick.AddListener(UseItem);
+        }
+        //button.onClick.AddListener(UseItem);
+
+        if (inventory.Items.Count > SlotNum)
+        {
+            heldItem = inventory.Items[SlotNum];
+        }
+        if (inventory.InventScreen.activeSelf)
+        {
+            if(inventory.Items.Count > SlotNum)
+            {
+                Icon.sprite = heldItem.Icon;
+            }
+            if (heldItem == null)
+            {
+                if (Icon != null)
+                {
+                    Icon.enabled = false;
+                }
+
+            }
+            else
+            {
+                Icon.enabled = true;
+            }
+        }
+    }
+    public void OnMouseUpAsButton()
+    {
+        Test();
+    }
+    public void Test()
+    {
+        Debug.Log("Test");
     }
 
     public void ActivateMenu()
@@ -29,10 +67,14 @@ public class InventorySlot : MonoBehaviour
     }
     public void UseItem()
     {
-        if (heldItem.isUsable)
+        if(heldItem != null)
         {
-            heldItem.UseInInventory();
+            if (heldItem.isUsable)
+            {
+                heldItem.UseInInventory();
+            }
         }
+        
     }
     
 }

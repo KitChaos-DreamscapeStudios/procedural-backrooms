@@ -88,6 +88,8 @@ public class Movement3D : MonoBehaviour
             #region Stolen Camera Script
             if (axes == RotationAxes.MouseXAndY)
             {
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
                 float rotationX = Orient.transform.eulerAngles.y + Input.GetAxis("Mouse X") * sensitivityX;
 
                 rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
@@ -112,8 +114,13 @@ public class Movement3D : MonoBehaviour
             LR = Input.GetAxisRaw("Horizontal");
             FB = Input.GetAxisRaw("Vertical");
         }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
        
-       
+        
         body.angularVelocity = new Vector3(0, 0, 0);
         if(FB == 0 && LR == 0)
         {

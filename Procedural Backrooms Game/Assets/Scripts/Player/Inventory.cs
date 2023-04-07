@@ -7,7 +7,7 @@ public class Inventory : MonoBehaviour
     public List<Item> Items;
     public Item HandItem;
     public GameObject InventScreen;
-    public bool InventUp;
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -27,12 +27,4 @@ public class Inventory : MonoBehaviour
         }
         
     }
-}
-public abstract class Item : MonoBehaviour
-{
-    public bool isHoldable;
-    public bool isUsable;
-    public GameObject DropObject;
-    public abstract void UseInInventory();
-    public abstract void UseHeld();
 }
