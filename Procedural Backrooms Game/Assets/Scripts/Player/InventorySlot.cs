@@ -69,10 +69,14 @@ public class InventorySlot : MonoBehaviour
         Debug.Log("Test");
     }
 
-    public void ActivateMenu()
+    public void DropHeldItem()
     {
-        Menu.SetActive(!Menu.activeInHierarchy);
-        
+        //Menu.SetActive(!Menu.activeInHierarchy);
+
+        Instantiate(heldItem.DropObject, playerStats.gameObject.transform.position, Quaternion.identity);
+        playerStats.gameObject.GetComponent<Inventory>().Items.Remove(heldItem);
+        heldItem = null;
+
     }
     public void UseItem()
     {

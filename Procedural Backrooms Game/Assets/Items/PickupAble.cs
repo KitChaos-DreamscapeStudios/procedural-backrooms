@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PickupAble : MonoBehaviour
 {
+    public Item ToGive;
     // Start is called before the first frame update
     void Start()
     {
