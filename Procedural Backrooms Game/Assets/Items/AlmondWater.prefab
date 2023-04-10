@@ -48,3 +48,4 @@ MonoBehaviour:
   DropObject: {fileID: 2273606950013226886, guid: 71bc1208f65373a44af354a0921b986c, type: 3}
   Icon: {fileID: 21300000, guid: a59fd11f072c10941b6442958cf7199f, type: 3}
   playerStats: {fileID: 0}
+  ItemName: Almond Water

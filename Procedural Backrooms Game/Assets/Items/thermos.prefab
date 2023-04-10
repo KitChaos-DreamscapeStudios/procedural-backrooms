@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1497070658655720764}
   - component: {fileID: 3035035446681199314}
+  - component: {fileID: 8877215433921444667}
   m_Layer: 0
   m_Name: thermos
   m_TagString: Untagged
@@ -49,6 +50,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8877215433921444667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2273606950013226886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 840bf6d1d1b3a91448a6459687f30a03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ToGive: {fileID: 6584681790121307321, guid: 4dc004447e8bab3429d330c4c057a491, type: 3}
 --- !u!1 &2446927054191721687
 GameObject:
   m_ObjectHideFlags: 0
@@ -60,7 +74,7 @@ GameObject:
   - component: {fileID: 5725945543733012710}
   - component: {fileID: 6427900260895591058}
   - component: {fileID: 8124365165988234248}
-  - component: {fileID: 2446927054191721688}
+  - component: {fileID: 6062334036388723894}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -132,7 +146,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &2446927054191721688
+--- !u!64 &6062334036388723894
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -157,7 +171,7 @@ GameObject:
   - component: {fileID: 5678997195404386310}
   - component: {fileID: 3047691063849755334}
   - component: {fileID: 8173457084337756781}
-  - component: {fileID: 7308037602540819429}
+  - component: {fileID: 7225427871105315772}
   m_Layer: 0
   m_Name: Cylinder.001
   m_TagString: Untagged
@@ -229,7 +243,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &7308037602540819429
+--- !u!64 &7225427871105315772
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

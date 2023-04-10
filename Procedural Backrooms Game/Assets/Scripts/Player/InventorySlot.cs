@@ -12,6 +12,7 @@ public class InventorySlot : MonoBehaviour
     public int SlotNum;
     public Button button;
     public PlayerStats playerStats;
+    public TMPro.TextMeshProUGUI label;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +28,14 @@ public class InventorySlot : MonoBehaviour
            // button.onClick.AddListener(UseItem);
         }
         //button.onClick.AddListener(UseItem);
+        if(heldItem != null)
+        {
+            label.text = heldItem.ItemName;
+        }
+        else
+        {
+            label.text = "";
+        }
 
         if (inventory.Items.Count > SlotNum)
         {

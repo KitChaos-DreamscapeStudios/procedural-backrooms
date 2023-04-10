@@ -38,7 +38,7 @@ public class Movement3D : MonoBehaviour
         body = GetComponent<Rigidbody>();
         DontDestroyOnLoad(this);
         //Hit = GetComponent<AudioSource>();
-        Cursor.visible = false;
+       // Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
 
@@ -88,7 +88,7 @@ public class Movement3D : MonoBehaviour
             #region Stolen Camera Script
             if (axes == RotationAxes.MouseXAndY)
             {
-                Cursor.visible = false;
+                //Cursor.visible = false;
                 Cursor.lockState = CursorLockMode.Locked;
                 float rotationX = Orient.transform.eulerAngles.y + Input.GetAxis("Mouse X") * sensitivityX;
 

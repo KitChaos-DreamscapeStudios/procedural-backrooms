@@ -9,6 +9,7 @@ public abstract class Item : MonoBehaviour
     public GameObject DropObject;
     public Sprite Icon;
     public PlayerStats playerStats;
+    public string ItemName;
     public abstract void UseInInventory();
     public abstract void UseHeld();
 }
