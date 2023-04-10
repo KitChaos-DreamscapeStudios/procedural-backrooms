@@ -7,7 +7,7 @@ public class AlmondWater : Item
     // Start is called before the first frame update
     void Start()
     {
-        playerStats = GameObject.Find("Player").GetComponent<PlayerStats>();
+       
     }
 
     // Update is called once per frame

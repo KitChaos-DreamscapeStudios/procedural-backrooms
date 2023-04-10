@@ -81,6 +81,22 @@ public class PlayerStats : MonoBehaviour
             }
             
         }
+        if(Health > MaxHealth)
+        {
+            Health = MaxHealth;
+        }
+        if(Thirst > 100)
+        {
+            Thirst = 100;
+        }
+        if(Hunger > 100)
+        {
+            Hunger = 100;
+        }
+        if(Sanity > MaxSanity)
+        {
+            Sanity = MaxSanity;
+        }
         if(Stamina <= 0)
         {
             Stamina = 0;

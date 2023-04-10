@@ -11,6 +11,7 @@ public class InventorySlot : MonoBehaviour
     public Inventory inventory;
     public int SlotNum;
     public Button button;
+    public PlayerStats playerStats;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,11 +32,19 @@ public class InventorySlot : MonoBehaviour
         {
             heldItem = inventory.Items[SlotNum];
         }
+        else
+        {
+            heldItem = null;
+        }
         if (inventory.InventScreen.activeSelf)
         {
             if(inventory.Items.Count > SlotNum)
             {
                 Icon.sprite = heldItem.Icon;
+            }
+            else
+            {
+                Icon.sprite = null;
             }
             if (heldItem == null)
             {
@@ -71,7 +80,9 @@ public class InventorySlot : MonoBehaviour
         {
             if (heldItem.isUsable)
             {
+                heldItem.playerStats = playerStats;
                 heldItem.UseInInventory();
+                heldItem = null;
             }
         }
         

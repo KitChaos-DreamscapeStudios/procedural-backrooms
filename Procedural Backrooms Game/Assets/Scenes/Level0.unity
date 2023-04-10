@@ -217,6 +217,7 @@ MonoBehaviour:
   inventory: {fileID: 2068203912}
   SlotNum: 1
   button: {fileID: 0}
+  playerStats: {fileID: 2068203910}
 --- !u!1 &77458393
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,10 +383,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heldItem: {fileID: 0}
   Menu: {fileID: 0}
-  Icon: {fileID: 0}
+  Icon: {fileID: 693735915}
   inventory: {fileID: 2068203912}
   SlotNum: 2
   button: {fileID: 0}
+  playerStats: {fileID: 2068203910}
 --- !u!1 &185587825
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,7 +400,7 @@ GameObject:
   - component: {fileID: 185587828}
   - component: {fileID: 185587827}
   m_Layer: 5
-  m_Name: IconforInv
+  m_Name: IconforInv8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -479,7 +481,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &190466483
 RectTransform:
   m_ObjectHideFlags: 0
@@ -896,7 +898,7 @@ GameObject:
   - component: {fileID: 301169805}
   - component: {fileID: 301169804}
   m_Layer: 5
-  m_Name: IconforInv
+  m_Name: IconforInv5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -972,7 +974,7 @@ GameObject:
   - component: {fileID: 307727866}
   - component: {fileID: 307727868}
   m_Layer: 5
-  m_Name: InventSlot2 (1)
+  m_Name: InventSlot6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1049,10 +1051,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heldItem: {fileID: 0}
   Menu: {fileID: 0}
-  Icon: {fileID: 0}
+  Icon: {fileID: 732338643}
   inventory: {fileID: 2068203912}
   SlotNum: 5
   button: {fileID: 0}
+  playerStats: {fileID: 2068203910}
 --- !u!1 &321774659
 GameObject:
   m_ObjectHideFlags: 0
@@ -1193,7 +1196,7 @@ GameObject:
   - component: {fileID: 427158396}
   - component: {fileID: 427158398}
   m_Layer: 5
-  m_Name: InventSlot3 (2)
+  m_Name: InventSlot11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1270,10 +1273,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heldItem: {fileID: 0}
   Menu: {fileID: 0}
-  Icon: {fileID: 0}
+  Icon: {fileID: 1066422838}
   inventory: {fileID: 2068203912}
   SlotNum: 10
   button: {fileID: 0}
+  playerStats: {fileID: 2068203910}
 --- !u!1 &449182976
 GameObject:
   m_ObjectHideFlags: 0
@@ -1287,7 +1291,7 @@ GameObject:
   - component: {fileID: 449182978}
   - component: {fileID: 449182980}
   m_Layer: 5
-  m_Name: InventSlot1 (2)
+  m_Name: InventSlot9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1364,10 +1368,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heldItem: {fileID: 0}
   Menu: {fileID: 0}
-  Icon: {fileID: 0}
+  Icon: {fileID: 1318002980}
   inventory: {fileID: 2068203912}
   SlotNum: 8
   button: {fileID: 0}
+  playerStats: {fileID: 2068203910}
 --- !u!1 &588335128
 GameObject:
   m_ObjectHideFlags: 0
@@ -1456,7 +1461,7 @@ GameObject:
   - component: {fileID: 588455224}
   - component: {fileID: 588455226}
   m_Layer: 5
-  m_Name: InventSlot2 (2)
+  m_Name: InventSlot10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1533,10 +1538,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heldItem: {fileID: 0}
   Menu: {fileID: 0}
-  Icon: {fileID: 0}
+  Icon: {fileID: 938016973}
   inventory: {fileID: 2068203912}
   SlotNum: 9
   button: {fileID: 0}
+  playerStats: {fileID: 2068203910}
 --- !u!1 &603313649
 GameObject:
   m_ObjectHideFlags: 0
@@ -1550,7 +1556,7 @@ GameObject:
   - component: {fileID: 603313651}
   - component: {fileID: 603313653}
   m_Layer: 5
-  m_Name: InventSlot3 (1)
+  m_Name: InventSlot7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1627,10 +1633,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heldItem: {fileID: 0}
   Menu: {fileID: 0}
-  Icon: {fileID: 0}
+  Icon: {fileID: 1367665053}
   inventory: {fileID: 2068203912}
   SlotNum: 6
   button: {fileID: 0}
+  playerStats: {fileID: 2068203910}
 --- !u!1 &632368688
 GameObject:
   m_ObjectHideFlags: 0
@@ -1644,7 +1651,7 @@ GameObject:
   - component: {fileID: 632368690}
   - component: {fileID: 632368692}
   m_Layer: 5
-  m_Name: InventSlot4 (2)
+  m_Name: InventSlot12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1721,10 +1728,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heldItem: {fileID: 0}
   Menu: {fileID: 0}
-  Icon: {fileID: 0}
+  Icon: {fileID: 742742905}
   inventory: {fileID: 2068203912}
   SlotNum: 11
   button: {fileID: 0}
+  playerStats: {fileID: 2068203910}
 --- !u!1 &684485030
 GameObject:
   m_ObjectHideFlags: 0
@@ -1737,7 +1745,7 @@ GameObject:
   - component: {fileID: 684485033}
   - component: {fileID: 684485032}
   m_Layer: 5
-  m_Name: IconforInv
+  m_Name: IconforInv4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1812,7 +1820,7 @@ GameObject:
   - component: {fileID: 693735916}
   - component: {fileID: 693735915}
   m_Layer: 5
-  m_Name: IconforInv
+  m_Name: IconforInv3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1887,7 +1895,7 @@ GameObject:
   - component: {fileID: 732338644}
   - component: {fileID: 732338643}
   m_Layer: 5
-  m_Name: IconforInv
+  m_Name: IconforInv6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1962,7 +1970,7 @@ GameObject:
   - component: {fileID: 742742906}
   - component: {fileID: 742742905}
   m_Layer: 5
-  m_Name: IconforInv
+  m_Name: IconforInv12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2208,8 +2216,6 @@ GameObject:
   - component: {fileID: 916520245}
   - component: {fileID: 916520244}
   - component: {fileID: 916520246}
-  - component: {fileID: 916520247}
-  - component: {fileID: 916520248}
   m_Layer: 5
   m_Name: InventSlot1
   m_TagString: Untagged
@@ -2291,89 +2297,8 @@ MonoBehaviour:
   Icon: {fileID: 1853057444}
   inventory: {fileID: 2068203912}
   SlotNum: 0
-  button: {fileID: 916520247}
---- !u!114 &916520247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 916520242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 916520244}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 916520246}
-        m_TargetAssemblyTypeName: InventorySlot, Assembly-CSharp
-        m_MethodName: Test
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!61 &916520248
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 916520242}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.83888245, y: -0.4194374}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 101.10745, y: 101.38705}
-  m_EdgeRadius: 0
+  button: {fileID: 0}
+  playerStats: {fileID: 2068203910}
 --- !u!1 &938016971
 GameObject:
   m_ObjectHideFlags: 0
@@ -2386,7 +2311,7 @@ GameObject:
   - component: {fileID: 938016974}
   - component: {fileID: 938016973}
   m_Layer: 5
-  m_Name: IconforInv
+  m_Name: IconforInv10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2718,10 +2643,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heldItem: {fileID: 0}
   Menu: {fileID: 0}
-  Icon: {fileID: 0}
+  Icon: {fileID: 684485032}
   inventory: {fileID: 2068203912}
   SlotNum: 3
   button: {fileID: 0}
+  playerStats: {fileID: 2068203910}
 --- !u!1 &1041409651
 GameObject:
   m_ObjectHideFlags: 0
@@ -2884,7 +2810,7 @@ GameObject:
   - component: {fileID: 1066422839}
   - component: {fileID: 1066422838}
   m_Layer: 5
-  m_Name: IconforInv
+  m_Name: IconforInv11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3153,7 +3079,7 @@ GameObject:
   - component: {fileID: 1318002981}
   - component: {fileID: 1318002980}
   m_Layer: 5
-  m_Name: IconforInv
+  m_Name: IconforInv9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3228,7 +3154,7 @@ GameObject:
   - component: {fileID: 1367665054}
   - component: {fileID: 1367665053}
   m_Layer: 5
-  m_Name: IconforInv
+  m_Name: IconforInv7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3304,7 +3230,7 @@ GameObject:
   - component: {fileID: 1436390151}
   - component: {fileID: 1436390153}
   m_Layer: 5
-  m_Name: InventSlot4 (1)
+  m_Name: InventSlot8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3381,10 +3307,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heldItem: {fileID: 0}
   Menu: {fileID: 0}
-  Icon: {fileID: 0}
+  Icon: {fileID: 185587827}
   inventory: {fileID: 2068203912}
   SlotNum: 7
   button: {fileID: 0}
+  playerStats: {fileID: 2068203910}
 --- !u!1 &1511352319
 GameObject:
   m_ObjectHideFlags: 0
@@ -3548,7 +3475,7 @@ GameObject:
   - component: {fileID: 1638750545}
   - component: {fileID: 1638750547}
   m_Layer: 5
-  m_Name: InventSlot1 (1)
+  m_Name: InventSlot5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3625,10 +3552,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heldItem: {fileID: 0}
   Menu: {fileID: 0}
-  Icon: {fileID: 0}
+  Icon: {fileID: 301169804}
   inventory: {fileID: 2068203912}
   SlotNum: 4
   button: {fileID: 0}
+  playerStats: {fileID: 2068203910}
 --- !u!1 &1687347930
 GameObject:
   m_ObjectHideFlags: 0
@@ -3894,6 +3822,7 @@ GameObject:
   - component: {fileID: 1853057443}
   - component: {fileID: 1853057445}
   - component: {fileID: 1853057444}
+  - component: {fileID: 1853057446}
   m_Layer: 5
   m_Name: IconforInv1
   m_TagString: Untagged
@@ -3958,6 +3887,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1853057442}
   m_CullTransparentMesh: 1
+--- !u!114 &1853057446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853057442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1853057444}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 916520246}
+        m_TargetAssemblyTypeName: InventorySlot, Assembly-CSharp
+        m_MethodName: UseItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1867632163
 GameObject:
   m_ObjectHideFlags: 0
@@ -4371,7 +4356,7 @@ MonoBehaviour:
   Health: 100
   Stamina: 30
   Sanity: 100
-  Thirst: 100
+  Thirst: 50
   Hunger: 100
   HealthBar: {fileID: 588335130}
   StamBar: {fileID: 1041409653}
