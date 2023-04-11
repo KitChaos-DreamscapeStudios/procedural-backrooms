@@ -5,24 +5,28 @@ using UnityEngine;
 public class WallLockedObject : MonoBehaviour
 {
     public float Height;
-    public Vector3 offset;
+    public string ForDirect;
     float Elap;
     // Start is called before the first frame update
     void Start()
     {
-        var Rotations = new List<int>
+       
+        Vector3 fordir = transform.right;
+        switch (ForDirect)
         {
-            0,
-            90,
-            -90,
-            180
-        };
-        transform.eulerAngles = new Vector3(0, Rotations[Random.Range(0, Rotations.Count)], 0);
+            case "Forward":
+                fordir = transform.forward;
+                break;
+            case "Right":
+                fordir = transform.right;
+                break;
+            
+        }
+       // transform.eulerAngles = new Vector3(0, Rotations[Random.Range(0, Rotations.Count)], 0);
         var hit = new RaycastHit();
-        Physics.Raycast(transform.position + transform.right, transform.right, out hit);
+        Physics.Raycast(transform.position + fordir, fordir, out hit);
         transform.position = hit.point;
-        transform.position += transform.right.normalized * offset.x;
-        transform.position += transform.forward.normalized * offset.z;
+      
     }
 
     // Update is called once per frame
@@ -37,7 +41,7 @@ public class WallLockedObject : MonoBehaviour
     {
        
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionStay(Collision collision)
     {
         if (collision.gameObject.tag == "Walls")
         {

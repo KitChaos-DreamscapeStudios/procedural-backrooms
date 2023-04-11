@@ -306,7 +306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Height: 2
-  offset: {x: 0, y: 0, z: 1}
+  ForDirect: Forward
 --- !u!1 &4181396153085437120
 GameObject:
   m_ObjectHideFlags: 0

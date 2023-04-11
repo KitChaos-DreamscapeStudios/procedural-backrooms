@@ -81,7 +81,7 @@ public class Movement3D : MonoBehaviour
                 }
                 else
                 {
-                    cam.transform.localPosition = new Vector3(0, Mathf.Sin(TimerBreathe) * 0.18f, 0);
+                    cam.transform.localPosition = new Vector3(0, Mathf.Sin(TimerBreathe) * 0.13f, 0);
                 }
             }
 

@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Height: 1
+  ForDirect: Right
 --- !u!1 &7813337590750961642
 GameObject:
   m_ObjectHideFlags: 0

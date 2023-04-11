@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1906836680319761430, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
       propertyPath: m_Name
-      value: Light (10)
+      value: RefurbLight
       objectReference: {fileID: 0}
     - target: {fileID: 2006802007256867479, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
       propertyPath: m_Color.b
@@ -21,6 +21,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2006802007256867479, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
       propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2006802007256867479, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: m_RenderMode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8798591196319458274, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
