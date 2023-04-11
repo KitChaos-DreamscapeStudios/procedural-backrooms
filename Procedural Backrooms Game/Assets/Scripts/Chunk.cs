@@ -17,7 +17,7 @@ public class Chunk : MonoBehaviour
     public GameObject Layout;
     public List<GameObject> SpawnedDisposables;
     public float SanityDrain;
-
+    public List<Vector3> ItemSpawnLocales;
    // public GameObject PlayerObj;
     // Start is called before the first frame update
     void Start()
@@ -34,13 +34,7 @@ public class Chunk : MonoBehaviour
         Layout = Instantiate(Struct, transform.position, Quaternion.identity);
         //Randomize The Layout's Rotation
         Layout.transform.eulerAngles = new Vector3(0, Rotations[Random.Range(0, Rotations.Count)], 0);
-        for (int i = 0; i < 10; i++)
-        {
-            var NewObj = WallLockedObjects[Random.Range(0, WallLockedObjects.Count)];
-            var NewNewObj = Instantiate(NewObj, transform.position + new Vector3(Random.Range(-50, 50), NewObj.GetComponent<WallLockedObject>().Height, Random.Range(-50, 50)), Quaternion.identity);
-            //NewNewObj.GetComponent<WallLockedObject>().Lock();
-            SpawnedDisposables.Add(NewNewObj);
-        }
+      
     }
     private void OnDestroy()
     {

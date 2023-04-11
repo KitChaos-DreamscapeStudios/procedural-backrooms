@@ -220,8 +220,7 @@ MonoBehaviour:
   - {fileID: 5420919816429788468, guid: 375f857c5037b484380fd83f981718f7, type: 3}
   Rotations: []
   FreeStandingObjects: []
-  WallLockedObjects:
-  - {fileID: 7720163143080857823, guid: 7e2caa39a96deb24da6f61df345f3b96, type: 3}
+  WallLockedObjects: []
   Layout: {fileID: 0}
   SpawnedDisposables: []
   SanityDrain: 0.2
