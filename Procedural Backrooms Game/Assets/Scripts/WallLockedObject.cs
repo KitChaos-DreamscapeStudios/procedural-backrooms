@@ -5,6 +5,8 @@ using UnityEngine;
 public class WallLockedObject : MonoBehaviour
 {
     public float Height;
+    public Vector3 offset;
+    float Elap;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,11 +21,27 @@ public class WallLockedObject : MonoBehaviour
         var hit = new RaycastHit();
         Physics.Raycast(transform.position + transform.right, transform.right, out hit);
         transform.position = hit.point;
+        transform.position += transform.right.normalized * offset.x;
+        transform.position += transform.forward.normalized * offset.z;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+       
+       
+       
+      
+    }
+    public void Lock()
+    {
+       
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Walls")
+        {
+            Destroy(gameObject);
+        }
     }
 }

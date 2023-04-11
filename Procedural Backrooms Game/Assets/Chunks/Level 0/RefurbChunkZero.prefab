@@ -221,6 +221,8 @@ MonoBehaviour:
   FreeStandingObjects: []
   WallLockedObjects:
   - {fileID: 7720163143080857823, guid: 7e2caa39a96deb24da6f61df345f3b96, type: 3}
+  - {fileID: 3946882206144906557, guid: c17fc0c0058a4c143917bc4f1f6888f2, type: 3}
+  - {fileID: 3031104396448030790, guid: 5aa2ee36ec7542a4c9e48017bfe4b955, type: 3}
   Layout: {fileID: 0}
   SpawnedDisposables: []
   SanityDrain: -0.1

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class Chunk : MonoBehaviour
 {
@@ -37,6 +38,7 @@ public class Chunk : MonoBehaviour
         {
             var NewObj = WallLockedObjects[Random.Range(0, WallLockedObjects.Count)];
             var NewNewObj = Instantiate(NewObj, transform.position + new Vector3(Random.Range(-50, 50), NewObj.GetComponent<WallLockedObject>().Height, Random.Range(-50, 50)), Quaternion.identity);
+            //NewNewObj.GetComponent<WallLockedObject>().Lock();
             SpawnedDisposables.Add(NewNewObj);
         }
     }
@@ -57,6 +59,7 @@ public class Chunk : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        SpawnedDisposables = SpawnedDisposables.Where(item => item != null).ToList();
         PlayerIn = Physics.CheckBox(transform.position, new Vector3(40, 200, 40), new Quaternion(0, 0, 0, 0), Player);
        
         if (PlayerIn)
