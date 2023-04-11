@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using UnityEngine.AI;
+using UnityEngine.Experimental.AI;
 public class Chunk : MonoBehaviour
 {
+    
     
     public bool PlayerIn;
     public Generation Parent;
@@ -34,7 +36,8 @@ public class Chunk : MonoBehaviour
         Layout = Instantiate(Struct, transform.position, Quaternion.identity);
         //Randomize The Layout's Rotation
         Layout.transform.eulerAngles = new Vector3(0, Rotations[Random.Range(0, Rotations.Count)], 0);
-        NavMesh.AddNavMeshData(new NavMeshData());
+        
+       
       
     }
     private void OnDestroy()
