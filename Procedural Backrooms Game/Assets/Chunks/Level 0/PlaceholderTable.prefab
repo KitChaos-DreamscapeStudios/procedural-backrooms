@@ -196,6 +196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Height: 2
   ForDirect: Forward
+  Rarity: 50
 --- !u!1 &3031104397030688285
 GameObject:
   m_ObjectHideFlags: 0
