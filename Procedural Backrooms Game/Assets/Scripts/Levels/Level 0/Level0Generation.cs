@@ -14,7 +14,7 @@ public class Level0Generation : Generation
             for (int z = -2; z < 3; z++)
             {
 
-                GenerateChunk(new Coords(x, 0, z));
+                GenerateChunk(new Coords(x, 0, z), true);
 
 
             }
@@ -26,7 +26,7 @@ public class Level0Generation : Generation
         InvokeRepeating("CheckDespawn", 1, 1);
         InvokeRepeating(nameof(GenerateFromCenter), 1.1f, 1.1f);
     }
-    public override void GenerateChunk(Coords c)
+    public override void GenerateChunk(Coords c, bool IsCore = false)
     {
         var ToSpawn = ChunkForLevel[Random.Range(0, ChunkForLevel.Count)];
         
@@ -37,12 +37,26 @@ public class Level0Generation : Generation
             var C = Instantiate(ToSpawn, new Vector3(c.X * 80, c.Y, c.Z * 80), Quaternion.identity);
             var ChunkData = C.GetComponent<Chunk>();
             ChunkData.Parent = this;
+            if (IsCore)
+            {
+                PlayerIn = ChunkData;
+            }
             Chunks.Add(ChunkData);
+            
             // Debug.Log(ChunkData.Structs.Count);
             try
             {
-                ChunkData.SpawnStuff(ChunkData.Structs[0]);
                 ChunkData.coords = c;
+                if (DifferenceInCoords(PlayerIn.coords, ChunkData.coords) > 3)
+                {
+                    Destroy(ChunkData.gameObject);
+                }
+                else
+                {
+                    ChunkData.SpawnStuff(ChunkData.Structs[0]);
+                }
+                
+               
             }
             catch (System.Exception)
             {
@@ -56,12 +70,23 @@ public class Level0Generation : Generation
             var C = Instantiate(LastChunk.gameObject, new Vector3(c.X * 80, c.Y, c.Z * 80), Quaternion.identity);
             var ChunkData = C.GetComponent<Chunk>();
             ChunkData.Parent = this;
+            if (IsCore)
+            {
+                PlayerIn = ChunkData;
+            }
             Chunks.Add(ChunkData);
             // Debug.Log(ChunkData.Structs.Count);
             try
             {
-                ChunkData.SpawnStuff(ChunkData.Structs[0]);
                 ChunkData.coords = c;
+                if (DifferenceInCoords(PlayerIn.coords, ChunkData.coords) > 3)
+                {
+                    Destroy(ChunkData.gameObject);
+                }
+                else
+                {
+                    ChunkData.SpawnStuff(ChunkData.Structs[0]);
+                }
             }
             catch (System.Exception)
             {
@@ -108,10 +133,15 @@ public class Level0Generation : Generation
         {
             if (DifferenceInCoords(PlayerIn.coords, c.coords) > 3)
             {
-                Destroy(c.gameObject);
+                if (c.gameObject)
+                {
+                    Destroy(c.gameObject);
+                }
+              
             }
         }
     }
+    
     public void Update()
     {
 

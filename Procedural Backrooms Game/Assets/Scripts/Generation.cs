@@ -14,7 +14,7 @@ public abstract class Generation : MonoBehaviour
     public GameObject LastChunk;
     //This is the overrarching Generative script, with many chunk duchies filled with serfs like saving, entity handling, and more.
     
-    public abstract void GenerateChunk(Coords c);
+    public abstract void GenerateChunk(Coords c, bool IsCore);
 
     public void DoAtChunk(Function f, Coords c)
     {

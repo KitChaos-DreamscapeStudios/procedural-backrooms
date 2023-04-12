@@ -4,10 +4,13 @@ using UnityEngine;
 using System.Linq;
 using UnityEngine.AI;
 using UnityEngine.Experimental.AI;
+using Unity.AI.Navigation;
+using System.Threading.Tasks;
 public class Chunk : MonoBehaviour
 {
+    public NavMeshSurface NavSurf;
     
-    
+  
     public bool PlayerIn;
     public Generation Parent;
     public LayerMask Player;
@@ -20,11 +23,21 @@ public class Chunk : MonoBehaviour
     public List<GameObject> SpawnedDisposables;
     public float SanityDrain;
     public List<Vector3> ItemSpawnLocales;
+    public delegate void Func();
    // public GameObject PlayerObj;
     // Start is called before the first frame update
     void Start()
     {
        // PlayerObj = GameObject.Find("Player");
+    }
+
+    public async Task GenNav()
+
+    {
+        NavSurf = GetComponent<NavMeshSurface>();
+
+        Task.Run(NavSurf.BuildNavMesh);
+
     }
     public void SpawnStuff(GameObject Struct)
     {
@@ -36,12 +49,22 @@ public class Chunk : MonoBehaviour
         Layout = Instantiate(Struct, transform.position, Quaternion.identity);
         //Randomize The Layout's Rotation
         Layout.transform.eulerAngles = new Vector3(0, Rotations[Random.Range(0, Rotations.Count)], 0);
-        
+        // Invoke("BuildMesh", 2);
+
+        GenNav();
+
        
-      
+
+
+
+    }
+    public void BuildMesh()
+    {
+       
     }
     private void OnDestroy()
     {
+        CancelInvoke();
         foreach (var item in SpawnedDisposables)
         {
             Destroy(item);
