@@ -8204,12 +8204,12 @@ MonoBehaviour:
   ThirstDeath: 0
   HungerDrain: 0.05
   HungerDeath: 0
-  MaxStamina: 30
+  MaxStamina: 10
   StamRecoverySpeed: 1
   Health: 100
-  Stamina: 30
+  Stamina: 10
   Sanity: 100
-  Thirst: 50
+  Thirst: 100
   Hunger: 100
   HealthBar: {fileID: 588335130}
   StamBar: {fileID: 1041409653}

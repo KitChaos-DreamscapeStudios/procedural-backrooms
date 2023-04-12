@@ -2,11 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WallLockedObject : MonoBehaviour
+public class RandSpawnObject : MonoBehaviour
 {
-    public float Height;
-    public string ForDirect;
-    float Elap;
+   
     public float Rarity;
     // Start is called before the first frame update
     void Start()
