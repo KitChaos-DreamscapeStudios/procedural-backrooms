@@ -190,16 +190,17 @@ public class Hound : Damager
         g.GetComponent<AudioSource>().Play();
         Destroy(g, 5);
     }
-    //private void OnBecameVisible()
-    //{
-    //    WasVis = true;
-    //}
-    //private void OnBecameInvisible()
-    //{
-    //    if(WasVis == true && state == State.preparing)
-    //    {
-    //        state = State.charging;
-    //    }
-    //}
+    private void OnBecameVisible()
+    {
+        WasVis = true;
+    }
+    private void OnBecameInvisible()
+    {
+        if (WasVis == true && state == State.preparing)
+        {
+            WasVis = false;
+            state = State.charging;
+        }
+    }
 }
 
