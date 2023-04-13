@@ -52,11 +52,15 @@ public class Hound : Damager
     void Update()
     {
         //Detect State 
-        if(Vector3.Distance(transform.position, Player.transform.position) < Player.GetComponent<Movement3D>().SoundLevel && state != State.charging && state != State.preparing && state != State.hunting)
+        if(Vector3.Distance(transform.position, Player.transform.position) < Player.GetComponent<Movement3D>().SoundLevel)
         {
             //Debug.Log("PlayerNear");
             PlayerDetected = true;
-            state = State.searching;
+            if ( state != State.charging && state != State.preparing && state != State.hunting)
+            {
+                state = State.searching;
+            }
+           
         }
         else
         {

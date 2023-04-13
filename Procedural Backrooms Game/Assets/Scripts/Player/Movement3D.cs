@@ -61,7 +61,7 @@ public class Movement3D : MonoBehaviour
             if (sprinting)
             {
                 speed = 20;
-                SoundLevel = 60;
+                SoundLevel = 90;
             }
             else
             {
