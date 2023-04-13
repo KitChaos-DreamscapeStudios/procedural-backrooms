@@ -31,7 +31,7 @@ public class Hound : Damager
     public State state;
     public NavMeshAgent agent;
     public GameObject Player;
-    float elap;
+    [SerializeField]float elap;
     public bool PlayerDetected;
     public float Preptime;
     public float Rand;
@@ -51,6 +51,7 @@ public class Hound : Damager
     // Update is called once per frame
     void Update()
     {
+        elap += Time.deltaTime;
         //Detect State 
         if(Vector3.Distance(transform.position, Player.transform.position) < Player.GetComponent<Movement3D>().SoundLevel)
         {
@@ -72,8 +73,9 @@ public class Hound : Damager
             if(Hit.collider.gameObject.layer == Player.layer)
             {
                 PlayGrowl();
+                //elap = 0;
                 state = State.preparing;
-                elap = 0;
+               
                 agent.SetDestination(transform.position);
             }
            
@@ -83,7 +85,7 @@ public class Hound : Damager
         {
            
             
-            elap += Time.deltaTime;
+           // elap += Time.deltaTime;
 
            
             if(elap > 2)
@@ -118,18 +120,21 @@ public class Hound : Damager
                 GrowlTimer = 0;
             }
             agent.speed = 5;
-            elap += Time.deltaTime;
-            if(elap >= 3 || Vector3.Distance(transform.position, agent.destination) < 2)
+           // elap += Time.deltaTime;
+            if(elap > 3 || Vector3.Distance(transform.position, agent.destination) < 2)
             {
-                elap = 0;
+                
                 if(PlayerDetected == false)
                 {
                     state = State.wandering;
+                    elap = 0;
                 }
                 else
                 {
                     agent.SetDestination(Player.transform.position);
+                    elap = 0;
                 }
+               
             }
         }
         if(state == State.searching)
@@ -141,17 +146,19 @@ public class Hound : Damager
                 GrowlTimer = 0;
             }
             agent.speed = 3.5f;
-            elap += Time.deltaTime;
+           // elap += Time.deltaTime;
             if (elap >= 5 || Vector3.Distance(transform.position, agent.destination) < 2)
             {
-                elap = 0;
+               
                 if (PlayerDetected == false)
                 {
                     state = State.wandering;
+                    elap = 0;
                 }
                 else
                 {
                     agent.SetDestination(Player.transform.position);
+                     elap = 0;
                 }
             }
         }
@@ -164,7 +171,7 @@ public class Hound : Damager
                 GrowlTimer = 0;
             }
             agent.speed = 1.5f;
-            elap += Time.deltaTime;
+           // elap += Time.deltaTime;
             if (elap >= 10)
             {
                 elap = 0;
