@@ -77,7 +77,7 @@ public class PlayerStats : MonoBehaviour
             }
             else
             {
-                Stamina += (StamRecoverySpeed * Time.deltaTime)/2;
+                Stamina += 0;
             }
             
         }
@@ -105,5 +105,12 @@ public class PlayerStats : MonoBehaviour
         
         
     }
-   
+    private void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.GetComponent<Damager>())
+        {
+            Health -= col.gameObject.GetComponent<Damager>().Damage;
+            EZCameraShake.CameraShaker.Instance.ShakeOnce(10, 5, 0, 0.5f);
+        }
+    }
 }

@@ -30,7 +30,7 @@ public class Level0Generation : Generation
     {
         var ToSpawn = ChunkForLevel[Random.Range(0, ChunkForLevel.Count)];
         
-        var Rand = Mathf.RoundToInt( Random.Range(0, maxInclusive: 10));
+        var Rand = Mathf.RoundToInt( Random.Range(0, maxInclusive: 35));
        // Debug.Log(Rand);
         if(Rand == 0)
         {
@@ -42,6 +42,7 @@ public class Level0Generation : Generation
                 PlayerIn = ChunkData;
             }
             Chunks.Add(ChunkData);
+            //Debug.Log("Spawnednew");
             
             // Debug.Log(ChunkData.Structs.Count);
             try
@@ -67,6 +68,7 @@ public class Level0Generation : Generation
         }
         else
         {
+          //  Debug.Log("SpawnedSame");
             var C = Instantiate(LastChunk.gameObject, new Vector3(c.X * 80, c.Y, c.Z * 80), Quaternion.identity);
             var ChunkData = C.GetComponent<Chunk>();
             ChunkData.Parent = this;

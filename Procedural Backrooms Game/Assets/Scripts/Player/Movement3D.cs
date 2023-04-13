@@ -17,7 +17,7 @@ public class Movement3D : MonoBehaviour
     float TimerBreathe;
     float TimerBob;
     public Inventory inventory;
-    
+    public float SoundLevel;
     #region Stolen Camera Script
     public enum RotationAxes { MouseXAndY = 0, MouseX = 1, MouseY = 2 }
     public RotationAxes axes = RotationAxes.MouseXAndY;
@@ -61,16 +61,24 @@ public class Movement3D : MonoBehaviour
             if (sprinting)
             {
                 speed = 20;
+                SoundLevel = 60;
             }
             else
             {
                 speed = 10;
+                SoundLevel = 45;
             }
             if (Input.GetKey(KeyCode.C))
             {
                 cam.transform.localPosition = new Vector3(cam.transform.localPosition.x, -2.5f, cam.transform.localPosition.z);
                 gameObject.transform.localScale = new Vector3(1, 0.5f, 1);
-                speed = 5;
+               
+               
+                
+                    speed = 5;
+                    SoundLevel = 20;
+                
+                
             }
             else
             {
@@ -82,6 +90,7 @@ public class Movement3D : MonoBehaviour
                 else
                 {
                     cam.transform.localPosition = new Vector3(0, Mathf.Sin(TimerBreathe) * 0.13f, 0);
+                    SoundLevel = 25;
                 }
             }
 
@@ -138,5 +147,5 @@ public class Movement3D : MonoBehaviour
         body.velocity =new Vector3((Orient.transform.forward * (FB * speed) + Orient.transform.right * (LR * speed)).x, body.velocity.y, (Orient.transform.forward * (FB * speed) + Orient.transform.right * (LR * speed)).z);
        
     }
-   
+  
 }

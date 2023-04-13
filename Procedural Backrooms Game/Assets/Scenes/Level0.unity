@@ -1395,12 +1395,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerIn: {fileID: 0}
   ChunkForLevel:
+  - {fileID: 6791048412490510030, guid: 7c96eb2ab8362d7408c986cf599b7106, type: 3}
   - {fileID: 1197769656058550797, guid: 92e8b7dfa1ed83749a78f004e18d7fa5, type: 3}
-  - {fileID: 6791048412490510030, guid: 7c96eb2ab8362d7408c986cf599b7106, type: 3}
-  - {fileID: 6791048412490510030, guid: 7c96eb2ab8362d7408c986cf599b7106, type: 3}
-  - {fileID: 6791048412490510030, guid: 7c96eb2ab8362d7408c986cf599b7106, type: 3}
-  - {fileID: 6791048412490510030, guid: 7c96eb2ab8362d7408c986cf599b7106, type: 3}
-  - {fileID: 6791048412490510030, guid: 7c96eb2ab8362d7408c986cf599b7106, type: 3}
   Center:
     X: 0
     Y: 0
@@ -1964,7 +1960,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 0
+  Priority: 1
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -8176,6 +8172,7 @@ MonoBehaviour:
   Orient: {fileID: 869372946}
   cam: {fileID: 963194225}
   inventory: {fileID: 2068203912}
+  SoundLevel: 0
   axes: 0
   sensitivityX: 10
   sensitivityY: 10
