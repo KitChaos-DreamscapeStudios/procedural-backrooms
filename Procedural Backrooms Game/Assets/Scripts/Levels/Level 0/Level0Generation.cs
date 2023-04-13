@@ -135,7 +135,7 @@ public class Level0Generation : Generation
         {
             if (DifferenceInCoords(PlayerIn.coords, c.coords) > 3)
             {
-                if (c.gameObject)
+                if (c.gameObject != null)
                 {
                     Destroy(c.gameObject);
                 }

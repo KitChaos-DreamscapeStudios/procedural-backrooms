@@ -110,6 +110,7 @@ public class PlayerStats : MonoBehaviour
         if (col.gameObject.GetComponent<Damager>())
         {
             Health -= col.gameObject.GetComponent<Damager>().Damage;
+            col.gameObject.GetComponent<Damager>().OnDamage();
             EZCameraShake.CameraShaker.Instance.ShakeOnce(10, 5, 0, 0.5f);
         }
     }

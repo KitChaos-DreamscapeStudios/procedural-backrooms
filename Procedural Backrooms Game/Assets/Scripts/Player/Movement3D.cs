@@ -61,12 +61,12 @@ public class Movement3D : MonoBehaviour
             if (sprinting)
             {
                 speed = 20;
-                SoundLevel = 90;
+                SoundLevel = 85;
             }
             else
             {
                 speed = 10;
-                SoundLevel = 45;
+                SoundLevel = 55;
             }
             if (Input.GetKey(KeyCode.C))
             {
@@ -76,7 +76,7 @@ public class Movement3D : MonoBehaviour
                
                 
                     speed = 5;
-                    SoundLevel = 20;
+                    SoundLevel = 30;
                 
                 
             }
@@ -90,7 +90,7 @@ public class Movement3D : MonoBehaviour
                 else
                 {
                     cam.transform.localPosition = new Vector3(0, Mathf.Sin(TimerBreathe) * 0.13f, 0);
-                    SoundLevel = 25;
+                    SoundLevel = 35;
                 }
             }
 

@@ -12,7 +12,7 @@ public class Hound : Damager
         hunting,
         searching
     }
-    bool WasVis;
+    bool WasVis = true;
     // State Machine For Hounds:
     //   If Wandering, move randomly, growl at random intervals
     //    When a player is seen, change to preparing, growl a lot, and wait up to 5 seconds (Random 1.5-5). Check if the player is making Eye contact, if so extend by 3 seconds (Flat)
@@ -33,10 +33,12 @@ public class Hound : Damager
     public GameObject Player;
     [SerializeField]float elap;
     public bool PlayerDetected;
-    public float Preptime;
+   // public float Preptime;
     public float Rand;
     public float GrowlTimer;
     public GameObject Growl;
+    public LayerMask PlayerMask;
+    public bool CanSeePlayer;
     // Start is called before the first frame update
     void Start()
     {
@@ -52,118 +54,111 @@ public class Hound : Damager
     void Update()
     {
         elap += Time.deltaTime;
-        //Detect State 
-        if(Vector3.Distance(transform.position, Player.transform.position) < Player.GetComponent<Movement3D>().SoundLevel)
+        var Hit = new RaycastHit();
+        if (Physics.Raycast(transform.position, transform.forward, out Hit, PlayerMask))
+        {
+            if (Hit.collider.gameObject.layer == Player.layer)
+            {
+                CanSeePlayer = true;
+                if (state != State.preparing && state != State.hunting && state != State.charging)
+                {
+
+
+                    elap = 0;
+                    state = State.preparing;
+                }
+            }
+         
+
+        }
+        if (Vector3.Distance(transform.position, Player.transform.position) < Player.GetComponent<Movement3D>().SoundLevel)
         {
             //Debug.Log("PlayerNear");
             PlayerDetected = true;
-            if ( state != State.charging && state != State.preparing && state != State.hunting)
-            {
-                state = State.searching;
-            }
+            
+       
+           
            
         }
         else
         {
             PlayerDetected = false;
         }
-        var Hit = new RaycastHit();
-        if(Physics.Raycast(origin: transform.position + transform.forward, direction: transform.forward, out Hit) && state != State.preparing && state != State.hunting && state != State.charging)
+        if (state == State.preparing)
         {
-            if(Hit.collider.gameObject.layer == Player.layer)
+            if(WasVis == false)
             {
-                PlayGrowl();
-                //elap = 0;
-                state = State.preparing;
-               
-                agent.SetDestination(transform.position);
-            }
-           
-        }
-        GrowlTimer += Time.deltaTime;
-        if(state == State.preparing)
-        {
-           
-            
-           // elap += Time.deltaTime;
-
-           
-            if(elap > 2)
-            {
-                
-            }
-            if(elap > 3)
-            {
-                PlayGrowl();
                 elap = 0;
-                agent.SetDestination(Player.transform.position);
+                state = State.charging;
+            }
+            if(elap > 8)
+            {
+                elap = 0;
                 state = State.charging;
             }
         }
-        if(state == State.charging)
-        {
-            //elap += Time.deltaTime;
-            agent.speed = 50;
-            if(Vector3.Distance(transform.position, agent.destination) < 2)
+       
+       if(state == State.charging)
+       {
+           agent.speed = 50;
+            agent.SetDestination(Player.transform.position);
+            if(elap > 3)
             {
-                agent.SetDestination(Player.transform.position);
                 state = State.hunting;
             }
-
-        }
-        if(state == State.hunting)
+       }
+       if(state == State.hunting)
         {
-            if(GrowlTimer > Rand-2)
+            if (GrowlTimer > Rand-2)
             {
                 Rand = Random.Range(2, 5);
                 PlayGrowl();
                 GrowlTimer = 0;
             }
-            agent.speed = 5;
-           // elap += Time.deltaTime;
-            if(elap > 3 || Vector3.Distance(transform.position, agent.destination) < 2)
+            agent.speed = 10;
+            agent.SetDestination(Player.transform.position);
+            if (PlayerDetected == false)
             {
-                
-                if(PlayerDetected == false)
-                {
-                    state = State.wandering;
-                    elap = 0;
-                }
-                else
-                {
-                    agent.SetDestination(Player.transform.position);
-                    elap = 0;
-                }
-               
+                state = State.wandering;
+            }
+        }
+        if (state == State.wandering)
+        {
+            agent.speed = 4.5f;
+            if (PlayerDetected)
+            {
+                state = State.searching;
             }
         }
         if(state == State.searching)
         {
-            if (GrowlTimer > Rand-1)
+            if (PlayerDetected)
+            {
+                agent.SetDestination(Player.transform.position);
+            }
+            //Growling
+            if (GrowlTimer > Rand)
             {
                 Rand = Random.Range(2, 5);
                 PlayGrowl();
                 GrowlTimer = 0;
             }
-            agent.speed = 3.5f;
-           // elap += Time.deltaTime;
-            if (elap >= 5 || Vector3.Distance(transform.position, agent.destination) < 2)
+            if (Vector3.Distance(transform.position, agent.destination) < 3)
             {
-               
-                if (PlayerDetected == false)
+
+                
+                if (!PlayerDetected)
                 {
+                    var newDest = Random.insideUnitSphere * 20;
+                    newDest.y = 0;
+                    agent.SetDestination(transform.position + newDest);
                     state = State.wandering;
-                    elap = 0;
-                }
-                else
-                {
-                    agent.SetDestination(Player.transform.position);
-                     elap = 0;
                 }
             }
         }
-        if(state == State.wandering)
+        if (state == State.wandering)
         {
+            //Growling
             if (GrowlTimer > Rand)
             {
                 Rand = Random.Range(2, 5);
@@ -171,24 +166,113 @@ public class Hound : Damager
                 GrowlTimer = 0;
             }
             agent.speed = 1.5f;
-           // elap += Time.deltaTime;
-            if (elap >= 10)
+            // elap += Time.deltaTime;
+            if (Vector3.Distance(transform.position, agent.destination) < 3)
             {
-                elap = 0;
-                if (PlayerDetected == false)
-                {
-                    var newDest = Random.insideUnitSphere*20;
-                    newDest.y = 0;
-                    agent.SetDestination(transform.position + newDest);
-                }
-                else
-                {
-                    state = State.hunting;
-                    agent.SetDestination(Player.transform.position);
-                }
+
+                
+                var newDest = Random.insideUnitSphere * 20;
+                newDest.y = 0;
+                agent.SetDestination(transform.position + newDest);
             }
         }
-        
+        //var Hit = new RaycastHit();
+        //if(Physics.Raycast(origin: transform.position + transform.forward, direction: transform.forward, out Hit) && state != State.preparing && state != State.hunting && state != State.charging)
+        //{
+        //    if(Hit.collider.gameObject.layer == Player.layer)
+        //    {
+        //        PlayGrowl();
+        //        //elap = 0;
+        //        state = State.preparing;
+
+        //        agent.SetDestination(transform.position);
+        //    }
+
+        //}
+        //GrowlTimer += Time.deltaTime;
+        //if(state == State.preparing)
+        //{
+
+
+        //   // elap += Time.deltaTime;
+
+
+        //    if(elap > 2)
+        //    {
+
+        //    }
+        //    if(elap > 3)
+        //    {
+        //        PlayGrowl();
+        //        elap = 0;
+        //        agent.SetDestination(Player.transform.position);
+        //        state = State.charging;
+        //    }
+        //}
+        //if(state == State.charging)
+        //{
+        //    //elap += Time.deltaTime;
+        //    agent.speed = 50;
+        //    if(Vector3.Distance(transform.position, agent.destination) < 2)
+        //    {
+        //        agent.SetDestination(Player.transform.position);
+        //        state = State.hunting;
+        //    }
+
+        //}
+        //if(state == State.hunting)
+        //{
+        //    if(GrowlTimer > Rand-2)
+        //    {
+        //        Rand = Random.Range(2, 5);
+        //        PlayGrowl();
+        //        GrowlTimer = 0;
+        //    }
+        //    agent.speed = 5;
+        //   // elap += Time.deltaTime;
+        //    if(elap > 3 || Vector3.Distance(transform.position, agent.destination) < 2)
+        //    {
+
+        //        if(PlayerDetected == false)
+        //        {
+        //            state = State.wandering;
+        //            elap = 0;
+        //        }
+        //        else
+        //        {
+        //            agent.SetDestination(Player.transform.position);
+        //            elap = 0;
+        //        }
+
+        //    }
+        //}
+        //if(state == State.searching)
+        //{
+        //    if (GrowlTimer > Rand-1)
+        //    {
+        //        Rand = Random.Range(2, 5);
+        //        PlayGrowl();
+        //        GrowlTimer = 0;
+        //    }
+        //    agent.speed = 3.5f;
+        //   // elap += Time.deltaTime;
+        //    if (elap >= 5 || Vector3.Distance(transform.position, agent.destination) < 2)
+        //    {
+
+        //        if (PlayerDetected == false)
+        //        {
+        //            state = State.wandering;
+        //            elap = 0;
+        //        }
+        //        else
+        //        {
+        //            agent.SetDestination(Player.transform.position);
+        //             elap = 0;
+        //        }
+        //    }
+        //}
+
+
     }
     void PlayGrowl()
     {
@@ -203,11 +287,7 @@ public class Hound : Damager
     }
     private void OnBecameInvisible()
     {
-        if (WasVis == true && state == State.preparing)
-        {
-            WasVis = false;
-            state = State.charging;
-        }
+        WasVis = false;
     }
 }
 
