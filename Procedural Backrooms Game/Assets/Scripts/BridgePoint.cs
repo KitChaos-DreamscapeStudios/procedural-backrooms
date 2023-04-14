@@ -18,7 +18,7 @@ public class BridgePoint : MonoBehaviour
         Link = GetComponent<NavMeshLink>();
         Link.startPoint = new Vector3(0,0,0);
         Link.endPoint = new Vector3(0,0,0);
-        Link.width = 3;
+        Link.width = 2;
         if (!Physics.Raycast(transform.position, direction: Direction, 3))
         {
             Link.endPoint = new Vector3(3 * Direction.x, 0, 3 * Direction.z);
