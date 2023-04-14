@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Experimental.AI;
+using UnityEngine.AI;
+using System.Threading.Tasks;
+using Unity.AI.Navigation;
 public class Movement3D : MonoBehaviour
 {
     //Make sure the player object has a camera as a child, an empty object as a child set as "Orient" a rigidbody with gravity off and all rotation directions locked, a collider, and a constant downwards force
@@ -18,6 +22,7 @@ public class Movement3D : MonoBehaviour
     float TimerBob;
     public Inventory inventory;
     public float SoundLevel;
+    public NavMeshSurface nav;
     #region Stolen Camera Script
     public enum RotationAxes { MouseXAndY = 0, MouseX = 1, MouseY = 2 }
     public RotationAxes axes = RotationAxes.MouseXAndY;
@@ -33,8 +38,10 @@ public class Movement3D : MonoBehaviour
     float rotationY = 0F;
     #endregion
     // Start is called before the first frame update
+    
     void Start()
     {
+        //BuildNav();
         body = GetComponent<Rigidbody>();
         DontDestroyOnLoad(this);
         //Hit = GetComponent<AudioSource>();

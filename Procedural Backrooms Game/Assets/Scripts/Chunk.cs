@@ -31,12 +31,11 @@ public class Chunk : MonoBehaviour
        // PlayerObj = GameObject.Find("Player");
     }
 
-    public async Task GenNav()
-
+    public async Task BuildNav()
     {
-        NavSurf = GetComponent<NavMeshSurface>();
-
+        NavSurf = GetComponentInChildren<NavMeshSurface>();
         Task.Run(NavSurf.BuildNavMesh);
+        //BuildNav();
 
     }
     public void SpawnStuff(GameObject Struct)
@@ -51,7 +50,7 @@ public class Chunk : MonoBehaviour
         Layout.transform.eulerAngles = new Vector3(0, Rotations[Random.Range(0, Rotations.Count)], 0);
         // Invoke("BuildMesh", 2);
 
-        GenNav();
+        BuildNav();
 
        
 

@@ -8217,6 +8217,7 @@ MonoBehaviour:
   cam: {fileID: 963194225}
   inventory: {fileID: 2068203912}
   SoundLevel: 0
+  nav: {fileID: 0}
   axes: 0
   sensitivityX: 10
   sensitivityY: 10

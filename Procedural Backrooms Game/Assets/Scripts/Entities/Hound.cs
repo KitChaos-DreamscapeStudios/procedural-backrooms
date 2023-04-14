@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Experimental.AI;
+using System.Threading.Tasks;
 public class Hound : Damager
 {
     public enum State
@@ -49,6 +51,10 @@ public class Hound : Damager
     {
         PlayGrowl();
       //  throw new System.NotImplementedException();
+    }
+    public async Task SwitchNav()
+    {
+
     }
     // Update is called once per frame
     void Update()
