@@ -2,9 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Rendering.PostProcessing;
 public class PlayerStats : MonoBehaviour
 {
     public Generation LevelStats;
+    public ChromaticAberration InsanityAbber;
+    public PostProcessVolume Vol;
+    public delegate void Event();
+    public List<Event> events;
     //Internal Stats
     public float MaxHealth;
     public float HealthRegen;
@@ -36,11 +41,14 @@ public class PlayerStats : MonoBehaviour
     public Image ThirstBar;
     //Level Stats
     public float SanityDrain;
+
    
     // Start is called before the first frame update
     void Start()
     {
+        Vol.profile.TryGetSettings<ChromaticAberration>(out InsanityAbber);
         
+
     }
 
     // Update is called once per frame
@@ -59,7 +67,7 @@ public class PlayerStats : MonoBehaviour
         Thirst -= (1 * Time.deltaTime) * ThirstDrain;//Add Statuses Laters.
         Hunger -= (1 * Time.deltaTime) * HungerDrain;
         Sanity -= (SanityDrain * Time.deltaTime);
-
+        
         if(Health < MaxHealth)
         {
             Health += HealthRegen * Time.deltaTime;
@@ -101,6 +109,29 @@ public class PlayerStats : MonoBehaviour
         {
             Stamina = 0;
             GetComponent<Movement3D>().sprinting = false;
+        }
+        //Sanity Effects
+        if(Sanity > 70)
+        {
+            InsanityAbber.intensity.Override(0);
+        }
+        if(Sanity < 70 && Sanity > 55)
+        {
+            
+            InsanityAbber.intensity.Override(1);
+         
+        }
+        if(Sanity < 60 && Sanity > 40)
+        {
+            HungerDrain = 0.055f;
+            ThirstDrain = 0.055f;
+            GetComponent<Movement3D>().SpeedBoost = 5;
+        }
+        if(Sanity < 55)
+        {
+            GetComponent<Movement3D>().sensitivityX =15;
+            GetComponent<Movement3D>().sensitivityY = 15;
+            InsanityAbber.intensity.Override(5);
         }
         
         

@@ -5813,7 +5813,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94dd75dcdcaeab942a7aaa6b71db9dce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rarity: 30
+  Rarity: 70
 --- !u!1001 &173556012300096971
 PrefabInstance:
   m_ObjectHideFlags: 0
