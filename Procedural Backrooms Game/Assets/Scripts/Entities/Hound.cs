@@ -41,6 +41,7 @@ public class Hound : Damager
     public GameObject Growl;
     public LayerMask PlayerMask;
     public bool CanSeePlayer;
+    public Animator anim;
     // Start is called before the first frame update
     void Start()
     {
@@ -52,13 +53,13 @@ public class Hound : Damager
         PlayGrowl();
       //  throw new System.NotImplementedException();
     }
-    public async Task SwitchNav()
-    {
-
-    }
+  
     // Update is called once per frame
     void Update()
     {
+        GrowlTimer += Time.deltaTime;
+        //Model adjustments
+       // transform.eulerAngles = new Vector3(-90, transform.eulerAngles.y, transform.eulerAngles.z);
         elap += Time.deltaTime;
         var Hit = new RaycastHit();
         if (Physics.Raycast(transform.position, transform.forward, out Hit, PlayerMask))
@@ -92,13 +93,17 @@ public class Hound : Damager
         }
         if (state == State.preparing)
         {
+            agent.SetDestination(  Player.transform.position);
+            agent.speed = 0;
             if(WasVis == false)
             {
+                PlayGrowl();
                 elap = 0;
                 state = State.charging;
             }
             if(elap > 8)
             {
+                PlayGrowl();
                 elap = 0;
                 state = State.charging;
             }
@@ -106,7 +111,8 @@ public class Hound : Damager
        
        if(state == State.charging)
        {
-           agent.speed = 50;
+            PlayGrowl();
+            agent.speed = 50;
             agent.SetDestination(Player.transform.position);
             if(elap > 3)
             {
@@ -130,6 +136,12 @@ public class Hound : Damager
         }
         if (state == State.wandering)
         {
+            if (GrowlTimer > Rand)
+            {
+                Rand = Random.Range(2, 5);
+                PlayGrowl();
+                GrowlTimer = 0;
+            }
             agent.speed = 4.5f;
             if (PlayerDetected)
             {
@@ -282,6 +294,7 @@ public class Hound : Damager
     }
     void PlayGrowl()
     {
+        Rand = Random.Range(3, 8);
         var g = Instantiate(Growl, transform.position, Quaternion.identity);
         g.GetComponent<AudioSource>().pitch = Random.Range(-2, 2);
         g.GetComponent<AudioSource>().Play();

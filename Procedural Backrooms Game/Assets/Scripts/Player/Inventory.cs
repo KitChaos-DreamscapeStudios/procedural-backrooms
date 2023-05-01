@@ -46,9 +46,19 @@ public class Inventory : MonoBehaviour
                         }
                     }
                 }
-                else
+                else if(!Grabby.collider.gameObject.GetComponent<Interactable>())
                 {
                     SelFX.Stop();
+                }
+                else
+                {
+                    Debug.Log("Touching Interactable");
+                    SelFX.transform.position = Grabby.point;
+                    SelFX.Play();
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
+                        Grabby.collider.gameObject.GetComponent<Interactable>().OnInteract();
+                    }
                 }
             }
             else
