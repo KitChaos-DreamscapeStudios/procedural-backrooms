@@ -23,11 +23,9 @@ public class Door : Interactable
     {
         if (IsChanging)
         {
-           Pivot.transform.eulerAngles=  Vector3.Lerp(Pivot.transform.eulerAngles, new Vector3(0, -90, 0), 0.1f);
-            if(Pivot.transform.eulerAngles.y == -90)
-            {
-                IsChanging = false;
-            }
+           Pivot.transform.eulerAngles=  Vector3.Lerp(Pivot.transform.eulerAngles, new Vector3(0, -90, 0), 1);
+            IsChanging = false;
+        
         }
     }
    
