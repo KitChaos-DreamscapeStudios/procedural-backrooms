@@ -110,6 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pivot: {fileID: 627391471766626231}
+  SceneToLoad: 
 --- !u!1 &627391471766626231
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,6 +311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pivot: {fileID: 1827248547460226077}
+  SceneToLoad: 
 --- !u!1 &3413003199125527262
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,6 +422,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pivot: {fileID: 5349431128352821580}
+  SceneToLoad: 
 --- !u!1 &4080253778462570163
 GameObject:
   m_ObjectHideFlags: 0
@@ -6225,6 +6228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pivot: {fileID: 8194600270017976932}
+  SceneToLoad: 
 --- !u!1 &8056180089552282489
 GameObject:
   m_ObjectHideFlags: 0
@@ -6296,7 +6300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94dd75dcdcaeab942a7aaa6b71db9dce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rarity: 90
+  Rarity: 10
 --- !u!114 &2170178554863741392
 MonoBehaviour:
   m_ObjectHideFlags: 0

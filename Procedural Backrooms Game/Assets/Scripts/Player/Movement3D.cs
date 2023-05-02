@@ -84,7 +84,7 @@
                
                 
                         speed = 5 + SpeedBoost;
-                        SoundLevel = 30;
+                        SoundLevel = 25;
                 
                 
                 }

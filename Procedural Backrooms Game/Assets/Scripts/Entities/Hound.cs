@@ -62,8 +62,10 @@ public class Hound : Damager
        // transform.eulerAngles = new Vector3(-90, transform.eulerAngles.y, transform.eulerAngles.z);
         elap += Time.deltaTime;
         var Hit = new RaycastHit();
-        if (Physics.Raycast(transform.position, transform.forward, out Hit, PlayerMask))
+       
+        if (Physics.Raycast(transform.position+new Vector3(0,1,0), transform.forward, out Hit, PlayerMask))
         {
+            Debug.Log(Hit.collider.gameObject);
             if (Hit.collider.gameObject.layer == Player.layer)
             {
                 CanSeePlayer = true;
@@ -134,6 +136,7 @@ public class Hound : Damager
                 state = State.wandering;
             }
         }
+       //I can probably condense the two wandering bits but I'm too scared to
         if (state == State.wandering)
         {
             if (GrowlTimer > Rand)
@@ -292,11 +295,15 @@ public class Hound : Damager
 
 
     }
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawRay(transform.position+new Vector3(0,1,0), transform.forward);
+    }
     void PlayGrowl()
     {
-        Rand = Random.Range(3, 8);
+        //Rand = Random.Range(3, 8);
         var g = Instantiate(Growl, transform.position, Quaternion.identity);
-        g.GetComponent<AudioSource>().pitch = Random.Range(-2, 2);
+        g.GetComponent<AudioSource>().pitch = Random.Range(-1, 2.1f);
         g.GetComponent<AudioSource>().Play();
         Destroy(g, 5);
     }
