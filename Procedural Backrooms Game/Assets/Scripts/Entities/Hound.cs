@@ -45,6 +45,7 @@ public class Hound : Damager
     // Start is called before the first frame update
     void Start()
     {
+        anim = GetComponentInChildren<Animator>();
         agent = GetComponent<NavMeshAgent>();
         Player = GameObject.Find("Player");
     }
@@ -92,6 +93,15 @@ public class Hound : Damager
         else
         {
             PlayerDetected = false;
+        }
+        if(state == State.preparing)
+        {
+            anim.Play("Pause");
+        }
+        else
+        {
+            anim.Play("Walk");
+            anim.speed = 5;
         }
         if (state == State.preparing)
         {
@@ -303,7 +313,7 @@ public class Hound : Damager
     {
         //Rand = Random.Range(3, 8);
         var g = Instantiate(Growl, transform.position, Quaternion.identity);
-        g.GetComponent<AudioSource>().pitch = Random.Range(-1, 2.1f);
+        g.GetComponent<AudioSource>().pitch = Random.Range(-1, 1.1f);
         g.GetComponent<AudioSource>().Play();
         Destroy(g, 5);
     }
