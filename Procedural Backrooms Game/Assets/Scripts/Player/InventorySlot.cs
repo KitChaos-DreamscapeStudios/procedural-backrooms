@@ -95,7 +95,11 @@ public class InventorySlot : MonoBehaviour
             {
                 heldItem.playerStats = playerStats;
                 heldItem.UseInInventory();
-                heldItem = null;
+                if (!heldItem.isHoldable)
+                {
+                    heldItem = null;
+                }
+                
             }
         }
         

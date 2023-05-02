@@ -10,6 +10,7 @@ public abstract class Item : MonoBehaviour
     public Sprite Icon;
     public PlayerStats playerStats;
     public string ItemName;
+    public Mesh Model;
     public abstract void UseInInventory();
     public abstract void UseHeld();
 }

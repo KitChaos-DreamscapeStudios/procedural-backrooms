@@ -10,6 +10,7 @@ public class Inventory : MonoBehaviour
     public RaycastHit Grabby;
     public float GrabDistance = 10;
     public ParticleSystem SelFX;
+    public MeshFilter handItemMesh;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +27,14 @@ public class Inventory : MonoBehaviour
         if (Input.GetMouseButtonUp(1) && HandItem!= null&& HandItem.isHoldable)
         {
             HandItem.UseHeld();
+        }
+        if(HandItem != null)
+        {
+            handItemMesh.mesh = HandItem.Model;
+        }
+        else
+        {
+            handItemMesh.mesh = null;
         }
        var Pickup= Physics.Raycast(GetComponent<Movement3D>().cam.transform.transform.position + GetComponent<Movement3D>().cam.transform.forward, GetComponent<Movement3D>().cam.transform.forward, out Grabby, maxDistance: GrabDistance);
         if (Pickup)

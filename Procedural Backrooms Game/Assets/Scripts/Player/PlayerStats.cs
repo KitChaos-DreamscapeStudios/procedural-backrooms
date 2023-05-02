@@ -10,6 +10,7 @@ public class PlayerStats : MonoBehaviour
     public PostProcessVolume Vol;
     public delegate void Event();
     public List<Event> events;
+    public GameObject Flashlight;
     //Internal Stats
     public float MaxHealth;
     public float HealthRegen;
