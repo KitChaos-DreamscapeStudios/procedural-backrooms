@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pivot: {fileID: 627391471766626231}
-  SceneToLoad: 
+  SceneToLoad: Level1
 --- !u!1 &627391471766626231
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,7 +311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pivot: {fileID: 1827248547460226077}
-  SceneToLoad: 
+  SceneToLoad: Level1
 --- !u!1 &3413003199125527262
 GameObject:
   m_ObjectHideFlags: 0
@@ -422,7 +422,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pivot: {fileID: 5349431128352821580}
-  SceneToLoad: 
+  SceneToLoad: Level1
 --- !u!1 &4080253778462570163
 GameObject:
   m_ObjectHideFlags: 0
@@ -6358,7 +6358,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pivot: {fileID: 8194600270017976932}
-  SceneToLoad: 
+  SceneToLoad: Level1
 --- !u!1 &8056180089552282489
 GameObject:
   m_ObjectHideFlags: 0
