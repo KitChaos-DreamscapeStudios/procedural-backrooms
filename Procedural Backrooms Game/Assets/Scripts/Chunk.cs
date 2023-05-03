@@ -6,6 +6,7 @@ using UnityEngine.AI;
 using UnityEngine.Experimental.AI;
 using Unity.AI.Navigation;
 using System.Threading.Tasks;
+
 public class Chunk : MonoBehaviour
 {
     public NavMeshSurface NavSurf;
@@ -16,7 +17,7 @@ public class Chunk : MonoBehaviour
     public LayerMask Player;
     public Coords coords;
     public List<GameObject> Structs;
-    public List<float> Rotations;
+    
     public List<GameObject> FreeStandingObjects;//Some Furniture, Entities. (Lock to floor)
     public List<GameObject> WallLockedObjects;//Doors, Paintings, Vents. (Lock to walls)
     public GameObject Layout;
@@ -38,16 +39,19 @@ public class Chunk : MonoBehaviour
         //BuildNav();
 
     }
-    public void SpawnStuff(GameObject Struct)
+    public unsafe void SpawnStuff(GameObject Struct)
     {
-        Rotations.Add(0);
-        Rotations.Add(90);
-        Rotations.Add(-90);
-        Rotations.Add(180);
+        const int rotLen = 4;
+       int* rots = stackalloc int[rotLen]; 
+        rots[0] = 0;
+        rots[1] = 90;
+        rots[2] = -90;
+        rots[3] = 180;
+        
         //Place the Layout
         Layout = Instantiate(Struct, transform.position, Quaternion.identity);
         //Randomize The Layout's Rotation
-        Layout.transform.eulerAngles = new Vector3(0, Rotations[Random.Range(0, Rotations.Count)], 0);
+        Layout.transform.eulerAngles = new Vector3(0, rots[Random.Range(0, 4)], 0);
         // Invoke("BuildMesh", 2);
 
         BuildNav();
