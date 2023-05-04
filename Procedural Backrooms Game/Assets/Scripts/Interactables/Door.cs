@@ -7,6 +7,8 @@ public class Door : Interactable
     public GameObject Pivot;
     bool IsChanging;
     public string SceneToLoad;
+    public List<AudioClip> Steps;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -14,9 +16,11 @@ public class Door : Interactable
     }
     public override void OnInteract()
     {
-
+        var Player = GameObject.Find("Player");
+        Player.transform.position = new Vector3(0, 3.47f, 0);   
         SceneManager.LoadScene(SceneToLoad);
-       
+
+
     }
 
     // Update is called once per frame
