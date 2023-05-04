@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4774650933314885843}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0008240104, y: 9.98204, z: 0.3519611}
+  m_LocalPosition: {x: 0.0008240104, y: 9.6, z: 0.3519611}
   m_LocalScale: {x: 0.03492375, y: 2.7939, z: 0.03492375}
   m_Children: []
   m_Father: {fileID: 4774650934168693162}
@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2ea0365aceaf59a4d9af1d9d2e678d7b, type: 2}
+  - {fileID: 2100000, guid: 7221273febbc3c44db891b37f9e6bfc3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -108,9 +108,9 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0.72783107, g: 0.9528302, b: 0.6777679, a: 1}
-  m_Intensity: 1
-  m_Range: 25
+  m_Color: {r: 0.84094393, g: 0.9811321, b: 0.80897117, a: 1}
+  m_Intensity: 3
+  m_Range: 30
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -143,7 +143,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -283,7 +283,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4774650933440508408}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0008240104, y: 9.98204, z: 0.08130332}
+  m_LocalPosition: {x: 0.0008240104, y: 9.6, z: 0.08130332}
   m_LocalScale: {x: 0.03492375, y: 2.7939, z: 0.03492375}
   m_Children: []
   m_Father: {fileID: 4774650934168693162}
@@ -317,7 +317,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2ea0365aceaf59a4d9af1d9d2e678d7b, type: 2}
+  - {fileID: 2100000, guid: 7221273febbc3c44db891b37f9e6bfc3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -363,9 +363,9 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0.72783107, g: 0.9528302, b: 0.6777679, a: 1}
-  m_Intensity: 1
-  m_Range: 25
+  m_Color: {r: 0.84094393, g: 0.9811321, b: 0.80897117, a: 1}
+  m_Intensity: 3
+  m_Range: 30
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -398,7 +398,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -922,7 +922,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4774650933813746418}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0008240104, y: 9.98204, z: -0.1705389}
+  m_LocalPosition: {x: 0.0008240104, y: 9.6, z: -0.1705389}
   m_LocalScale: {x: 0.03492375, y: 2.7939, z: 0.03492375}
   m_Children: []
   m_Father: {fileID: 4774650934168693162}
@@ -956,7 +956,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2ea0365aceaf59a4d9af1d9d2e678d7b, type: 2}
+  - {fileID: 2100000, guid: 7221273febbc3c44db891b37f9e6bfc3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1002,9 +1002,9 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0.72783107, g: 0.9528302, b: 0.6777679, a: 1}
-  m_Intensity: 1
-  m_Range: 25
+  m_Color: {r: 0.84094393, g: 0.9811321, b: 0.80897117, a: 1}
+  m_Intensity: 3
+  m_Range: 30
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -1037,7 +1037,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -1997,7 +1997,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4774650934982829827}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0008240104, y: 9.98204, z: -0.3892889}
+  m_LocalPosition: {x: 0.0008240104, y: 9.6, z: -0.3892889}
   m_LocalScale: {x: 0.03492375, y: 2.7939, z: 0.03492375}
   m_Children: []
   m_Father: {fileID: 4774650934168693162}
@@ -2031,7 +2031,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2ea0365aceaf59a4d9af1d9d2e678d7b, type: 2}
+  - {fileID: 2100000, guid: 7221273febbc3c44db891b37f9e6bfc3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2077,9 +2077,9 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0.72783107, g: 0.9528302, b: 0.6777679, a: 1}
-  m_Intensity: 1
-  m_Range: 25
+  m_Color: {r: 0.84094393, g: 0.9811321, b: 0.80897117, a: 1}
+  m_Intensity: 3
+  m_Range: 30
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -2112,7 +2112,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295

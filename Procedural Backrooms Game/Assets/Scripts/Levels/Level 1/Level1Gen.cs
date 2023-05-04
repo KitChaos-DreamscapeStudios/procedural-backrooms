@@ -56,7 +56,7 @@ public class Level1Gen : Generation
                 }
                 else
                 {
-                    ChunkData.SpawnStuff(ChunkData.Structs[0]);
+                    ChunkData.SpawnStuff(ChunkData.Structs[Random.Range(0, ChunkData.Structs.Count)]);
                 }
 
 
@@ -89,7 +89,7 @@ public class Level1Gen : Generation
                 }
                 else
                 {
-                    ChunkData.SpawnStuff(ChunkData.Structs[0]);
+                    ChunkData.SpawnStuff(ChunkData.Structs[Random.Range(0, ChunkData.Structs.Count)]);
                 }
             }
             catch (System.Exception)

@@ -1440,9 +1440,6 @@ MonoBehaviour:
   PlayerIn: {fileID: 0}
   ChunkForLevel:
   - {fileID: 1197769656058550797, guid: 92e8b7dfa1ed83749a78f004e18d7fa5, type: 3}
-  - {fileID: 6791048412490510030, guid: 7c96eb2ab8362d7408c986cf599b7106, type: 3}
-  - {fileID: 6791048412490510030, guid: 7c96eb2ab8362d7408c986cf599b7106, type: 3}
-  - {fileID: 6791048412490510030, guid: 7c96eb2ab8362d7408c986cf599b7106, type: 3}
   Center:
     X: 0
     Y: 0

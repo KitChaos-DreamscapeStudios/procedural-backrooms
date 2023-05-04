@@ -153,7 +153,7 @@ MonoBehaviour:
     Z: 0
   Structs:
   - {fileID: 4774650934168693163, guid: 7964c6e1e001e5c43aa57f87012a2c9b, type: 3}
-  Rotations: []
+  - {fileID: 5344512274392723664, guid: fe4b8cce20c7cc043abb002e489aef84, type: 3}
   FreeStandingObjects: []
   WallLockedObjects: []
   Layout: {fileID: 0}
