@@ -154,6 +154,7 @@ MonoBehaviour:
   Structs:
   - {fileID: 4774650934168693163, guid: 7964c6e1e001e5c43aa57f87012a2c9b, type: 3}
   - {fileID: 5344512274392723664, guid: fe4b8cce20c7cc043abb002e489aef84, type: 3}
+  - {fileID: 4099643935880834124, guid: 04cae7f386acd054dba1145528490e8c, type: 3}
   FreeStandingObjects: []
   WallLockedObjects: []
   Layout: {fileID: 0}

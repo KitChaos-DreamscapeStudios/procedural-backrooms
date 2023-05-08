@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using System.IO;
+
 public class Level0Generation : Generation
 {
+    public float FlickerTimer;
     public void Start()
     {
+        Rand = Random.Range(30, 31);
+        
         LastChunk = ChunkForLevel[Random.Range(0, ChunkForLevel.Count)];
         Center = new Coords(0, 0, 0);
         for (int x = -2; x < 3; x++)
@@ -143,13 +147,37 @@ public class Level0Generation : Generation
             }
         }
     }
-    
+    float Rand;
     public void Update()
     {
-
+      
+        
         Chunks = Chunks.Where(item => item != null).ToList();
         Center = PlayerIn.coords;
         Playerstats.SanityDrain = SanityDrain;
+
+        //level specific event: The light shift
+        if (Playerstats.Sanity < 50)
+        {
+            FlickerTimer += Time.deltaTime;
+            if(FlickerTimer >= Rand)
+            {
+                FlickerTimer = 0;
+                Rand = Random.Range(30, 31);
+                var BrightorNight = Random.Range(0, 2);
+                if(BrightorNight == 0)
+                {
+                    //bright
+                    PlayerIn.IsShiftingLightsB = true;
+                }
+                else
+                {
+                    //Night
+                    PlayerIn.IsShiftingLightsN = true;
+                }
+            }
+           
+        }
     }
     
     float DifferenceInCoords(Coords a, Coords b)

@@ -125,7 +125,7 @@ public class PlayerStats : MonoBehaviour
         if(Sanity < 60 && Sanity > 40)
         {
             HungerDrain = 0.055f;
-            ThirstDrain = 0.055f;
+            ThirstDrain = 0.15f;
             GetComponent<Movement3D>().SpeedBoost = 5;
         }
         if(Sanity < 55)
@@ -133,6 +133,12 @@ public class PlayerStats : MonoBehaviour
             GetComponent<Movement3D>().sensitivityX =15;
             GetComponent<Movement3D>().sensitivityY = 15;
             InsanityAbber.intensity.Override(5);
+        }
+        if(Sanity < 40 && Sanity > 20)
+        {
+            HungerDrain = 0.1f;
+            ThirstDrain = 0.2f;
+            GetComponent<Movement3D>().SpeedBoost = 8;
         }
         
         

@@ -10,7 +10,7 @@ public class Inventory : MonoBehaviour
     public RaycastHit Grabby;
     public float GrabDistance = 10;
     public ParticleSystem SelFX;
-    public MeshFilter handItemMesh;
+    public SpriteRenderer handItemSprite;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +20,13 @@ public class Inventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            if(HandItem != null)
+            {
+                
+            }
+        }
         if (Input.GetKeyUp(KeyCode.Tab))
         {
             InventScreen.SetActive(!InventScreen.activeSelf);
@@ -30,11 +37,11 @@ public class Inventory : MonoBehaviour
         }
         if(HandItem != null)
         {
-            handItemMesh.mesh = HandItem.Model;
+            handItemSprite.sprite = HandItem.HeldGFX;
         }
         else
         {
-            handItemMesh.mesh = null;
+            handItemSprite.sprite = null;
         }
        var Pickup= Physics.Raycast(GetComponent<Movement3D>().cam.transform.transform.position + GetComponent<Movement3D>().cam.transform.forward, GetComponent<Movement3D>().cam.transform.forward, out Grabby, maxDistance: GrabDistance);
         if (Pickup)

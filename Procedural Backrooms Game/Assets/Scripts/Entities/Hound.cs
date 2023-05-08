@@ -66,7 +66,7 @@ public class Hound : Damager
        
         if (Physics.Raycast(transform.position+new Vector3(0,1,0), transform.forward, out Hit, PlayerMask))
         {
-            Debug.Log(Hit.collider.gameObject);
+           // Debug.Log(Hit.collider.gameObject);
             if (Hit.collider.gameObject.layer == Player.layer)
             {
                 CanSeePlayer = true;

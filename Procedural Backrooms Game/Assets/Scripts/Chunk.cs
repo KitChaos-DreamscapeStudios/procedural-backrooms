@@ -25,8 +25,13 @@ public class Chunk : MonoBehaviour
     public float SanityDrain;
     public List<Vector3> ItemSpawnLocales;
     public delegate void Func();
-   // public GameObject PlayerObj;
-    // Start is called before the first frame update
+    public List<Light> Lights;
+
+    //level specific stuff
+    public bool IsShiftingLightsB;
+    public bool IsShiftingLightsN;//Used for if the chunk is brighting or nighting its lights for level 0
+                                  // public GameObject PlayerObj;
+                                  // Start is called before the first frame update
     void Start()
     {
        // PlayerObj = GameObject.Find("Player");
@@ -52,6 +57,10 @@ public class Chunk : MonoBehaviour
         Layout = Instantiate(Struct, transform.position, Quaternion.identity);
         //Randomize The Layout's Rotation
         Layout.transform.eulerAngles = new Vector3(0, rots[Random.Range(0, 4)], 0);
+        foreach (Light light in Layout.GetComponentsInChildren<Light>())
+        {
+            Lights.Add(light);
+        }
         // Invoke("BuildMesh", 2);
 
         BuildNav();
@@ -91,7 +100,23 @@ public class Chunk : MonoBehaviour
             Parent.PlayerIn = this;
             Parent.SanityDrain = SanityDrain;
         }
-        
-       
+        //Light Shifts level 0
+        if (IsShiftingLightsB)
+        {
+            foreach (Light l in Lights)
+            {
+                l.intensity = Mathf.Lerp(l.intensity, 800, 0.01f);
+            }
+        }
+        if (IsShiftingLightsN)
+        {
+            foreach (Light l in Lights)
+            {
+                
+              
+                l.intensity = Mathf.Lerp(l.intensity, 0, 0.01f);
+            }
+        }
+
     }
 }

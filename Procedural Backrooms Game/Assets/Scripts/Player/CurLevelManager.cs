@@ -24,11 +24,11 @@ public class CurLevelManager : MonoBehaviour
         {
             if (!movement.sprinting)
             {
-                Invoke("FootStep", (1.5f - ((int)movement.speed / 6)));
+                Invoke("FootStep", RegulateAbove0(1.5f - ((int)movement.speed / 6)));
             }
             else
             {
-                Invoke("FootStep", (2.5f - ((int)movement.speed / 8)));
+                Invoke("FootStep", RegulateAbove0(2.5f - ((int)movement.speed / 8)));
             }
            
             
@@ -36,6 +36,14 @@ public class CurLevelManager : MonoBehaviour
         }
        
         
+    }
+    float RegulateAbove0(float Input)//used to make sure footstepts dont jank out
+    {
+        if(Input <= 0)
+        {
+            Input = 0.5f;
+        }
+        return Input;
     }
     void FootStep()
     {

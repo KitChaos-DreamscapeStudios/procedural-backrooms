@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4774650933314885843}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0008240104, y: 9.6, z: 0.3519611}
+  m_LocalPosition: {x: 0.0008240104, y: 11, z: 0.3519611}
   m_LocalScale: {x: 0.03492375, y: 2.7939, z: 0.03492375}
   m_Children: []
   m_Father: {fileID: 4774650934168693162}
@@ -115,7 +115,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -283,7 +283,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4774650933440508408}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0008240104, y: 9.6, z: 0.08130332}
+  m_LocalPosition: {x: 0.0008240104, y: 11, z: 0.08130332}
   m_LocalScale: {x: 0.03492375, y: 2.7939, z: 0.03492375}
   m_Children: []
   m_Father: {fileID: 4774650934168693162}
@@ -370,7 +370,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -922,7 +922,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4774650933813746418}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0008240104, y: 9.6, z: -0.1705389}
+  m_LocalPosition: {x: 0.0008240104, y: 11, z: -0.1705389}
   m_LocalScale: {x: 0.03492375, y: 2.7939, z: 0.03492375}
   m_Children: []
   m_Father: {fileID: 4774650934168693162}
@@ -1009,7 +1009,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -1997,7 +1997,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4774650934982829827}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0008240104, y: 9.6, z: -0.3892889}
+  m_LocalPosition: {x: 0.0008240104, y: 11, z: -0.3892889}
   m_LocalScale: {x: 0.03492375, y: 2.7939, z: 0.03492375}
   m_Children: []
   m_Father: {fileID: 4774650934168693162}
@@ -2084,7 +2084,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
