@@ -1440,7 +1440,6 @@ MonoBehaviour:
   PlayerIn: {fileID: 0}
   ChunkForLevel:
   - {fileID: 1197769656058550797, guid: 92e8b7dfa1ed83749a78f004e18d7fa5, type: 3}
-  - {fileID: 6791048412490510030, guid: 7c96eb2ab8362d7408c986cf599b7106, type: 3}
   Center:
     X: 0
     Y: 0
@@ -2126,8 +2125,8 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 2
-  m_Range: 50
+  m_Intensity: 1
+  m_Range: 500
   m_SpotAngle: 50
   m_InnerSpotAngle: 1
   m_CookieSize: 10
@@ -8354,7 +8353,7 @@ MonoBehaviour:
   Health: 100
   Stamina: 10
   Sanity: 100
-  Thirst: 100
+  Thirst: 50
   Hunger: 100
   HealthBar: {fileID: 588335130}
   StamBar: {fileID: 1041409653}

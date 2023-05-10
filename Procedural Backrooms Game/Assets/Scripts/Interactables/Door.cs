@@ -17,7 +17,8 @@ public class Door : Interactable
     public override void OnInteract()
     {
         var Player = GameObject.Find("Player");
-        Player.transform.position = new Vector3(0, 3.47f, 0);   
+        Player.transform.position = new Vector3(0, 3.47f, 0);
+        Player.GetComponent<CurLevelManager>().CurStepNoises = Steps;
         SceneManager.LoadScene(SceneToLoad);
 
 
