@@ -53,10 +53,7 @@
         // Update is called once per frame
         void Update()
         {
-        if (Input.GetKeyUp(KeyCode.Alpha1))
-        {
-            SceneManager.LoadScene("Level1"); //CHEATING REMOVE LATER
-        }
+       
             TimerBreathe += Time.deltaTime;
             TimerBob += (Time.deltaTime * 8)*speed/10;
             if (!inventory.InventScreen.activeSelf)

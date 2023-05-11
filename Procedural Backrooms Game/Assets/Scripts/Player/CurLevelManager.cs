@@ -53,7 +53,7 @@ public class CurLevelManager : MonoBehaviour
            
                 var fs = Instantiate(footStep.gameObject);
                 fs.GetComponent<AudioSource>().clip = CurStepNoises[Random.Range(0, CurStepNoises.Count)];
-            fs.GetComponent<AudioSource>().pitch = Random.Range(-0.2f, 1.2f);
+            fs.GetComponent<AudioSource>().pitch = Random.Range(0.9f, 1.1f);
                 fs.GetComponent<AudioSource>().Play();
 
                 Destroy(fs, 3);
