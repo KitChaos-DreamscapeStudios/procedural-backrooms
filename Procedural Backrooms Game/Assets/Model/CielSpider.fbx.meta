@@ -2,7 +2,10 @@ fileFormatVersion: 2
 guid: a9b7a2496ea36094697e6a3e823b0a75
 ModelImporter:
   serializedVersion: 21100
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: -2388811887902066691
+    second: Cylinder.002|Cylinder.002Action
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -31,7 +34,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 0
+    isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1

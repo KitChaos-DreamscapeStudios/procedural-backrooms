@@ -31,7 +31,7 @@ public class Level1Spider : Damager
     // Update is called once per frame
     void Update()
     {
-        transform.eulerAngles = new Vector3(90, transform.rotation.y, 0);
+        //transform.eulerAngles = new Vector3(90, transform.rotation.y, 0);
         elap += Time.deltaTime;
         if (Vector3.Distance(transform.position, Player.transform.position) < Player.GetComponent<Movement3D>().SoundLevel)
         {

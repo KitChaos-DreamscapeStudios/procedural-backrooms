@@ -39,9 +39,10 @@ public class Chunk : MonoBehaviour
 
     public async Task BuildNav()
     {
+        
         NavSurf = GetComponentInChildren<NavMeshSurface>();
         await Task.Run(NavSurf.BuildNavMesh);
-        NavSurf.UpdateNavMesh(NavSurf.navMeshData);
+            NavSurf.UpdateNavMesh(NavSurf.navMeshData);
         
         //sTask.Run(NavSurf.AddData);
         //BuildNav();

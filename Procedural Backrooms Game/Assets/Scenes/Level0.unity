@@ -5663,8 +5663,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 3.4038992, z: 1}
-  m_Center: {x: 0, y: -1.2019496, z: 0}
+  m_Size: {x: 1, y: 4.276861, z: 1}
+  m_Center: {x: 0, y: -0.7654687, z: 0}
 --- !u!1 &1169545170
 GameObject:
   m_ObjectHideFlags: 0
@@ -8322,8 +8322,8 @@ MonoBehaviour:
   sensitivityY: 10
   minimumX: -360
   maximumX: 360
-  minimumY: -60
-  maximumY: 60
+  minimumY: -90
+  maximumY: 90
 --- !u!114 &2068203910
 MonoBehaviour:
   m_ObjectHideFlags: 0
