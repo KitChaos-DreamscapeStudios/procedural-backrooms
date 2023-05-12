@@ -98,7 +98,7 @@
                     }
                     else
                     {
-                        cam.transform.localPosition = new Vector3(0, (Mathf.Sin(TimerBreathe) * 0.13f)-1.23f, 0);
+                        cam.transform.localPosition = new Vector3(0, (Mathf.Sin(TimerBreathe) * 0.13f), 0);
                         SoundLevel = 35;
                     }
                 }
