@@ -109,7 +109,7 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 0.23018867, a: 1}
+  m_Color: {r: 1, g: 1, b: 0.42830187, a: 1}
   m_Intensity: 2
   m_Range: 18
   m_SpotAngle: 30
@@ -141,7 +141,7 @@ Light:
       e32: 0
       e33: 1
     m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 0}
+  m_Cookie: {fileID: 8900000, guid: 93ed0b8d7e1b4d143a0e8549ee0a977a, type: 2}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
   m_RenderMode: 1
