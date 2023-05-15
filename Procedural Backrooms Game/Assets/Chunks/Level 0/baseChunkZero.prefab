@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6791048411402975181}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 13.4, z: 0}
+  m_LocalPosition: {x: 0, y: 24, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6791048412490510026}
@@ -217,12 +217,14 @@ MonoBehaviour:
     Y: 0
     Z: 0
   Structs:
-  - {fileID: 5420919816429788468, guid: 375f857c5037b484380fd83f981718f7, type: 3}
-  - {fileID: 5420919816429788468, guid: 375f857c5037b484380fd83f981718f7, type: 3}
-  Rotations: []
+  - {fileID: 4016037651883598887, guid: c741dd52a3b32ff4daf546140ea004ad, type: 3}
+  - {fileID: 4016037651883598887, guid: c741dd52a3b32ff4daf546140ea004ad, type: 3}
   FreeStandingObjects: []
   WallLockedObjects: []
   Layout: {fileID: 0}
   SpawnedDisposables: []
   SanityDrain: 0.1
   ItemSpawnLocales: []
+  Lights: []
+  IsShiftingLightsB: 0
+  IsShiftingLightsN: 0

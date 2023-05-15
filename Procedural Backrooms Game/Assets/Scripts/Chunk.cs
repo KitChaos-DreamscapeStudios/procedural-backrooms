@@ -58,7 +58,7 @@ public class Chunk : MonoBehaviour
         rots[3] = 180;
         
         //Place the Layout
-        Layout = Instantiate(Struct, transform.position, Quaternion.identity);
+        Layout = Instantiate(Struct, transform.position + new Vector3(0, 5.8337f, 0), Quaternion.identity);
         //Randomize The Layout's Rotation
         Layout.transform.eulerAngles = new Vector3(0, rots[Random.Range(0, 4)], 0);
         foreach (Light light in Layout.GetComponentsInChildren<Light>())

@@ -10,8 +10,8 @@ Material:
   m_Name: TileCeiling
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _EMISSION
-  m_LightmapFlags: 0
-  m_EnableInstancingVariants: 0
+  m_LightmapFlags: 2
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -75,5 +75,5 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 0.9229445, b: 0.29622638, a: 1}
-    - _EmissionColor: {r: 0.1981132, g: 0.17872545, b: 0.11475614, a: 1}
+    - _EmissionColor: {r: 0.4245283, g: 0.39693943, b: 0.07769666, a: 1}
   m_BuildTextureStacks: []
