@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.Rendering.PostProcessing;
 public class PlayerStats : MonoBehaviour
 {
+    public List<StatusEffect> statuses;
     public Generation LevelStats;
     public ChromaticAberration InsanityAbber;
     public PostProcessVolume Vol;
@@ -43,6 +44,7 @@ public class PlayerStats : MonoBehaviour
     //Level Stats
     public float SanityDrain;
 
+    public float StatusTick;
    
     // Start is called before the first frame update
     void Start()
@@ -51,10 +53,24 @@ public class PlayerStats : MonoBehaviour
         
 
     }
-
+   
     // Update is called once per frame
     void Update()
     {
+        StatusTick += Time.deltaTime;
+        if(StatusTick >= 1)
+        {
+            StatusTick = 0;
+            foreach (StatusEffect effect in statuses)
+            {
+                effect.TimeLeft -= 1;
+                effect.TickActivation();
+                if(effect.TimeLeft <= 0)
+                {
+                    statuses.Remove(effect);
+                }
+            }
+        }
         if(Sanity >= MaxSanity)
         {
             Sanity = MaxSanity;

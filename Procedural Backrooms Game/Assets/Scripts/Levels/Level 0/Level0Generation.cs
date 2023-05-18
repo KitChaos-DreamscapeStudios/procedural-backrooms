@@ -163,7 +163,7 @@ public class Level0Generation : Generation
             if(FlickerTimer >= Rand)
             {
                 FlickerTimer = 0;
-                Rand = Random.Range(30, 31);
+                Rand = Random.Range(30, 60);
                 var BrightorNight = Random.Range(0, 2);
                 if(BrightorNight == 0)
                 {

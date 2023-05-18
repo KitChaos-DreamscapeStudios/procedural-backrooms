@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Door : Interactable
 {
-    public GameObject Pivot;
+  
     bool IsChanging;
     public string SceneToLoad;
     public List<AudioClip> Steps;
