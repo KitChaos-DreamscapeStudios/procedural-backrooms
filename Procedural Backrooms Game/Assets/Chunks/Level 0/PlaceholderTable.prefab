@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1888635020941448356}
   - component: {fileID: 4454395117964566638}
   - component: {fileID: 3083658399508037532}
-  - component: {fileID: 4659226599196798904}
+  - component: {fileID: 7723682397124053844}
   m_Layer: 0
   m_Name: Bowl
   m_TagString: Untagged
@@ -97,8 +97,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Rarity: 25
---- !u!64 &4659226599196798904
-MeshCollider:
+--- !u!65 &7723682397124053844
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -107,10 +107,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4711208715938537054, guid: 64d763612709fe34d910eb90f095f227, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 2.267686, y: 2.267685, z: 0.8971337}
+  m_Center: {x: -0.00000036977278, y: -0.00000024651524, z: -0.5513116}
 --- !u!1 &3031104396448030790
 GameObject:
   m_ObjectHideFlags: 0

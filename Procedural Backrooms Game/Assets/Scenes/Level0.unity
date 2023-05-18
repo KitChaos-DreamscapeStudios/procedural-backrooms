@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 1
+  m_Fog: 0
   m_FogColor: {r: 0.3018868, g: 0.3018868, b: 0.3018868, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.01
@@ -2229,6 +2229,10 @@ PrefabInstance:
     - target: {fileID: 6791048412490510030, guid: 7c96eb2ab8362d7408c986cf599b7106, type: 3}
       propertyPath: m_Name
       value: baseChunkZero
+      objectReference: {fileID: 0}
+    - target: {fileID: 6791048412490510030, guid: 7c96eb2ab8362d7408c986cf599b7106, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c96eb2ab8362d7408c986cf599b7106, type: 3}
@@ -8443,7 +8447,7 @@ MonoBehaviour:
   Vol: {fileID: 963194230}
   Flashlight: {fileID: 350549269}
   MaxHealth: 100
-  HealthRegen: 1
+  HealthRegen: 0.5
   MaxSanity: 100
   SanityDrainRes: 0
   ThirstDrain: 0.1
@@ -8500,7 +8504,7 @@ MonoBehaviour:
   Items: []
   HandItem: {fileID: 0}
   InventScreen: {fileID: 190466482}
-  GrabDistance: 20
+  GrabDistance: 4
   SelFX: {fileID: 2147270459}
   handItemSprite: {fileID: 2108075682}
 --- !u!1 &2108075681
@@ -13492,7 +13496,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4016037651883598888, guid: c741dd52a3b32ff4daf546140ea004ad, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5
+      value: 5.8337
       objectReference: {fileID: 0}
     - target: {fileID: 4016037651883598888, guid: c741dd52a3b32ff4daf546140ea004ad, type: 3}
       propertyPath: m_LocalPosition.z
