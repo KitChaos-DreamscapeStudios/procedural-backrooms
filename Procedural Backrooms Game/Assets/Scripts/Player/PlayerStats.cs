@@ -220,9 +220,13 @@ public class PlayerStats : MonoBehaviour
         {
             Die("Starved to Death");
         }
-        
+        if(Fatigue < 0 || VisFatigue < 0)
+        {
+            Fatigue = 0;
+            VisFatigue = 0;
+        }
     }
-    void Sleep(float OverrideQuality = 0)
+   public  void Sleep(float OverrideQuality = 0)
     {
         if(OverrideQuality != 0)
         {
