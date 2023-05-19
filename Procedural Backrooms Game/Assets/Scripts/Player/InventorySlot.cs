@@ -87,6 +87,15 @@ public class InventorySlot : MonoBehaviour
 
             playerStats.gameObject.GetComponent<Inventory>().Items.Remove(heldItem);
             heldItem = null;
+
+        }
+        else
+        {
+            playerStats.gameObject.GetComponent<Inventory>().HandItem = null;
+            Instantiate(heldItem.DropObject, playerStats.gameObject.transform.position, Quaternion.identity);
+
+            playerStats.gameObject.GetComponent<Inventory>().Items.Remove(heldItem);
+            heldItem = null;
         }
        
 

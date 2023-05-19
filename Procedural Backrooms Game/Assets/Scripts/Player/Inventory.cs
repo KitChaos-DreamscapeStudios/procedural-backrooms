@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class Inventory : MonoBehaviour
     public RaycastHit Grabby;
     public float GrabDistance = 10;
     public ParticleSystem SelFX;
-    public SpriteRenderer handItemSprite;
+    public Image handItemSprite;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,10 +39,12 @@ public class Inventory : MonoBehaviour
         if(HandItem != null)
         {
             handItemSprite.sprite = HandItem.HeldGFX;
+            handItemSprite.color = new Color(1, 1, 1, 1);
         }
         else
         {
             handItemSprite.sprite = null;
+            handItemSprite.color = new Color(0, 0, 0, 0);
         }
        var Pickup= Physics.Raycast(GetComponent<Movement3D>().cam.transform.transform.position + GetComponent<Movement3D>().cam.transform.forward, GetComponent<Movement3D>().cam.transform.forward, out Grabby, maxDistance: GrabDistance);
         if (Pickup)
