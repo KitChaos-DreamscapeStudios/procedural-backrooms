@@ -12,6 +12,7 @@ public abstract class Generation : MonoBehaviour
     public PlayerStats Playerstats;
     public float SanityDrain = 1;
     public GameObject LastChunk;
+    public float BedQual;
     //This is the overrarching Generative script, with many chunk duchies filled with serfs like saving, entity handling, and more.
     
     public abstract void GenerateChunk(Coords c, bool IsCore);

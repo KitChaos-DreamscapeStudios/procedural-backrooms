@@ -49,7 +49,12 @@ public class PlayerStats : MonoBehaviour
     public float SanityDrain;
 
     public float StatusTick;
-   
+
+
+    float SleepButtonTimer;
+    public float BedQuality;
+    public Image SleepShade;
+    public bool IsSleeping;
     // Start is called before the first frame update
     void Start()
     {
@@ -61,6 +66,19 @@ public class PlayerStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey(KeyCode.M))
+        {
+            SleepButtonTimer += Time.deltaTime;
+        }
+        else
+        {
+            SleepButtonTimer = 0;
+        }
+        if(SleepButtonTimer > 3)
+        {
+            Sleep();
+            SleepButtonTimer = 0;
+        }
         StatusTick += Time.deltaTime;
         if(StatusTick >= 1)
         {
@@ -71,6 +89,7 @@ public class PlayerStats : MonoBehaviour
                 effect.TickActivation();
                 if(effect.TimeLeft <= 0)
                 {
+                    effect.OnRemove();
                     statuses.Remove(effect);
                 }
             }
@@ -78,6 +97,21 @@ public class PlayerStats : MonoBehaviour
         if(Sanity >= MaxSanity)
         {
             Sanity = MaxSanity;
+        }
+        if (IsSleeping)
+        {
+            SleepShade.color = Color.Lerp(SleepShade.color, new Color(0, 0, 0, 1), 0.06f);
+            if(SleepShade.color == new Color(0, 0, 0, 1))
+            {
+                IsSleeping = false;
+            }
+        }
+        else
+        {
+            if(SleepShade.color != new Color(0, 0, 0, 0))
+            {
+                SleepShade.color = Color.Lerp(SleepShade.color, new Color(0, 0, 0, 0), 0.06f);
+            }
         }
         HealthBar.fillAmount = Health / MaxHealth;
         StamBar.fillAmount = Stamina / MaxStamina;
@@ -161,8 +195,8 @@ public class PlayerStats : MonoBehaviour
         }
         if(Sanity < 60 && Sanity > 40)
         {
-            HungerDrain = 0.055f;
-            ThirstDrain = 0.15f;
+            HungerDrain = 0.1f;
+            ThirstDrain = 0.2f;
             GetComponent<Movement3D>().SpeedBoost = 5;
         }
         if(Sanity < 55)
@@ -173,8 +207,8 @@ public class PlayerStats : MonoBehaviour
         }
         if(Sanity < 40 && Sanity > 20)
         {
-            HungerDrain = 0.1f;
-            ThirstDrain = 0.2f;
+            HungerDrain = 0.2f;
+            ThirstDrain = 0.4f;
             GetComponent<Movement3D>().SpeedBoost = 8;
         }
         
@@ -186,6 +220,23 @@ public class PlayerStats : MonoBehaviour
         {
             Die("Starved to Death");
         }
+        
+    }
+    void Sleep(float OverrideQuality = 0)
+    {
+        if(OverrideQuality != 0)
+        {
+            VisFatigue -= OverrideQuality; //Make sure to set visfatigue anytime you mess with fatigue
+
+            Sanity += OverrideQuality * 10 / SanityDrain + 1;
+        }
+        IsSleeping = true;
+        Hunger /= 1.3f;
+        Thirst /= 1.5f;
+
+        VisFatigue -= BedQuality; //Make sure to set visfatigue anytime you mess with fatigue
+
+        Sanity += BedQuality * 10 / SanityDrain + 1;
     }
     
     private void OnCollisionEnter(Collision col)

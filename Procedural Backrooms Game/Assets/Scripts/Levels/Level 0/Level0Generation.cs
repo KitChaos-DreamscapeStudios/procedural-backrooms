@@ -6,6 +6,7 @@ using System.IO;
 
 public class Level0Generation : Generation
 {
+
     public float FlickerTimer;
     public void Start()
     {
@@ -155,6 +156,7 @@ public class Level0Generation : Generation
         Chunks = Chunks.Where(item => item != null).ToList();
         Center = PlayerIn.coords;
         Playerstats.SanityDrain = SanityDrain;
+        Playerstats.BedQuality = BedQual;
 
         //level specific event: The light shift
         if (Playerstats.Sanity < 50)

@@ -19,4 +19,8 @@ public class DrankFloorWater : StatusEffect
     {
         player.Health -= 2;
     }
+    public override void OnRemove()
+    {
+       //Nothing
+    }
 }

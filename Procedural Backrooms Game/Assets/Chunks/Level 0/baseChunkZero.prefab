@@ -226,5 +226,6 @@ MonoBehaviour:
   SanityDrain: 0.1
   ItemSpawnLocales: []
   Lights: []
+  BedQual: 1
   IsShiftingLightsB: 0
   IsShiftingLightsN: 0

@@ -37,6 +37,7 @@
         public float maximumY = 60F;
 
         float rotationY = 0F;
+    public bool CantMove;
         #endregion
         // Start is called before the first frame update
     
@@ -56,7 +57,7 @@
        
             TimerBreathe += Time.deltaTime;
             TimerBob += (Time.deltaTime * 8)*speed/10;
-            if (!inventory.InventScreen.activeSelf)
+            if (!inventory.InventScreen.activeSelf && !GetComponent<PlayerStats>().IsSleeping)
             {
                 if (((Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) && body.velocity != new Vector3(0, 0, 0)) && GetComponent<PlayerStats>().Stamina > GetComponent<PlayerStats>().Fatigue && GetComponent<PlayerStats>().Fatigue < 10)
                 {
@@ -139,6 +140,8 @@
             {
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
+                FB = 0;
+                LR = 0;
             }
        
         
@@ -153,11 +156,18 @@
             
             }
         }
+    public void RestoreMove()
+    {
+        CantMove = false;
+    }
         private void FixedUpdate()
         {
+        if (!CantMove)
+        {
+            body.velocity = new Vector3((Orient.transform.forward * (FB * speed) + Orient.transform.right * (LR * speed)).x, body.velocity.y, (Orient.transform.forward * (FB * speed) + Orient.transform.right * (LR * speed)).z);
 
-            body.velocity =new Vector3((Orient.transform.forward * (FB * speed) + Orient.transform.right * (LR * speed)).x, body.velocity.y, (Orient.transform.forward * (FB * speed) + Orient.transform.right * (LR * speed)).z);
-       
         }
+
+    }
   
     }

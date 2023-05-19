@@ -20,4 +20,5 @@ public abstract class StatusEffect : ScriptableObject
         
     }
     public abstract void TickActivation();
+    public abstract void OnRemove();
 }

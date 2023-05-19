@@ -26,7 +26,7 @@ public class Chunk : MonoBehaviour
     public List<Vector3> ItemSpawnLocales;
     public delegate void Func();
     public List<Light> Lights;
-
+    public float BedQual;
     //level specific stuff
     public bool IsShiftingLightsB;
     public bool IsShiftingLightsN;//Used for if the chunk is brighting or nighting its lights for level 0
@@ -103,6 +103,7 @@ public class Chunk : MonoBehaviour
         {
             Parent.PlayerIn = this;
             Parent.SanityDrain = SanityDrain;
+            Parent.BedQual = BedQual;
         }
         //Light Shifts level 0
         if (IsShiftingLightsB)
