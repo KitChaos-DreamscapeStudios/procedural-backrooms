@@ -6,8 +6,8 @@ public class Candies : Item
 {
     public override void UseInInventory()
     {
-        playerStats.Hunger += 8;
-        playerStats.Sanity -= 1;
+        playerStats.Hunger += 18;
+        playerStats.Sanity -= 2;
         playerStats.gameObject.GetComponent<Inventory>().Items.Remove(this);
     }
     public override void UseHeld()
