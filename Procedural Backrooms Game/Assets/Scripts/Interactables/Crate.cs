@@ -30,6 +30,10 @@ public class Crate : Interactable
     }
     public override void OnInteract()
     {
-        throw new System.NotImplementedException();
+       foreach(GameObject i in Items)
+        {
+            Instantiate(i, transform.position, Quaternion.identity);
+        }
+        Destroy(gameObject);
     }
 }
