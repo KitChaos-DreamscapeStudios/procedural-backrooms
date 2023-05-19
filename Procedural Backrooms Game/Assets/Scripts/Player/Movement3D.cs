@@ -58,9 +58,12 @@
             TimerBob += (Time.deltaTime * 8)*speed/10;
             if (!inventory.InventScreen.activeSelf)
             {
-                if (((Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) && body.velocity != new Vector3(0, 0, 0)) && GetComponent<PlayerStats>().Stamina > 1)
+                if (((Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) && body.velocity != new Vector3(0, 0, 0)) && GetComponent<PlayerStats>().Stamina > GetComponent<PlayerStats>().Fatigue && GetComponent<PlayerStats>().Fatigue < 10)
                 {
-                    sprinting = true;
+                   
+                        sprinting = true;
+                    
+                   
                 }
                 else
                 {

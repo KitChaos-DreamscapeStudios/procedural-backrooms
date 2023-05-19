@@ -35,12 +35,15 @@ public class PlayerStats : MonoBehaviour
     public float Sanity;
     public float Thirst;
     public float Hunger;
+    public float Fatigue;
     //Bars Themselves;
+    public float VisFatigue;
     public Image HealthBar;
     public Image StamBar;
     public Image SanityBar;
     public Image HungerBar;
     public Image ThirstBar;
+    public Image FatigueBar;
     //Level Stats
     public float SanityDrain;
 
@@ -80,10 +83,15 @@ public class PlayerStats : MonoBehaviour
         SanityBar.fillAmount = Sanity / MaxSanity;
         HungerBar.fillAmount = Hunger / 100;
         ThirstBar.fillAmount = Thirst / 100;
+        FatigueBar.fillAmount = VisFatigue / 10;
         
         Thirst -= (1 * Time.deltaTime) * ThirstDrain;//Add Statuses Laters.
         Hunger -= (1 * Time.deltaTime) * HungerDrain;
         Sanity -= (SanityDrain * Time.deltaTime);
+        if(Fatigue >= 10)
+        {
+            Fatigue = 10;
+        }
         
         if(Health < MaxHealth)
         {
@@ -94,18 +102,25 @@ public class PlayerStats : MonoBehaviour
         {
             Stamina -= 2 * Time.deltaTime;
         }
-        else if(Stamina < MaxStamina)
+        else 
         {
-            if(GetComponent<Movement3D>().FB == 0)
+
+            Fatigue = VisFatigue;
+         if (Stamina < MaxStamina)
             {
-                Stamina += StamRecoverySpeed * Time.deltaTime;
+                if (GetComponent<Movement3D>().FB == 0)
+                {
+                    Stamina += StamRecoverySpeed * Time.deltaTime;
+                }
+                else
+                {
+                    Stamina += 0;
+                }
+
             }
-            else
-            {
-                Stamina += 0;
-            }
-            
+
         }
+        
         if(Health > MaxHealth)
         {
             Health = MaxHealth;
@@ -122,10 +137,15 @@ public class PlayerStats : MonoBehaviour
         {
             Sanity = MaxSanity;
         }
+        if(Stamina <= Fatigue && GetComponent<Movement3D>().sprinting && Fatigue < 10)
+        {
+            Stamina = Fatigue + 0.01f;  
+            VisFatigue += Time.deltaTime;
+        }
+        
         if(Stamina <= 0)
         {
             Stamina = 0;
-            GetComponent<Movement3D>().sprinting = false;
         }
         //Sanity Effects
         if(Sanity > 70)

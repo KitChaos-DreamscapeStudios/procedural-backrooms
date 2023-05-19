@@ -5902,6 +5902,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1169545170}
   m_CullTransparentMesh: 1
+--- !u!1 &1201519115
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1201519116}
+  - component: {fileID: 1201519118}
+  - component: {fileID: 1201519117}
+  m_Layer: 5
+  m_Name: FatigueBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1201519116
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201519115}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1845847540}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -1653, y: -60.615784}
+  m_SizeDelta: {x: 16.0541, y: 443.9833}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1201519117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201519115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.5377358, g: 0.34340566, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 2b888b9b5321c114a9fe927445a0bfaf, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 1
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 1
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1201519118
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201519115}
+  m_CullTransparentMesh: 1
 --- !u!1 &1218824628
 GameObject:
   m_ObjectHideFlags: 0
@@ -7435,6 +7510,7 @@ RectTransform:
   - {fileID: 588335129}
   - {fileID: 1041409652}
   - {fileID: 2108075685}
+  - {fileID: 1201519116}
   m_Father: {fileID: 2068203907}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8461,11 +8537,14 @@ MonoBehaviour:
   Sanity: 100
   Thirst: 100
   Hunger: 100
+  Fatigue: 0
+  VisFatigue: 0
   HealthBar: {fileID: 588335130}
   StamBar: {fileID: 1041409653}
   SanityBar: {fileID: 2008512438}
   HungerBar: {fileID: 877558477}
   ThirstBar: {fileID: 236628261}
+  FatigueBar: {fileID: 1201519117}
   SanityDrain: 0
   StatusTick: 0
 --- !u!114 &2068203911
