@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Rendering.PostProcessing;
+using UnityEngine.SceneManagement;
 public class PlayerStats : MonoBehaviour
 {
     public List<StatusEffect> statuses;
@@ -177,8 +178,16 @@ public class PlayerStats : MonoBehaviour
             GetComponent<Movement3D>().SpeedBoost = 8;
         }
         
-        
+        if(Thirst <= ThirstDeath)
+        {
+            Die("Died of Thirst");
+        }   
+        if(Hunger <= HungerDeath)
+        {
+            Die("Starved to Death");
+        }
     }
+    
     private void OnCollisionEnter(Collision col)
     {
         if (col.gameObject.GetComponent<Damager>())
@@ -187,5 +196,24 @@ public class PlayerStats : MonoBehaviour
             col.gameObject.GetComponent<Damager>().OnDamage();
             EZCameraShake.CameraShaker.Instance.ShakeOnce(10, 5, 0, 0.5f);
         }
+    }
+    void Die(string Reason)
+    {//Add some animation for death Later
+        var R = Instantiate(new GameObject());
+        R.AddComponent<DeathReason>();
+        R.GetComponent<DeathReason>().Reason = Reason;
+
+        R.name = "Death Data";
+        DontDestroyOnLoad(R);
+        SceneManager.LoadScene("Death");
+        Destroy(gameObject);
+    }
+}
+public class DeathReason : MonoBehaviour
+{
+    public string Reason;
+    public DeathReason(string reason)
+    {
+        this.Reason = reason;  
     }
 }
