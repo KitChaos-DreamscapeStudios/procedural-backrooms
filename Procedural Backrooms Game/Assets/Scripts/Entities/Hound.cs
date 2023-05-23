@@ -54,7 +54,10 @@ public class Hound : Damager
         PlayGrowl();
       //  throw new System.NotImplementedException();
     }
-  
+    public override void Die()
+    {
+        throw new System.NotImplementedException();
+    }
     // Update is called once per frame
     void Update()
     {

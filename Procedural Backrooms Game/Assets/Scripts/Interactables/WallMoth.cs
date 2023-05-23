@@ -23,7 +23,7 @@ public class WallMoth : Interactable
         playerStats.Thirst += 5;
         playerStats.Sanity -= 2;
         playerStats.Hunger += 15;
-        if(Random.Range(0, 100) > 0)
+        if(Random.Range(0, 100) > 90)
         {
             moths = new Mothfection();
             moths.player = playerStats;

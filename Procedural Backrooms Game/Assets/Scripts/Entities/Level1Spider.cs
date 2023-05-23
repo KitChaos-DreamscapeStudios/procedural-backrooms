@@ -27,7 +27,10 @@ public class Level1Spider : Damager
     {
        
     }
-
+    public override void Die()
+    {
+        throw new System.NotImplementedException();
+    }
     // Update is called once per frame
     void Update()
     {

@@ -52,3 +52,4 @@ MonoBehaviour:
   HeldGFX: {fileID: 21300000, guid: 05bbd189d7cd21742b46fa19bbb677f1, type: 3}
   Projectile: {fileID: 8531642052156244813, guid: a58346799b6333c439b7c5c2f10df3fd, type: 3}
   slotIn: {fileID: 0}
+  Damage: 5

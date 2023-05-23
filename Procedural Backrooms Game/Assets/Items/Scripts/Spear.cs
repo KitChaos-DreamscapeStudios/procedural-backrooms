@@ -6,6 +6,7 @@ public class Spear : Item
 {
     public GameObject Projectile;
     public InventorySlot slotIn;
+   
     // Start is called before the first frame update
     void Start()
     {

@@ -210,6 +210,7 @@ public class PlayerStats : MonoBehaviour
             HungerDrain = 0.2f;
             ThirstDrain = 0.4f;
             GetComponent<Movement3D>().SpeedBoost = 8;
+            //Make sure to add creepy ambience later
         }
         
         if(Thirst <= ThirstDeath)
