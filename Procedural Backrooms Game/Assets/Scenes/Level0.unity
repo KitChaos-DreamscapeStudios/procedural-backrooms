@@ -13530,6 +13530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ca9a3e1618f144abc2e378a15d7afa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Score: 0
   Hurt: {fileID: 729918329}
   statuses: []
   LevelStats: {fileID: 0}

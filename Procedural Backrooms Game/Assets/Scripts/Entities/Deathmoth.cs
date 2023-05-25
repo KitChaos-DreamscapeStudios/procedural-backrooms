@@ -76,13 +76,18 @@ public class Deathmoth : Damager
             targ.z = targ.z - objectPos.z;
 
 
+            if (ChitterTime >= Rand - 0.5f)
+            {
+               
+                PlayChitter();
 
+            }
 
 
             //targ.y = targ.y - objectPos.y;
             PlayTimer += Time.deltaTime;
             transform.forward = Vector3.Slerp(transform.forward, targ, 0.1f);
-            if(PostFlyElap >= 5 && Vector3.Distance(transform.position, Player.transform.position)>= 70)
+            if(PostFlyElap >= 5 && Vector3.Distance(transform.position, Player.transform.position)>= 50)
             {
                 Destroy(gameObject);
             }

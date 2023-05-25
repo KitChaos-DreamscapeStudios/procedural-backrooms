@@ -8,10 +8,15 @@ public class Level0Generation : Generation
 {
 
     public float FlickerTimer;
+    bool HasGeneratedMap;
     public void Start()
     {
+        Invoke("Generate", 2);  
+    }
+    public void Generate()
+    {
         Rand = Random.Range(30, 31);
-        
+
         LastChunk = ChunkForLevel[Random.Range(0, ChunkForLevel.Count)];
         Center = new Coords(0, 0, 0);
         for (int x = -2; x < 3; x++)
@@ -26,8 +31,8 @@ public class Level0Generation : Generation
         }
         Playerstats = GameObject.Find("Player").GetComponent<PlayerStats>();
         Playerstats.LevelStats = this;
-       
 
+        HasGeneratedMap = true;
         InvokeRepeating("CheckDespawn", 1, 1);
         InvokeRepeating(nameof(GenerateFromCenter), 1.1f, 1.1f);
     }
@@ -151,35 +156,38 @@ public class Level0Generation : Generation
     float Rand;
     public void Update()
     {
-      
-        
-        Chunks = Chunks.Where(item => item != null).ToList();
-        Center = PlayerIn.coords;
-        Playerstats.SanityDrain = SanityDrain;
-        Playerstats.BedQuality = BedQual;
-
-        //level specific event: The light shift
-        if (Playerstats.Sanity < 50)
+        if (HasGeneratedMap)
         {
-            FlickerTimer += Time.deltaTime;
-            if(FlickerTimer >= Rand)
+            Chunks = Chunks.Where(item => item != null).ToList();
+            Center = PlayerIn.coords;
+            Playerstats.SanityDrain = SanityDrain;
+            Playerstats.BedQuality = BedQual;
+
+            //level specific event: The light shift
+            if (Playerstats.Sanity < 50)
             {
-                FlickerTimer = 0;
-                Rand = Random.Range(30, 60);
-                var BrightorNight = Random.Range(0, 2);
-                if(BrightorNight == 0)
+                FlickerTimer += Time.deltaTime;
+                if (FlickerTimer >= Rand)
                 {
-                    //bright
-                    PlayerIn.IsShiftingLightsB = true;
+                    FlickerTimer = 0;
+                    Rand = Random.Range(30, 60);
+                    var BrightorNight = Random.Range(0, 2);
+                    if (BrightorNight == 0)
+                    {
+                        //bright
+                        PlayerIn.IsShiftingLightsB = true;
+                    }
+                    else
+                    {
+                        //Night
+                        PlayerIn.IsShiftingLightsN = true;
+                    }
                 }
-                else
-                {
-                    //Night
-                    PlayerIn.IsShiftingLightsN = true;
-                }
+
             }
-           
         }
+        
+       
     }
     
     float DifferenceInCoords(Coords a, Coords b)

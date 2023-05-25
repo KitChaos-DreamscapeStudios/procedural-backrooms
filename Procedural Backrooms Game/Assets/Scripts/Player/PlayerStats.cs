@@ -6,6 +6,7 @@ using UnityEngine.Rendering.PostProcessing;
 using UnityEngine.SceneManagement;
 public class PlayerStats : MonoBehaviour
 {
+    public float Score;
     public AudioSource Hurt;
     public List<StatusEffect> statuses;
     public Generation LevelStats;
@@ -69,6 +70,7 @@ public class PlayerStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (Input.GetKey(KeyCode.M))
         {
             SleepButtonTimer += Time.deltaTime;
@@ -185,6 +187,7 @@ public class PlayerStats : MonoBehaviour
         {
             Stamina = 0;
         }
+        Score += Time.deltaTime;
         //Sanity Effects
         if(Sanity > 70)
         {
@@ -296,7 +299,7 @@ public class PlayerStats : MonoBehaviour
             Hurt.Play();
             TakeDamage(col.gameObject.GetComponent<Damager>().Damage, col.gameObject.GetComponent<Damager>().DeathMessage);
             col.gameObject.GetComponent<Damager>().OnDamage();
-            EZCameraShake.CameraShaker.Instance.ShakeOnce(10, 5, 0, 0.5f);
+            EZCameraShake.CameraShaker.Instance.ShakeOnce(50, 15, 0.1f, 0.5f);
         }
     }
     void Die(string Reason)
@@ -304,7 +307,7 @@ public class PlayerStats : MonoBehaviour
         var R = Instantiate(new GameObject());
         R.AddComponent<DeathReason>();
         R.GetComponent<DeathReason>().Reason = Reason;
-
+        R.GetComponent<DeathReason>().Score = Score;
         R.name = "Death Data";
         DontDestroyOnLoad(R);
         SceneManager.LoadScene("Death");
@@ -314,8 +317,10 @@ public class PlayerStats : MonoBehaviour
 public class DeathReason : MonoBehaviour
 {
     public string Reason;
-    public DeathReason(string reason)
+    public float Score;
+    public DeathReason(string reason, float score)
     {
-        this.Reason = reason;  
+        this.Reason = reason;
+        this.Score = score;
     }
 }
