@@ -6,6 +6,7 @@ public abstract class Damager : MonoBehaviour
 {
     public float Damage;
     public float Health;
+    public string DeathMessage;
     // Start is called before the first frame update
     void Start()
     {

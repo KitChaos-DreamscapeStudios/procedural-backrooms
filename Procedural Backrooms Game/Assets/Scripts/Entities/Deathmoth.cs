@@ -9,7 +9,11 @@ public class Deathmoth : Damager
     public GameObject Player;
     public LayerMask NotMonster;
     public Animator anim;
-    bool Visible;
+    [SerializeField] bool Visible;
+    float PostFlyElap;
+    public AudioSource Chitter;
+    float ChitterTime;
+    int Rand = 3;
     public enum State 
     {
         Resting,
@@ -21,11 +25,26 @@ public class Deathmoth : Damager
     void Start()
     {
         Player = GameObject.Find("Player");
+        anim = GetComponent<Animator>();
+        Chitter = GetComponent<AudioSource>();
+    }
+    void PlayChitter()
+    {
+        Chitter.pitch = 1 + Random.Range(-0.5f, 0.5f);
+        Chitter.Play();
     }
     private void Update()
     {
+        ChitterTime += Time.deltaTime;
+        if(ChitterTime >= Rand)
+        {
+            ChitterTime = 0;
+            Rand = Random.Range(3, 8);
+            PlayChitter();
+            
+        }
         var Hit = new RaycastHit();
-        if(!Physics.Linecast(transform.position, Player.transform.position, out Hit, NotMonster) && Vector3.Distance(transform.position, Player.transform.position) < 80)
+        if(Vector3.Distance(transform.position, Player.transform.position) < 80)
         {
             DetectedPlayer = true;
         }
@@ -39,12 +58,15 @@ public class Deathmoth : Damager
             if(PlayTimer >= 3)
             {
                 PlayTimer = 0;
+                PlayChitter();
                 state = State.Flying;
             }
         }
         if(state == State.Flying)
         {
-            transform.position += transform.forward.normalized/3;
+            anim.Play("Flap");
+            PostFlyElap += Time.deltaTime;
+            transform.position += transform.forward.normalized/2;
             Vector3 targ = Player.transform.position;
           
 
@@ -60,6 +82,10 @@ public class Deathmoth : Damager
             //targ.y = targ.y - objectPos.y;
             PlayTimer += Time.deltaTime;
             transform.forward = Vector3.Slerp(transform.forward, targ, 0.1f);
+            if(PostFlyElap >= 5 && Vector3.Distance(transform.position, Player.transform.position)>= 70)
+            {
+                Destroy(gameObject);
+            }
             
         }
     }
@@ -72,7 +98,7 @@ public class Deathmoth : Damager
     }
     public override void OnDamage()
     {
-        
+        PlayChitter();
     }
     new public void OnCollisionEnter(Collision col)
     {

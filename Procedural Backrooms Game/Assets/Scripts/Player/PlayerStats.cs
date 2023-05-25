@@ -6,9 +6,11 @@ using UnityEngine.Rendering.PostProcessing;
 using UnityEngine.SceneManagement;
 public class PlayerStats : MonoBehaviour
 {
+    public AudioSource Hurt;
     public List<StatusEffect> statuses;
     public Generation LevelStats;
     public ChromaticAberration InsanityAbber;
+    public DepthOfField blur;
     public PostProcessVolume Vol;
     public delegate void Event();
     public List<Event> events;
@@ -59,6 +61,7 @@ public class PlayerStats : MonoBehaviour
     void Start()
     {
         Vol.profile.TryGetSettings<ChromaticAberration>(out InsanityAbber);
+        Vol.profile.TryGetSettings<DepthOfField>(out blur);
         
 
     }
@@ -186,17 +189,25 @@ public class PlayerStats : MonoBehaviour
         if(Sanity > 70)
         {
             InsanityAbber.intensity.Override(0);
+            GetComponent<Movement3D>().SpeedBoost = 0;
+            GetComponent<Movement3D>().SpeedBoost = 0;
+            GetComponent<Movement3D>().sensitivityX = 10;
+            GetComponent<Movement3D>().sensitivityY = 10;
+            HungerDrain = 0.05f;
+            ThirstDrain = 0.1f;
+
         }
         if(Sanity < 70 && Sanity > 55)
         {
             
             InsanityAbber.intensity.Override(1);
-         
+            GetComponent<Movement3D>().SpeedBoost = 0;
+            GetComponent<Movement3D>().sensitivityX = 10;
+            GetComponent<Movement3D>().sensitivityY = 10;
         }
         if(Sanity < 60 && Sanity > 40)
         {
-            HungerDrain = 0.1f;
-            ThirstDrain = 0.2f;
+           
             GetComponent<Movement3D>().SpeedBoost = 5;
         }
         if(Sanity < 55)
@@ -205,6 +216,7 @@ public class PlayerStats : MonoBehaviour
             GetComponent<Movement3D>().sensitivityY = 15;
             InsanityAbber.intensity.Override(5);
         }
+       
         if(Sanity < 40 && Sanity > 20)
         {
             HungerDrain = 0.2f;
@@ -212,8 +224,33 @@ public class PlayerStats : MonoBehaviour
             GetComponent<Movement3D>().SpeedBoost = 8;
             //Make sure to add creepy ambience later
         }
-        
-        if(Thirst <= ThirstDeath)
+        if (Sanity < 35)
+        {
+            blur.focusDistance.Override(0.1f);
+        }
+        else
+        {
+            blur.focusDistance.Override(4.83f);
+        }
+        if(Sanity > 20)
+        {
+            ThirstBar.color = new Color(0.3607843f, 0.5496334f, 1, 1);
+            HungerBar.color = new Color(1, 0.7781968f, 0.3622641f, 1);
+            GetComponent<Movement3D>().sensitivityX = 15;
+            GetComponent<Movement3D>().sensitivityY = 15;
+        }
+        if (Sanity < 20 && Sanity > 5)
+        {
+            HungerDrain = 0.4f;
+            ThirstDrain = 0.8f;
+            GetComponent<Movement3D>().SpeedBoost = 10;
+            GetComponent<Movement3D>().sensitivityX = 25;
+            GetComponent<Movement3D>().sensitivityY = 25;
+            ThirstBar.color = new Color(0, 0, 0, 0);
+            HungerBar.color = new Color(0, 0, 0, 0);
+        }
+
+        if (Thirst <= ThirstDeath)
         {
             Die("Died of Thirst");
         }   
@@ -227,11 +264,19 @@ public class PlayerStats : MonoBehaviour
             VisFatigue = 0;
         }
     }
+    public void TakeDamage(float DMG, string Type)
+    {
+        Health -= DMG;
+        if(Health <= 0)
+        {
+            Die(Type);
+        }
+    }
    public  void Sleep(float OverrideQuality = 0)
     {
         if(OverrideQuality != 0)
         {
-            VisFatigue -= OverrideQuality; //Make sure to set visfatigue anytime you mess with fatigue
+            VisFatigue -= OverrideQuality*1.5f; //Make sure to set visfatigue anytime you mess with fatigue
 
             Sanity += OverrideQuality * 10 / SanityDrain + 1;
         }
@@ -239,16 +284,17 @@ public class PlayerStats : MonoBehaviour
         Hunger /= 1.3f;
         Thirst /= 1.5f;
 
-        VisFatigue -= BedQuality; //Make sure to set visfatigue anytime you mess with fatigue
+        VisFatigue -= BedQuality*1.5f; //Make sure to set visfatigue anytime you mess with fatigue
 
-        Sanity += BedQuality * 10 / SanityDrain + 1;
+        Sanity += BedQuality * 10 / (SanityDrain + 1);
     }
     
     private void OnCollisionEnter(Collision col)
     {
         if (col.gameObject.GetComponent<Damager>())
         {
-            Health -= col.gameObject.GetComponent<Damager>().Damage;
+            Hurt.Play();
+            TakeDamage(col.gameObject.GetComponent<Damager>().Damage, col.gameObject.GetComponent<Damager>().DeathMessage);
             col.gameObject.GetComponent<Damager>().OnDamage();
             EZCameraShake.CameraShaker.Instance.ShakeOnce(10, 5, 0, 0.5f);
         }

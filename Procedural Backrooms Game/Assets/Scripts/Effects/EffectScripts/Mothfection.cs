@@ -23,7 +23,7 @@ public class Mothfection : StatusEffect
     {
         player.GetComponent<Movement3D>().CantMove = true;
         player.GetComponent<Movement3D>().Invoke("RestoreMove", 2);
-        player.Health -= 40;
+        player.TakeDamage(40, "Died of the Mothfection");
         player.Sanity -= 25;
         EZCameraShake.CameraShaker.Instance.ShakeOnce(10, 10, 0, 0.8f);
         GameObject.Find("MothBurst").GetComponent<ParticleSystem>().Play();
