@@ -220,6 +220,8 @@ MonoBehaviour:
   Structs:
   - {fileID: 4016037651883598887, guid: c741dd52a3b32ff4daf546140ea004ad, type: 3}
   - {fileID: 4016037651883598887, guid: c741dd52a3b32ff4daf546140ea004ad, type: 3}
+  - {fileID: 332799607110177227, guid: a497289a44ed79547901e20b2f478c45, type: 3}
+  - {fileID: 332799607110177227, guid: a497289a44ed79547901e20b2f478c45, type: 3}
   FreeStandingObjects: []
   WallLockedObjects: []
   Layout: {fileID: 0}

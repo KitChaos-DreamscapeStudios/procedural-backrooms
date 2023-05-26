@@ -12,6 +12,7 @@ public class Inventory : MonoBehaviour
     public float GrabDistance = 10;
     public ParticleSystem SelFX;
     public Image handItemSprite;
+    public AudioSource PickupNoise;
     // Start is called before the first frame update
     void Start()
     {
@@ -59,9 +60,14 @@ public class Inventory : MonoBehaviour
                     {
                         if (Items.Count < 12)
                         {
+                            PickupNoise.Play();
                             SelFX.Stop();
                             Items.Add(Grabby.collider.transform.parent.GetComponent<PickupAble>().ToGive);
                             Destroy(Grabby.collider.transform.parent.gameObject);
+                            if(!Input.GetKey(KeyCode.Q) && Grabby.collider.transform.parent.GetComponent<PickupAble>().ToGive.isHoldable)
+                            {
+                                HandItem = Grabby.collider.transform.parent.GetComponent<PickupAble>().ToGive;
+                            }
                         }
                     }
                 }

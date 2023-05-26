@@ -99,6 +99,7 @@ public class Deathmoth : Damager
 
     public override void Die()
     {
+        Player.GetComponent<PlayerStats>().Score += 60;
         Destroy(gameObject);
     }
     public override void OnDamage()

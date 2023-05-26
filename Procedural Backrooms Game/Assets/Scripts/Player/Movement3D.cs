@@ -49,12 +49,13 @@
             //Hit = GetComponent<AudioSource>();
            // Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
+
         }
 
         // Update is called once per frame
         void Update()
         {
-       
+        Cursor.visible = true;
             TimerBreathe += Time.deltaTime;
             TimerBob += (Time.deltaTime * 8)*speed/10;
             if (!inventory.InventScreen.activeSelf && !GetComponent<PlayerStats>().IsSleeping)
