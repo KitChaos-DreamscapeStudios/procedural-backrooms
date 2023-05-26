@@ -12,7 +12,7 @@ public class GroundWater : Interactable
         playerStats = GameObject.Find("Player").GetComponent<PlayerStats>();
         playerStats.Thirst += 15;
         playerStats.Sanity -= 5;
-        playerStats.Health += 10;
+        playerStats.TakeDamage(10, "Died of Floor water Poisoning");
         //playerStats.Hunger -= 10;
         effect = new DrankFloorWater();
         effect.player = playerStats;

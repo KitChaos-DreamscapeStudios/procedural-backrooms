@@ -44,7 +44,7 @@ public class Deathmoth : Damager
             
         }
         var Hit = new RaycastHit();
-        if(Vector3.Distance(transform.position, Player.transform.position) < 80)
+        if(Vector3.Distance(transform.position, Player.transform.position) < 60)
         {
             DetectedPlayer = true;
         }
@@ -87,7 +87,7 @@ public class Deathmoth : Damager
             //targ.y = targ.y - objectPos.y;
             PlayTimer += Time.deltaTime;
             transform.forward = Vector3.Slerp(transform.forward, targ, 0.1f);
-            if(PostFlyElap >= 5 && Vector3.Distance(transform.position, Player.transform.position)>= 50)
+            if(PostFlyElap >= 5 && Vector3.Distance(transform.position, Player.transform.position)>= 35)
             {
                 Destroy(gameObject);
             }

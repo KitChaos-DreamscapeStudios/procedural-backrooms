@@ -304,6 +304,10 @@ public class PlayerStats : MonoBehaviour
     }
     void Die(string Reason)
     {//Add some animation for death Later
+        if (IsSleeping)
+        {
+            Reason += "While Sleeping";
+        }
         var R = Instantiate(new GameObject());
         R.AddComponent<DeathReason>();
         R.GetComponent<DeathReason>().Reason = Reason;
