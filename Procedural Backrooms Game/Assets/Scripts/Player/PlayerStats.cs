@@ -6,6 +6,7 @@ using UnityEngine.Rendering.PostProcessing;
 using UnityEngine.SceneManagement;
 public class PlayerStats : MonoBehaviour
 {
+    public string Specialization;
     public float Score;
     public AudioSource Hurt;
     public List<StatusEffect> statuses;
@@ -58,6 +59,12 @@ public class PlayerStats : MonoBehaviour
     public float BedQuality;
     public Image SleepShade;
     public bool IsSleeping;
+
+    //Stats for Specializations
+    public float ExtraHungerDrain;
+    public float ExtraSanityDrain;
+    public float ExtraHuntingPoints;
+    public float ExtraPoints;
     // Start is called before the first frame update
     void Start()
     {
@@ -66,10 +73,24 @@ public class PlayerStats : MonoBehaviour
         
 
     }
-   
+   void GetSpecial()
+    {
+        Specialization = GameObject.Find("SpecHolder").GetComponent<SpecHolder>().Specialization;
+    }
     // Update is called once per frame
     void Update()
     {
+       // InvokeRepeating("GetSpecial", 0.1f, 0.1f);
+        if(Specialization == "Hunter")//Make this code better later
+        {
+            ExtraHungerDrain = 0.1f;
+            ExtraHuntingPoints = 0.3f;
+        }
+        if(Specialization == "Lost")
+        {
+            ExtraPoints = 0.1f;
+            ExtraSanityDrain = 0.2f;
+        }
 
         if (Input.GetKey(KeyCode.M))
         {
@@ -85,6 +106,7 @@ public class PlayerStats : MonoBehaviour
             SleepButtonTimer = 0;
         }
         StatusTick += Time.deltaTime;
+        List<StatusEffect> RemStat = new List<StatusEffect>();
         if(StatusTick >= 1)
         {
             StatusTick = 0;
@@ -95,9 +117,13 @@ public class PlayerStats : MonoBehaviour
                 if(effect.TimeLeft <= 0)
                 {
                     effect.OnRemove();
-                    statuses.Remove(effect);
+                    RemStat.Add(effect);
                 }
             }
+        }
+        foreach(StatusEffect statusEffect in RemStat)
+        {
+            statuses.Remove(statusEffect);
         }
         if(Sanity >= MaxSanity)
         {
@@ -125,9 +151,9 @@ public class PlayerStats : MonoBehaviour
         ThirstBar.fillAmount = Thirst / 100;
         FatigueBar.fillAmount = VisFatigue / 10;
         
-        Thirst -= (1 * Time.deltaTime) * ThirstDrain;//Add Statuses Laters.
-        Hunger -= (1 * Time.deltaTime) * HungerDrain;
-        Sanity -= (SanityDrain * Time.deltaTime);
+        Thirst -= (1 * Time.deltaTime) * ThirstDrain;
+        Hunger -= (1 * Time.deltaTime) * HungerDrain + (1 * Time.deltaTime) * ExtraHungerDrain;
+        Sanity -= (SanityDrain * Time.deltaTime) + (SanityDrain*Time.deltaTime)*ExtraSanityDrain;
         if(Fatigue >= 10)
         {
             Fatigue = 10;
@@ -187,7 +213,7 @@ public class PlayerStats : MonoBehaviour
         {
             Stamina = 0;
         }
-        Score += Time.deltaTime;
+        Score += Time.deltaTime + (Time.deltaTime*ExtraPoints);
         //Sanity Effects
         if(Sanity > 70)
         {
@@ -314,6 +340,7 @@ public class PlayerStats : MonoBehaviour
         R.GetComponent<DeathReason>().Score = Score;
         R.name = "Death Data";
         DontDestroyOnLoad(R);
+        Cursor.lockState = CursorLockMode.None;
         SceneManager.LoadScene("Death");
         Destroy(gameObject);
     }

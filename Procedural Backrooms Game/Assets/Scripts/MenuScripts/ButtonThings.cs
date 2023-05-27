@@ -19,4 +19,12 @@ public class ButtonThings : MonoBehaviour
     {
         SceneManager.LoadScene("Level0");
     }
+    public void BackToMenuButtom()
+    {
+        SceneManager.LoadScene("Title");
+    }
+    public void LoadControls()
+    {
+        SceneManager.LoadScene("Controls");
+    }
 }
