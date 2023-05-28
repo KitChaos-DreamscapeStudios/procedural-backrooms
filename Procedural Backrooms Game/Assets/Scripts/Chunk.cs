@@ -10,14 +10,14 @@ using System.Threading.Tasks;
 public class Chunk : MonoBehaviour
 {
     public NavMeshSurface NavSurf;
-    
-  
+
+
     public bool PlayerIn;
     public Generation Parent;
     public LayerMask Player;
     public Coords coords;
     public List<GameObject> Structs;
-    
+
     public List<GameObject> FreeStandingObjects;//Some Furniture, Entities. (Lock to floor)
     public List<GameObject> WallLockedObjects;//Doors, Paintings, Vents. (Lock to walls)
     public GameObject Layout;
@@ -29,7 +29,8 @@ public class Chunk : MonoBehaviour
     public float BedQual;
     //level specific stuff
     public bool IsShiftingLightsB;
-    public bool IsShiftingLightsN;//Used for if the chunk is brighting or nighting its lights for level 0
+    public bool IsShiftingLightsN;
+    public List<int> rots;//Used for if the chunk is brighting or nighting its lights for level 0
                                   // public GameObject PlayerObj;
                                   // Start is called before the first frame update
     void Start()
@@ -48,14 +49,15 @@ public class Chunk : MonoBehaviour
         //BuildNav();
 
     }
-    public unsafe void SpawnStuff(GameObject Struct)
+    public void SpawnStuff(GameObject Struct)
     {
-        const int rotLen = 4;
-       int* rots = stackalloc int[rotLen]; 
-        rots[0] = 0;
-        rots[1] = 90;
-        rots[2] = -90;
-        rots[3] = 180;
+        
+        //const int rotLen = 4;
+       //int* rots = stackalloc int[rotLen]; 
+        rots.Add(0);
+        rots.Add(90);
+        rots.Add(-90);
+        rots.Add(180);
         
         //Place the Layout
         Layout = Instantiate(Struct, transform.position + new Vector3(0, 5.8337f, 0), Quaternion.identity);
@@ -67,7 +69,7 @@ public class Chunk : MonoBehaviour
         }
         // Invoke("BuildMesh", 2);
 
-        BuildNav();
+       // BuildNav();
 
        
 

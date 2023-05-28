@@ -68,6 +68,7 @@ public class PlayerStats : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         Vol.profile.TryGetSettings<ChromaticAberration>(out InsanityAbber);
         Vol.profile.TryGetSettings<DepthOfField>(out blur);
         
@@ -220,8 +221,8 @@ public class PlayerStats : MonoBehaviour
             InsanityAbber.intensity.Override(0);
             GetComponent<Movement3D>().SpeedBoost = 0;
             GetComponent<Movement3D>().SpeedBoost = 0;
-            GetComponent<Movement3D>().sensitivityX = 10;
-            GetComponent<Movement3D>().sensitivityY = 10;
+            GetComponent<Movement3D>().sensitivityX = 5;
+            GetComponent<Movement3D>().sensitivityY = 5;
             HungerDrain = 0.05f;
             ThirstDrain = 0.1f;
 
@@ -231,18 +232,18 @@ public class PlayerStats : MonoBehaviour
             
             InsanityAbber.intensity.Override(1);
             GetComponent<Movement3D>().SpeedBoost = 0;
-            GetComponent<Movement3D>().sensitivityX = 10;
-            GetComponent<Movement3D>().sensitivityY = 10;
+            GetComponent<Movement3D>().sensitivityX = 5;
+            GetComponent<Movement3D>().sensitivityY = 5;
         }
         if(Sanity < 60 && Sanity > 40)
         {
            
             GetComponent<Movement3D>().SpeedBoost = 5;
         }
-        if(Sanity < 55)
+        if(Sanity < 55 && Sanity > 20)
         {
-            GetComponent<Movement3D>().sensitivityX =15;
-            GetComponent<Movement3D>().sensitivityY = 15;
+            GetComponent<Movement3D>().sensitivityX =10;
+            GetComponent<Movement3D>().sensitivityY = 10;
             InsanityAbber.intensity.Override(5);
         }
        
@@ -261,7 +262,7 @@ public class PlayerStats : MonoBehaviour
         {
             blur.focusDistance.Override(4.83f);
         }
-        if(Sanity > 20)
+        if(Sanity > 20 && Sanity < 55)
         {
             ThirstBar.color = new Color(0.3607843f, 0.5496334f, 1, 1);
             HungerBar.color = new Color(1, 0.7781968f, 0.3622641f, 1);
@@ -273,8 +274,8 @@ public class PlayerStats : MonoBehaviour
             HungerDrain = 0.4f;
             ThirstDrain = 0.8f;
             GetComponent<Movement3D>().SpeedBoost = 10;
-            GetComponent<Movement3D>().sensitivityX = 25;
-            GetComponent<Movement3D>().sensitivityY = 25;
+            GetComponent<Movement3D>().sensitivityX = 20;
+            GetComponent<Movement3D>().sensitivityY = 20;
             ThirstBar.color = new Color(0, 0, 0, 0);
             HungerBar.color = new Color(0, 0, 0, 0);
         }

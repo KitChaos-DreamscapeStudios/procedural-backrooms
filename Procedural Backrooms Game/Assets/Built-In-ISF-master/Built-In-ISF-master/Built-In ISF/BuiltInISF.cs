@@ -5,7 +5,7 @@ using System.IO;
 using UnityEngine;
 using UnityEditor;
 using UnityEngine.Rendering;
-using static UnityEditor.AssetDatabase;
+
 
 [ExecuteAlways]
 public class BuiltInISF : MonoBehaviour
@@ -34,7 +34,7 @@ public class BuiltInISF : MonoBehaviour
         }
 
        
-            AssetDatabase.Refresh();
+        //    AssetDatabase.Refresh();
         
         
     }

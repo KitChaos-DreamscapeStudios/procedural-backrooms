@@ -13,6 +13,8 @@ public class Inventory : MonoBehaviour
     public ParticleSystem SelFX;
     public Image handItemSprite;
     public AudioSource PickupNoise;
+    public TMPro.TextMeshProUGUI PickUpTooltip;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -54,6 +56,8 @@ public class Inventory : MonoBehaviour
             {
                 if (Grabby.collider.transform.parent.GetComponent<PickupAble>())
                 {
+                    PickUpTooltip.text = $"Pick up { Grabby.collider.transform.parent.GetComponent<PickupAble>().ToGive.ItemName}";
+
                     SelFX.transform.position = Grabby.point;
                     SelFX.Play();
                     if (Input.GetKeyDown(KeyCode.E))
@@ -62,7 +66,9 @@ public class Inventory : MonoBehaviour
                         {
                             PickupNoise.Play();
                             SelFX.Stop();
+                            Grabby.collider.transform.parent.GetComponent<PickupAble>().ToGive.playerStats = GetComponent<PlayerStats>();
                             Items.Add(Grabby.collider.transform.parent.GetComponent<PickupAble>().ToGive);
+                            
                             Destroy(Grabby.collider.transform.parent.gameObject);
                             if(!Input.GetKey(KeyCode.Q) && Grabby.collider.transform.parent.GetComponent<PickupAble>().ToGive.isHoldable)
                             {
@@ -74,9 +80,11 @@ public class Inventory : MonoBehaviour
                 else if(!Grabby.collider.gameObject.GetComponent<Interactable>())
                 {
                     SelFX.Stop();
+                    PickUpTooltip.text = "";
                 }
                 else
                 {
+                    PickUpTooltip.text = Grabby.collider.gameObject.GetComponent<Interactable>().InteractText;
                     Debug.Log("Touching Interactable");
                     SelFX.transform.position = Grabby.point;
                     SelFX.Play();
@@ -89,12 +97,14 @@ public class Inventory : MonoBehaviour
             else
             {
                 SelFX.Stop();
+                PickUpTooltip.text = "";
             }
 
         }
         else
         {
             SelFX.Stop();
+            PickUpTooltip.text = "";
         }
 
 

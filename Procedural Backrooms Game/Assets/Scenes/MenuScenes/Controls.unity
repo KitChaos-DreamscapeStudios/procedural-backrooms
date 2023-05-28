@@ -342,7 +342,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -7, y: -222}
+  m_AnchoredPosition: {x: -74, y: -176.5}
   m_SizeDelta: {x: 306.16113, y: 86.5173}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &602872469
@@ -391,7 +391,11 @@ MonoBehaviour:
 
     Sleeping
     is the most consistent way to restore stability, but costs a lot of thirst and
-    hunger.'
+    hunger.
+
+
+    If you hear chittering nearby, do not sprint. It is likely a deathmoth,
+    which attack when they feel threatened by loud sounds and sudden movements'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -454,7 +458,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -1.0233154, w: -7.5960083}
+  m_margin: {x: 0, y: 0, z: -175.91663, w: -7.5960083}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

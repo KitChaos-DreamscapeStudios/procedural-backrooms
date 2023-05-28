@@ -9,6 +9,8 @@ public class Level0Generation : Generation
 
     public float FlickerTimer;
     bool HasGeneratedMap;
+    public GameObject FakeWalls;
+    float FakeWallTimer;
     public void Start()
     {
         Invoke("Generate", 2);  
@@ -16,6 +18,7 @@ public class Level0Generation : Generation
     public void Generate()
     {
         Rand = Random.Range(30, 31);
+        WallRand = 10;
 
         LastChunk = ChunkForLevel[Random.Range(0, ChunkForLevel.Count)];
         Center = new Coords(0, 0, 0);
@@ -64,7 +67,7 @@ public class Level0Generation : Generation
                 }
                 else
                 {
-                    ChunkData.SpawnStuff(ChunkData.Structs[0]);
+                    ChunkData.SpawnStuff(ChunkData.Structs[Random.Range(0, ChunkData.Structs.Count)]);
                 }
                 
                
@@ -97,7 +100,8 @@ public class Level0Generation : Generation
                 }
                 else
                 {
-                    ChunkData.SpawnStuff(ChunkData.Structs[0]);
+                    ChunkData.SpawnStuff(ChunkData.Structs[Random.Range(0, ChunkData.Structs.Count)]);
+
                 }
             }
             catch (System.Exception)
@@ -154,6 +158,7 @@ public class Level0Generation : Generation
         }
     }
     float Rand;
+    float WallRand;
     public void Update()
     {
         if (HasGeneratedMap)
@@ -185,6 +190,18 @@ public class Level0Generation : Generation
                 }
 
             }
+            //level Specific effect: The Fake Walls
+            if(Playerstats.Sanity < 30)
+            {
+                FakeWallTimer += Time.deltaTime;
+                if (FakeWallTimer >= WallRand)
+                {
+                    FakeWallTimer = 0;
+                    WallRand = Random.Range(60, 120);
+                    Instantiate(FakeWalls, Playerstats.transform.position - new Vector3(0, 10, 0), Quaternion.identity);
+                }
+            }
+            
         }
         
        

@@ -504,6 +504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaee4789bdfed4944907df8128a31c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractText: Eat Moths
   playerStats: {fileID: 0}
   moths: {fileID: 0}
 --- !u!1 &345913318
@@ -581,6 +582,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaee4789bdfed4944907df8128a31c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractText: Eat Moths
   playerStats: {fileID: 0}
   moths: {fileID: 0}
 --- !u!1 &365814613
@@ -1737,6 +1739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaee4789bdfed4944907df8128a31c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractText: Eat Moths
   playerStats: {fileID: 0}
   moths: {fileID: 0}
 --- !u!1 &1198257117
@@ -2243,6 +2246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaee4789bdfed4944907df8128a31c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractText: Eat Moths
   playerStats: {fileID: 0}
   moths: {fileID: 0}
 --- !u!1 &1398009818
@@ -2486,6 +2490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaee4789bdfed4944907df8128a31c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractText: Eat Moths
   playerStats: {fileID: 0}
   moths: {fileID: 0}
 --- !u!1 &1445435842
@@ -2660,6 +2665,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaee4789bdfed4944907df8128a31c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractText: Eat Moths
   playerStats: {fileID: 0}
   moths: {fileID: 0}
 --- !u!1 &1505269181
@@ -2737,6 +2743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaee4789bdfed4944907df8128a31c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractText: Eat Moths
   playerStats: {fileID: 0}
   moths: {fileID: 0}
 --- !u!1 &1516681938
@@ -3243,6 +3250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaee4789bdfed4944907df8128a31c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractText: Eat Moths
   playerStats: {fileID: 0}
   moths: {fileID: 0}
 --- !u!1 &1873281041
@@ -3486,6 +3494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaee4789bdfed4944907df8128a31c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractText: Eat Moths
   playerStats: {fileID: 0}
   moths: {fileID: 0}
 --- !u!1 &2002625061
@@ -4046,6 +4055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6599d80e1da04944ab791902ab165f20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractText: Open Crate
   Items:
   - {fileID: 2273606950013226886, guid: 71bc1208f65373a44af354a0921b986c, type: 3}
   - {fileID: 2273606950013226886, guid: 71bc1208f65373a44af354a0921b986c, type: 3}
@@ -4117,6 +4127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6599d80e1da04944ab791902ab165f20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractText: Open Crate
   Items:
   - {fileID: 2273606950013226886, guid: 71bc1208f65373a44af354a0921b986c, type: 3}
   - {fileID: 2273606950013226886, guid: 71bc1208f65373a44af354a0921b986c, type: 3}
@@ -4205,6 +4216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f445bcbf47e0d3d4583fa5ace1331583, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractText: Drink Carpet Juice
   playerStats: {fileID: 0}
   effect: {fileID: 6303562428773603418, guid: c675d677fd2ab594e805bc685c574ca8, type: 3}
 --- !u!65 &839500576
@@ -4275,6 +4287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f445bcbf47e0d3d4583fa5ace1331583, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractText: Drink Carpet Juice
   playerStats: {fileID: 0}
   effect: {fileID: 6303562428773603418, guid: c675d677fd2ab594e805bc685c574ca8, type: 3}
 --- !u!114 &934069609
@@ -4471,7 +4484,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ce7be5b46b2d9e84fbdcb9d1eb0e28e1, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.6666667
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -4679,6 +4692,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f445bcbf47e0d3d4583fa5ace1331583, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractText: Drink Carpet Juice
   playerStats: {fileID: 0}
   effect: {fileID: 6303562428773603418, guid: c675d677fd2ab594e805bc685c574ca8, type: 3}
 --- !u!64 &1829867387
@@ -4723,6 +4737,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f445bcbf47e0d3d4583fa5ace1331583, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractText: Drink Carpet Juice
   playerStats: {fileID: 0}
   effect: {fileID: 6303562428773603418, guid: c675d677fd2ab594e805bc685c574ca8, type: 3}
 --- !u!114 &1829867385
@@ -4962,6 +4977,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f445bcbf47e0d3d4583fa5ace1331583, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractText: Drink Carpet Juice
   playerStats: {fileID: 0}
   effect: {fileID: 6303562428773603418, guid: c675d677fd2ab594e805bc685c574ca8, type: 3}
 --- !u!114 &1555300397
@@ -5042,6 +5058,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7423135bdd710c40b268d05ab8efb50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractText: 
   SceneToLoad: Level1
   Steps:
   - {fileID: 8300000, guid: 42fb8ae8a7929c14eadc460582a23b4d, type: 3}
@@ -5071,6 +5088,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7423135bdd710c40b268d05ab8efb50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractText: 
   SceneToLoad: Level1
   Steps:
   - {fileID: 8300000, guid: 42fb8ae8a7929c14eadc460582a23b4d, type: 3}
@@ -5100,6 +5118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7423135bdd710c40b268d05ab8efb50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractText: 
   SceneToLoad: Level1
   Steps:
   - {fileID: 8300000, guid: 42fb8ae8a7929c14eadc460582a23b4d, type: 3}
@@ -5129,6 +5148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7423135bdd710c40b268d05ab8efb50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractText: 
   SceneToLoad: Level1
   Steps:
   - {fileID: 8300000, guid: 42fb8ae8a7929c14eadc460582a23b4d, type: 3}
@@ -5413,6 +5433,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4016037651883598888}
     m_Modifications:
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: m_Volume
+      value: 0.6666667
+      objectReference: {fileID: 0}
     - target: {fileID: 1906836680319761430, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
       propertyPath: m_Name
       value: Light (20)
@@ -6085,6 +6109,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4016037651883598888}
     m_Modifications:
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: m_Volume
+      value: 0.6666667
+      objectReference: {fileID: 0}
     - target: {fileID: 1906836680319761430, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
       propertyPath: m_Name
       value: Light (18)
@@ -6707,6 +6735,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4016037651883598888}
     m_Modifications:
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: m_Volume
+      value: 0.6666667
+      objectReference: {fileID: 0}
     - target: {fileID: 1906836680319761430, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
       propertyPath: m_Name
       value: Light (12)
@@ -7921,6 +7953,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4016037651883598888}
     m_Modifications:
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: m_Volume
+      value: 0.6666667
+      objectReference: {fileID: 0}
     - target: {fileID: 1906836680319761430, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
       propertyPath: m_Name
       value: Light (16)
@@ -7991,6 +8027,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4016037651883598888}
     m_Modifications:
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: m_Volume
+      value: 0.6666667
+      objectReference: {fileID: 0}
     - target: {fileID: 1906836680319761430, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
       propertyPath: m_Name
       value: Light (14)
@@ -8302,6 +8342,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4016037651883598888}
     m_Modifications:
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: m_Volume
+      value: 0.6666667
+      objectReference: {fileID: 0}
     - target: {fileID: 1906836680319761430, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
       propertyPath: m_Name
       value: Light (13)
@@ -8620,6 +8664,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4016037651883598888}
     m_Modifications:
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: m_Volume
+      value: 0.6666667
+      objectReference: {fileID: 0}
     - target: {fileID: 1906836680319761430, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
       propertyPath: m_Name
       value: Light (17)
@@ -9216,6 +9264,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4016037651883598888}
     m_Modifications:
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: m_Volume
+      value: 0.6666667
+      objectReference: {fileID: 0}
     - target: {fileID: 1906836680319761430, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
       propertyPath: m_Name
       value: Light (10)
@@ -9377,6 +9429,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4016037651883598888}
     m_Modifications:
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: m_Volume
+      value: 0.6666667
+      objectReference: {fileID: 0}
     - target: {fileID: 1906836680319761430, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
       propertyPath: m_Name
       value: Light (11)
@@ -9608,6 +9664,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4016037651883598888}
     m_Modifications:
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: m_Volume
+      value: 0.6666667
+      objectReference: {fileID: 0}
     - target: {fileID: 1906836680319761430, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
       propertyPath: m_Name
       value: Light (15)
@@ -10336,6 +10396,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4016037651883598888}
     m_Modifications:
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: m_Volume
+      value: 0.6666667
+      objectReference: {fileID: 0}
     - target: {fileID: 1906836680319761430, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
       propertyPath: m_Name
       value: Light (19)

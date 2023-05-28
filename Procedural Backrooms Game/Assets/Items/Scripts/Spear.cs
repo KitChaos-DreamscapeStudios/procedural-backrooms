@@ -10,7 +10,7 @@ public class Spear : Item
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerStats = GameObject.Find("Player").GetComponent<PlayerStats>();
     }
 
     // Update is called once per frame
@@ -28,6 +28,7 @@ public class Spear : Item
     }
     public override void UseHeld()
     {
+
         var DirectObject = GameObject.Find("Main Camera");
         
         var NewObj = Instantiate(Projectile, DirectObject.transform.position + DirectObject.transform.forward*4, Quaternion.identity);
