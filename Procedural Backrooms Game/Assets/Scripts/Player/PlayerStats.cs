@@ -256,11 +256,11 @@ public class PlayerStats : MonoBehaviour
         }
         if (Sanity < 35)
         {
-            blur.focusDistance.Override(0.1f);
+            blur.focusDistance.Override(0.5f);
         }
         else
         {
-            blur.focusDistance.Override(4.83f);
+            blur.focusDistance.Override(4.3f);
         }
         if(Sanity > 20 && Sanity < 55)
         {
