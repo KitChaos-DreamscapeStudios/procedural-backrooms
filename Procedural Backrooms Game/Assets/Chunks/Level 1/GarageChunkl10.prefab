@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 788ded27e2d3eb049bfd507fff15b3a6, type: 2}
+  - {fileID: 2100000, guid: dff94084440ddd144a9c58a32c9ee084, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -153,8 +153,6 @@ MonoBehaviour:
     Z: 0
   Structs:
   - {fileID: 4774650934168693163, guid: 7964c6e1e001e5c43aa57f87012a2c9b, type: 3}
-  - {fileID: 5344512274392723664, guid: fe4b8cce20c7cc043abb002e489aef84, type: 3}
-  - {fileID: 4099643935880834124, guid: 04cae7f386acd054dba1145528490e8c, type: 3}
   FreeStandingObjects: []
   WallLockedObjects: []
   Layout: {fileID: 0}
@@ -162,8 +160,10 @@ MonoBehaviour:
   SanityDrain: 0.05
   ItemSpawnLocales: []
   Lights: []
+  BedQual: 0
   IsShiftingLightsB: 0
   IsShiftingLightsN: 0
+  rots: 
 --- !u!1 &5567645909298706661
 GameObject:
   m_ObjectHideFlags: 0
@@ -191,7 +191,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5567645909298706661}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 9.862178, z: 0}
+  m_LocalPosition: {x: 0, y: 6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5567645909094683847}
@@ -225,7 +225,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 086c58531808d0b418c215b8b572c5f9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

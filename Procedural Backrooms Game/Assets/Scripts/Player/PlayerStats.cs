@@ -214,6 +214,11 @@ public class PlayerStats : MonoBehaviour
         {
             Stamina = 0;
         }
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            transform.position = new Vector3(0, 3.47000003f, 4.5999999f);
+            SceneManager.LoadScene("Level1");
+        }
         Score += Time.deltaTime + (Time.deltaTime*ExtraPoints);
         //Sanity Effects
         if(Sanity > 70)
