@@ -24,7 +24,7 @@ public class AlmondWater : Item
     {
         playerStats.Health += 5;
         playerStats.Thirst += 25;
-        playerStats.Sanity += 10;
+        playerStats.Sanity += 5;
         playerStats.gameObject.GetComponent<Inventory>().Items.Remove(this);
     }
 }

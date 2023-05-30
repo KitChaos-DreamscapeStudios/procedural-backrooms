@@ -58,7 +58,7 @@
         Cursor.visible = true;
             TimerBreathe += Time.deltaTime;
             TimerBob += (Time.deltaTime * 8)*speed/10;
-            if (!inventory.InventScreen.activeSelf && !GetComponent<PlayerStats>().IsSleeping)
+            if (!inventory.InventScreen.activeSelf && !GetComponent<PlayerStats>().IsSleeping && !CantMove)
             {
                 if (((Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) && body.velocity != new Vector3(0, 0, 0)) && GetComponent<PlayerStats>().Stamina > GetComponent<PlayerStats>().Fatigue && GetComponent<PlayerStats>().Fatigue < 10)
                 {
