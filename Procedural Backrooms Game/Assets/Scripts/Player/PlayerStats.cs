@@ -228,8 +228,8 @@ public class PlayerStats : MonoBehaviour
             GetComponent<Movement3D>().SpeedBoost = 0;
             GetComponent<Movement3D>().sensitivityX = 5;
             GetComponent<Movement3D>().sensitivityY = 5;
-            HungerDrain = 0.05f;
-            ThirstDrain = 0.1f;
+            HungerDrain = 0.1f;
+            ThirstDrain = 0.2f;
 
         }
         if(Sanity < 70 && Sanity > 55)
@@ -254,8 +254,8 @@ public class PlayerStats : MonoBehaviour
        
         if(Sanity < 40 && Sanity > 20)
         {
-            HungerDrain = 0.2f;
-            ThirstDrain = 0.4f;
+            HungerDrain = 0.4f;
+            ThirstDrain = 0.8f;
             GetComponent<Movement3D>().SpeedBoost = 8;
             //Make sure to add creepy ambience later
         }
@@ -276,8 +276,8 @@ public class PlayerStats : MonoBehaviour
         }
         if (Sanity < 20 && Sanity > 5)
         {
-            HungerDrain = 0.4f;
-            ThirstDrain = 0.8f;
+            HungerDrain = 0.8f;
+            ThirstDrain = 1f;
             GetComponent<Movement3D>().SpeedBoost = 10;
             GetComponent<Movement3D>().sensitivityX = 20;
             GetComponent<Movement3D>().sensitivityY = 20;

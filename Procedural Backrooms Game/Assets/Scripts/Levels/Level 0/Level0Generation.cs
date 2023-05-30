@@ -18,7 +18,7 @@ public class Level0Generation : Generation
     public void Generate()
     {
         Rand = Random.Range(30, 31);
-        WallRand = 10;
+        WallRand = 20;
 
         LastChunk = ChunkForLevel[Random.Range(0, ChunkForLevel.Count)];
         Center = new Coords(0, 0, 0);
@@ -175,7 +175,7 @@ public class Level0Generation : Generation
                 if (FlickerTimer >= Rand)
                 {
                     FlickerTimer = 0;
-                    Rand = Random.Range(30, 60);
+                    Rand = Random.Range(20, 40);
                     var BrightorNight = Random.Range(0, 2);
                     if (BrightorNight == 0)
                     {
@@ -197,7 +197,7 @@ public class Level0Generation : Generation
                 if (FakeWallTimer >= WallRand)
                 {
                     FakeWallTimer = 0;
-                    WallRand = Random.Range(60, 120);
+                    WallRand = Random.Range(30, 60);
                     Instantiate(FakeWalls, Playerstats.transform.position - new Vector3(0, 10, 0), Quaternion.identity);
                 }
             }

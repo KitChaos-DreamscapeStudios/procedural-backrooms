@@ -226,7 +226,7 @@ MonoBehaviour:
   WallLockedObjects: []
   Layout: {fileID: 0}
   SpawnedDisposables: []
-  SanityDrain: 0.1
+  SanityDrain: 0.2
   ItemSpawnLocales: []
   Lights: []
   BedQual: 1

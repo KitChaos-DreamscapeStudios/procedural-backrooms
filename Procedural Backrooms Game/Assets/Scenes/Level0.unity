@@ -5485,7 +5485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7423135bdd710c40b268d05ab8efb50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractText: 
+  InteractText: Open Door
   SceneToLoad: Level1
   Steps:
   - {fileID: 8300000, guid: 42fb8ae8a7929c14eadc460582a23b4d, type: 3}
@@ -5515,7 +5515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7423135bdd710c40b268d05ab8efb50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractText: 
+  InteractText: Open Door
   SceneToLoad: Level1
   Steps:
   - {fileID: 8300000, guid: 42fb8ae8a7929c14eadc460582a23b4d, type: 3}
@@ -10524,7 +10524,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.5019608, g: 0.5019608, b: 0.5019608, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -11414,8 +11414,8 @@ Transform:
   m_Father: {fileID: 2068203907}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1145336979
-BoxCollider:
+--- !u!136 &1145336979
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -11424,9 +11424,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.5, y: 3.4141223, z: 0.5}
-  m_Center: {x: 0, y: -1.196838, z: 0}
+  m_Radius: 0.5
+  m_Height: 3.089386
+  m_Direction: 1
+  m_Center: {x: 0, y: -1.044693, z: 0}
 --- !u!1 &1165148735
 GameObject:
   m_ObjectHideFlags: 0
@@ -19754,314 +19755,6 @@ PrefabInstance:
     - target: {fileID: 332799607110177227, guid: a497289a44ed79547901e20b2f478c45, type: 3}
       propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982007141376572, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_DrawHalo
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982007141376572, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_Bias
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982007141376572, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_Type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982007141376572, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_Strength
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982007141376572, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_NearPlane
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982007141376572, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_NormalBias
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982007141376572, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_Resolution
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982007173453463, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_DrawHalo
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982007173453463, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_Bias
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982007173453463, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_Type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982007173453463, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_Strength
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982007173453463, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_NearPlane
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982007173453463, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_NormalBias
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982007173453463, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_Resolution
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982007319816957, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_DrawHalo
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982007319816957, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_Bias
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982007319816957, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_Type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982007319816957, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_Strength
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982007319816957, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_NearPlane
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982007319816957, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_NormalBias
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982007319816957, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_Resolution
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982007412968699, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_DrawHalo
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982007412968699, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_Bias
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982007412968699, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_Type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982007412968699, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_Strength
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982007412968699, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_NearPlane
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982007412968699, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_NormalBias
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982007412968699, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_Resolution
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982007506806457, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_DrawHalo
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982007506806457, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_Bias
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982007506806457, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_Type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982007506806457, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_Strength
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982007506806457, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_NearPlane
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982007506806457, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_NormalBias
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982007506806457, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_Resolution
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982007516921493, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_DrawHalo
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982007516921493, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_Bias
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982007516921493, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_Type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982007516921493, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_Strength
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982007516921493, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_NearPlane
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982007516921493, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_NormalBias
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982007516921493, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_Resolution
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982007866072381, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_DrawHalo
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982007866072381, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_Bias
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982007866072381, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_Type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982007866072381, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_Strength
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982007866072381, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_NearPlane
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982007866072381, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_NormalBias
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982007866072381, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_Resolution
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982008114578356, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_DrawHalo
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982008114578356, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_Bias
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982008114578356, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_Type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982008114578356, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_Strength
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982008114578356, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_NearPlane
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982008114578356, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_NormalBias
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982008114578356, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_Resolution
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982008239767988, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_DrawHalo
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982008239767988, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_Bias
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982008239767988, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_Type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982008239767988, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_Strength
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982008239767988, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_NearPlane
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982008239767988, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_NormalBias
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982008239767988, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_Resolution
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982008617791069, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_DrawHalo
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982008617791069, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_Bias
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982008617791069, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_Type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982008617791069, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_Strength
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982008617791069, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_NearPlane
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982008617791069, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_NormalBias
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982008617791069, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_Resolution
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982009063413804, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_DrawHalo
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982009063413804, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_Bias
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982009063413804, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_Type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982009063413804, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_Strength
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982009063413804, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_NearPlane
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982009063413804, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_NormalBias
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2253982009063413804, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-      propertyPath: m_Shadows.m_Resolution
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a497289a44ed79547901e20b2f478c45, type: 3}
