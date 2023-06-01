@@ -301,6 +301,7 @@ public class PlayerStats : MonoBehaviour
     }
     public void TakeDamage(float DMG, string Type)
     {
+        Hurt.Play();
         Health -= DMG;
         if(Health <= 0)
         {
@@ -328,7 +329,7 @@ public class PlayerStats : MonoBehaviour
     {
         if (col.gameObject.GetComponent<Damager>())
         {
-            Hurt.Play();
+           
             TakeDamage(col.gameObject.GetComponent<Damager>().Damage, col.gameObject.GetComponent<Damager>().DeathMessage);
             col.gameObject.GetComponent<Damager>().OnDamage();
             EZCameraShake.CameraShaker.Instance.ShakeOnce(50, 15, 0.1f, 0.5f);
@@ -350,6 +351,7 @@ public class PlayerStats : MonoBehaviour
         SceneManager.LoadScene("Death");
         Destroy(gameObject);
     }
+  
 }
 public class DeathReason : MonoBehaviour
 {

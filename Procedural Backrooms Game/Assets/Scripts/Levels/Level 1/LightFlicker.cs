@@ -27,7 +27,7 @@ public class LightFlicker : MonoBehaviour
         {
             CanBurst = true;
         }
-        BurstTime = Random.Range(20, 40);
+        BurstTime = Random.Range(25, 60);
     }
 
     // Update is called once per frame
@@ -52,9 +52,9 @@ public class LightFlicker : MonoBehaviour
             }
             if (t > BurstTime)
             {
-                if(Physics.CheckSphere(transform.position, 3, 3))
+                if(Physics.CheckSphere(transform.position, 0.5f, GameObject.Find("Col").layer))
                 {
-                    GameObject.Find("Player").GetComponent<PlayerStats>().TakeDamage(20, "Killed by Exploding Light");
+                   // GameObject.Find("Player").GetComponent<PlayerStats>().TakeDamage(20, "Killed by Exploding Light");
                 }
                 L.intensity = BaseIntenisty;
                 BurstNoise.volume = 1;

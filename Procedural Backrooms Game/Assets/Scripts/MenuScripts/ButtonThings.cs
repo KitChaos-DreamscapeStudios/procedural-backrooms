@@ -22,6 +22,10 @@ public class ButtonThings : MonoBehaviour
     public void BackToMenuButtom()
     {
         SceneManager.LoadScene("Title");
+        if (GameObject.Find("Death Data"))
+        {
+            Destroy(GameObject.Find("Death Data"));
+        }
     }
     public void LoadControls()
     {
