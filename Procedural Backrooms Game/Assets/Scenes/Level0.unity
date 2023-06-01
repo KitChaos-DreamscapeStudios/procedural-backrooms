@@ -14576,6 +14576,7 @@ MonoBehaviour:
   LevelStats: {fileID: 0}
   InsanityAbber: {fileID: 0}
   blur: {fileID: 0}
+  HurtGlow: {fileID: 0}
   Vol: {fileID: 963194230}
   Flashlight: {fileID: 350549269}
   MaxHealth: 100

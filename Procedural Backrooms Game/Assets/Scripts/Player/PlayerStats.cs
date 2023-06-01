@@ -13,6 +13,7 @@ public class PlayerStats : MonoBehaviour
     public Generation LevelStats;
     public ChromaticAberration InsanityAbber;
     public DepthOfField blur;
+    public Vignette HurtGlow;
     public PostProcessVolume Vol;
     public delegate void Event();
     public List<Event> events;
@@ -71,6 +72,7 @@ public class PlayerStats : MonoBehaviour
         
         Vol.profile.TryGetSettings<ChromaticAberration>(out InsanityAbber);
         Vol.profile.TryGetSettings<DepthOfField>(out blur);
+        Vol.profile.TryGetSettings<Vignette>(out HurtGlow);
         
 
     }
@@ -81,6 +83,8 @@ public class PlayerStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        HurtGlow.opacity.Override(100);
+        HurtGlow.intensity.Override((100 - Health) / 100);
        // InvokeRepeating("GetSpecial", 0.1f, 0.1f);
         if(Specialization == "Hunter")//Make this code better later
         {
