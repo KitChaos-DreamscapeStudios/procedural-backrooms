@@ -16,7 +16,7 @@ public class PipeBurst : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var Rand = Random.Range(0, 1000000);
+        var Rand = Random.Range(0, 500000);
         if(Rand == 3)
         {
             Hiss.Play();

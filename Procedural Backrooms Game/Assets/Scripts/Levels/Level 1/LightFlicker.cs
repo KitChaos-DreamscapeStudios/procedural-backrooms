@@ -42,11 +42,13 @@ public class LightFlicker : MonoBehaviour
                 var Rand = Random.Range(0, 30);
                 if(Rand == 5)
                 {
-                    //FlickNoise.Play();
+                    
+                    FlickNoise.Play();
                     IsDoFlick = true;
                 }
                 else
                 {
+                    FlickNoise.Stop();
                     IsDoFlick = false;
                 }
             }

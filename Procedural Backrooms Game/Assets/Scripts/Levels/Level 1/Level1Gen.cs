@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
-
+    
 public class Level1Gen : Generation
 {
     float elap;
     bool StartCheck;
+    float elap2;
     public void Start()
     {
         LastChunk = ChunkForLevel[Random.Range(0, ChunkForLevel.Count)];
@@ -26,7 +27,7 @@ public class Level1Gen : Generation
 
 
         InvokeRepeating("CheckDespawn", 1, 1);
-        InvokeRepeating(nameof(GenerateFromCenter), 1.1f, 1.1f);
+     //   InvokeRepeating(nameof(GenerateFromCenter), 4f, 4f);
     }
     public override void GenerateChunk(Coords c, bool IsCore = false)
     {
@@ -149,7 +150,12 @@ public class Level1Gen : Generation
     public void Update()
     {
         elap += Time.deltaTime;
-
+        elap2 += Time.deltaTime;
+        if(elap2 > 3)
+        {
+            GenerateFromCenter();
+            elap2 = 0;
+        }
         if (elap > 2)
         {
             StartCheck = true;

@@ -49,5 +49,5 @@ MonoBehaviour:
   Icon: {fileID: 21300000, guid: f730444d7955e354d872b5192550a108, type: 3}
   playerStats: {fileID: 0}
   ItemName: Flashlight
-  HeldGFX: {fileID: 21300000, guid: b97d3dbed13ca574eb6a1acbf6b9ff1d, type: 3}
+  HeldGFX: {fileID: 21300000, guid: 05bbd189d7cd21742b46fa19bbb677f1, type: 3}
   Light: {fileID: 0}
