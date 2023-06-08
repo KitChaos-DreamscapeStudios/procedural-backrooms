@@ -69,7 +69,7 @@ public class Chunk : MonoBehaviour
         }
         // Invoke("BuildMesh", 2);
 
-       // BuildNav();
+     //  BuildNav();
 
        
 

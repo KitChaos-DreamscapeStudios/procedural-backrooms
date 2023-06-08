@@ -24,10 +24,10 @@ public class Level1Gen : Generation
         }
         Playerstats = GameObject.Find("Player").GetComponent<PlayerStats>();
         Playerstats.LevelStats = this;
-
-
+        
+        StartCoroutine(GenerateFromCenter());
         InvokeRepeating("CheckDespawn", 1, 1);
-     //   InvokeRepeating(nameof(GenerateFromCenter), 4f, 4f);
+       
     }
     public override void GenerateChunk(Coords c, bool IsCore = false)
     {
@@ -106,29 +106,34 @@ public class Level1Gen : Generation
 
 
     }
-    void GenerateFromCenter()
+    IEnumerator GenerateFromCenter()
     {
-        for (int x = -2; x < 3; x++)
+       for(; ; )
         {
-            for (int z = -2; z < 3; z++)
+            for (int x = -2; x < 3; x++)
             {
-                bool Occupied = false;
-                foreach (Chunk c in Chunks)
+                for (int z = -2; z < 3; z++)
                 {
-                    if (c.coords.X == x + Center.X && c.coords.Z == z + Center.Z)
+                    bool Occupied = false;
+                    foreach (Chunk c in Chunks)
                     {
-                        Occupied = true;
+                        if (c.coords.X == x + Center.X && c.coords.Z == z + Center.Z)
+                        {
+                            Occupied = true;
+                        }
                     }
+                    if (!Occupied)
+                    {
+                        GenerateChunk(new Coords(x + Center.X, 0, z + Center.Z));
+                    }
+
+
+
                 }
-                if (!Occupied)
-                {
-                    GenerateChunk(new Coords(x + Center.X, 0, z + Center.Z));
-                }
-
-
-
+                yield return null;
             }
         }
+        
 
     }
     //Check if the player is far enough away to spawn new chunks
@@ -150,12 +155,7 @@ public class Level1Gen : Generation
     public void Update()
     {
         elap += Time.deltaTime;
-        elap2 += Time.deltaTime;
-        if(elap2 > 3)
-        {
-            GenerateFromCenter();
-            elap2 = 0;
-        }
+     
         if (elap > 2)
         {
             StartCheck = true;
