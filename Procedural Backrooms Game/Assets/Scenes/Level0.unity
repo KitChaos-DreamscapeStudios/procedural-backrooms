@@ -14644,7 +14644,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e10c909d23aa3e34c8597a3ce6d3fe4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Items: []
+  Items:
+  - {fileID: 6642830172642159796, guid: 1eeeb8e78d6dc08449173b62036223eb, type: 3}
   HandItem: {fileID: 0}
   InventScreen: {fileID: 190466482}
   GrabDistance: 6

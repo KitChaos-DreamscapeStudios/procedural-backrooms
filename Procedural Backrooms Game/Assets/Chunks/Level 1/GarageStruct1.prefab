@@ -5042,6 +5042,7 @@ GameObject:
   - component: {fileID: 1632130358}
   - component: {fileID: 1632130357}
   - component: {fileID: 1632130356}
+  - component: {fileID: 339255977130737417}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -5126,6 +5127,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &339255977130737417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632130354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7423135bdd710c40b268d05ab8efb50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractText: Enter Tunnel
+  SceneToLoad: Level34
+  Steps:
+  - {fileID: 8300000, guid: 42fb8ae8a7929c14eadc460582a23b4d, type: 3}
 --- !u!1 &1716291727
 GameObject:
   m_ObjectHideFlags: 0
@@ -5173,7 +5190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94dd75dcdcaeab942a7aaa6b71db9dce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rarity: 99
+  Rarity: 98
 --- !u!1 &1986588744
 GameObject:
   m_ObjectHideFlags: 0
@@ -40169,7 +40186,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 7a51f19b20691bf4cba0cf1a12261365, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: f1efd17e1349ee249853a9305244ba7c, type: 2}
+      objectReference: {fileID: 2100000, guid: c5c701d0497a9154899777ff36e7aef1, type: 2}
     - target: {fileID: 919132149155446097, guid: 7a51f19b20691bf4cba0cf1a12261365, type: 3}
       propertyPath: m_Name
       value: SewerEntrance
