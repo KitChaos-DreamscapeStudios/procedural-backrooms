@@ -9,11 +9,11 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: SewerWater
   m_Shader: {fileID: 4800000, guid: 104cb0e3a7464a3696069ea84b145eee, type: 3}
-  m_ShaderKeywords: EFFECT_FOAM EFFECT_PARALLAX _ALPHABLEND_ON
+  m_ShaderKeywords: EFFECT_FOAM _ALPHABLEND_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 3000
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -88,16 +88,16 @@ Material:
     - _Albedo2Flow: -167.16
     - _Albedo2Tiling: 1
     - _AlbedoContrast: 1
-    - _AlbedoIntensity: 1
+    - _AlbedoIntensity: 0.1
     - _BumpScale: -0.36
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 10
-    - _FoamAmplitude: 6
+    - _FoamAmplitude: 10
     - _FoamFlow: 10
     - _FoamFrequency: 0.8
     - _FoamGain: 0.6
-    - _FoamLacunarity: 5.04
+    - _FoamLacunarity: 1.95
     - _FoamScale: 0.1
     - _GlossMapScale: 1
     - _Glossiness: 1
@@ -139,7 +139,7 @@ Material:
     - _UVSec: 0
     - _ZWrite: 0
     m_Colors:
-    - _AlbedoColor: {r: 0.10206478, g: 0.4433962, b: 0.15606229, a: 0.6117647}
+    - _AlbedoColor: {r: 0.10206478, g: 0.4433962, b: 0.15606229, a: 1}
     - _Color: {r: 0.61548245, g: 1, b: 0.5803921, a: 0.07058824}
     - _EmissionColor: {r: 0, g: 0.08627451, b: 0.028504008, a: 1}
     - _FoamColor: {r: 0.6538305, g: 1, b: 0.63584906, a: 1}

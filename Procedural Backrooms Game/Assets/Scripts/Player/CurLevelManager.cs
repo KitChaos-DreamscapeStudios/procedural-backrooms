@@ -10,6 +10,7 @@ public class CurLevelManager : MonoBehaviour
     public string WalkArea;
     public List<AudioClip> CurStepNoises;
     float footTimer;
+    public ParticleSystem StepFX;
     // Start is called before the first frame update
     void Start()
     {
@@ -53,10 +54,14 @@ public class CurLevelManager : MonoBehaviour
            
                 var fs = Instantiate(footStep.gameObject);
                 fs.GetComponent<AudioSource>().clip = CurStepNoises[Random.Range(0, CurStepNoises.Count)];
-            fs.GetComponent<AudioSource>().pitch = Random.Range(0.9f, 1.1f);
+                fs.GetComponent<AudioSource>().pitch = Random.Range(0.9f, 1.1f);
                 fs.GetComponent<AudioSource>().Play();
 
                 Destroy(fs, 3);
+                if(StepFX != null)
+                {
+                StepFX.Play();
+                }
                 footTimer = 0;
             
         }

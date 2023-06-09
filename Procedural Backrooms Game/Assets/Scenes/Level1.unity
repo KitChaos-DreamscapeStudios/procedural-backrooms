@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 2401556}
   - component: {fileID: 2401555}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Entrance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -151,8 +151,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2401553}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.182799, y: -2.4861, z: -0.2604}
-  m_LocalScale: {x: 0.17154293, y: 6.6477447, z: 0.06616372}
+  m_LocalPosition: {x: 0.176364, y: -2.4861, z: -0.2604}
+  m_LocalScale: {x: 0.15867394, y: 6.6477447, z: 0.06616372}
   m_Children: []
   m_Father: {fileID: 678840494}
   m_RootOrder: 3
@@ -172,7 +172,7 @@ MonoBehaviour:
   InteractText: Enter Tunnel
   SceneToLoad: Level34
   Steps:
-  - {fileID: 8300000, guid: 42fb8ae8a7929c14eadc460582a23b4d, type: 3}
+  - {fileID: 8300000, guid: 2107413431251834198948d1bb9a3f65, type: 3}
 --- !u!65 &2401556
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5149,7 +5149,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &678840494
 Transform:
   m_ObjectHideFlags: 0
@@ -5385,66 +5385,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 536462014, guid: 7964c6e1e001e5c43aa57f87012a2c9b, type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 536462014, guid: 7964c6e1e001e5c43aa57f87012a2c9b, type: 3}
-      propertyPath: InitialModule.startSpeed.scalar
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 786678595, guid: 7964c6e1e001e5c43aa57f87012a2c9b, type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 786678595, guid: 7964c6e1e001e5c43aa57f87012a2c9b, type: 3}
-      propertyPath: InitialModule.startSpeed.scalar
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 1090080270, guid: 7964c6e1e001e5c43aa57f87012a2c9b, type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1090080270, guid: 7964c6e1e001e5c43aa57f87012a2c9b, type: 3}
-      propertyPath: InitialModule.startSpeed.scalar
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 1146322796, guid: 7964c6e1e001e5c43aa57f87012a2c9b, type: 3}
-      propertyPath: Priority
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268910045, guid: 7964c6e1e001e5c43aa57f87012a2c9b, type: 3}
-      propertyPath: Priority
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1450112103, guid: 7964c6e1e001e5c43aa57f87012a2c9b, type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1450112103, guid: 7964c6e1e001e5c43aa57f87012a2c9b, type: 3}
-      propertyPath: InitialModule.startSpeed.scalar
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 1626340803, guid: 7964c6e1e001e5c43aa57f87012a2c9b, type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1626340803, guid: 7964c6e1e001e5c43aa57f87012a2c9b, type: 3}
-      propertyPath: InitialModule.startSpeed.scalar
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 1654947081, guid: 7964c6e1e001e5c43aa57f87012a2c9b, type: 3}
-      propertyPath: Priority
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1673489949, guid: 7964c6e1e001e5c43aa57f87012a2c9b, type: 3}
-      propertyPath: Priority
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1720547527, guid: 7964c6e1e001e5c43aa57f87012a2c9b, type: 3}
-      propertyPath: Priority
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 4774650934168693162, guid: 7964c6e1e001e5c43aa57f87012a2c9b, type: 3}
       propertyPath: m_RootOrder
       value: 1
