@@ -70,7 +70,7 @@ public class Inventory : MonoBehaviour
                             Items.Add(Grabby.collider.transform.parent.GetComponent<PickupAble>().ToGive);
                             
                             Destroy(Grabby.collider.transform.parent.gameObject);
-                            if(!Input.GetKey(KeyCode.Q) && Grabby.collider.transform.parent.GetComponent<PickupAble>().ToGive.isHoldable)
+                            if(!Input.GetKey(KeyCode.Q) && Grabby.collider.transform.parent.GetComponent<PickupAble>().ToGive.isHoldable && !HandItem)
                             {
                                 HandItem = Grabby.collider.transform.parent.GetComponent<PickupAble>().ToGive;
                             }

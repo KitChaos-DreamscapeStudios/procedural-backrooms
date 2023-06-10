@@ -20,6 +20,7 @@ public class Door : Interactable
         var Player = GameObject.Find("Player");
         Player.transform.position = new Vector3(0, 3.47f, 0);
         Player.GetComponent<CurLevelManager>().CurStepNoises = Steps;
+        Player.GetComponent<PlayerStats>().Score += 120;
         SceneManager.LoadScene(SceneToLoad);
 
 
