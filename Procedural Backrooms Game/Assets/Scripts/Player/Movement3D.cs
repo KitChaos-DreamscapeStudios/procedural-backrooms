@@ -166,7 +166,7 @@
         if (!CantMove)
         {
             body.velocity = new Vector3((Orient.transform.forward * (FB * speed) + Orient.transform.right * (LR * speed)).x, body.velocity.y, (Orient.transform.forward * (FB * speed) + Orient.transform.right * (LR * speed)).z);
-
+           
         }
 
     }
