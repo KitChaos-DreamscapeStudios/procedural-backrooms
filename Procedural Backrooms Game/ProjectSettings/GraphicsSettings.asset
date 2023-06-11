@@ -51,15 +51,15 @@ GraphicsSettings:
       standardShaderQuality: 0
       renderingPath: 1
       hdrMode: 1
-      realtimeGICPUUsage: 100
+      realtimeGICPUUsage: 25
       useReflectionProbeBoxProjection: 1
       useReflectionProbeBlending: 0
       useHDR: 0
       useDetailNormalMap: 1
-      useCascadedShadowMaps: 0
+      useCascadedShadowMaps: 1
       prefer32BitShadowMaps: 0
       enableLPPV: 1
-      useDitherMaskForAlphaBlendedShadows: 0
+      useDitherMaskForAlphaBlendedShadows: 1
     m_Automatic: 0
   - serializedVersion: 5
     m_BuildTarget: 1
@@ -68,15 +68,15 @@ GraphicsSettings:
       standardShaderQuality: 0
       renderingPath: 1
       hdrMode: 1
-      realtimeGICPUUsage: 100
+      realtimeGICPUUsage: 25
       useReflectionProbeBoxProjection: 1
       useReflectionProbeBlending: 0
       useHDR: 0
       useDetailNormalMap: 1
-      useCascadedShadowMaps: 0
+      useCascadedShadowMaps: 1
       prefer32BitShadowMaps: 0
       enableLPPV: 1
-      useDitherMaskForAlphaBlendedShadows: 0
+      useDitherMaskForAlphaBlendedShadows: 1
     m_Automatic: 0
   - serializedVersion: 5
     m_BuildTarget: 1
@@ -85,15 +85,15 @@ GraphicsSettings:
       standardShaderQuality: 0
       renderingPath: 1
       hdrMode: 1
-      realtimeGICPUUsage: 100
+      realtimeGICPUUsage: 25
       useReflectionProbeBoxProjection: 1
       useReflectionProbeBlending: 0
       useHDR: 0
       useDetailNormalMap: 1
-      useCascadedShadowMaps: 0
+      useCascadedShadowMaps: 1
       prefer32BitShadowMaps: 0
       enableLPPV: 1
-      useDitherMaskForAlphaBlendedShadows: 0
+      useDitherMaskForAlphaBlendedShadows: 1
     m_Automatic: 0
   m_LightmapStripping: 0
   m_FogStripping: 0
