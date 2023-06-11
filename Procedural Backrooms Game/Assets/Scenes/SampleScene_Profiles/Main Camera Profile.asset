@@ -208,7 +208,7 @@ MonoBehaviour:
     value: 1
   preset:
     overrideState: 1
-    value: 6
+    value: 1
   maximumIterationCount:
     overrideState: 0
     value: 16
@@ -223,7 +223,7 @@ MonoBehaviour:
     value: 100
   distanceFade:
     overrideState: 1
-    value: 0.5
+    value: 0
   vignette:
     overrideState: 1
     value: 0.5

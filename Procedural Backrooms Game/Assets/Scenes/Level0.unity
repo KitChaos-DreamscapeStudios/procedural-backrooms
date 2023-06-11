@@ -15,7 +15,7 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 0
-  m_FogColor: {r: 0.3018868, g: 0.3018868, b: 0.3018868, a: 1}
+  m_FogColor: {r: 0.5377358, g: 0.41823897, b: 0, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.01
   m_LinearFogStart: 0
@@ -5447,7 +5447,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: 3c0bda85b2544734ea7d87a5b36f165c, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: 3c0bda85b2544734ea7d87a5b36f165c, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -5455,7 +5455,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: dff94084440ddd144a9c58a32c9ee084, type: 2}
     - target: {fileID: -1461304994638716399, guid: 3c0bda85b2544734ea7d87a5b36f165c, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -1461304994638716399, guid: 3c0bda85b2544734ea7d87a5b36f165c, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -7431,10 +7431,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6791048411402975176, guid: 7c96eb2ab8362d7408c986cf599b7106, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6791048412490510026, guid: 7c96eb2ab8362d7408c986cf599b7106, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -7477,10 +7473,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6791048412490510026, guid: 7c96eb2ab8362d7408c986cf599b7106, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6791048412490510028, guid: 7c96eb2ab8362d7408c986cf599b7106, type: 3}
-      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6791048412490510030, guid: 7c96eb2ab8362d7408c986cf599b7106, type: 3}

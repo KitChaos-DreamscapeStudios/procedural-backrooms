@@ -17,6 +17,8 @@ public class Settings : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Application.targetFrameRate = 60;
+        //Screen.SetResolution(1920, 1080, true);
         Volume = VolSlider.value;
         foreach(AudioSource a in GameObject.FindObjectsOfType<AudioSource>())
         {
