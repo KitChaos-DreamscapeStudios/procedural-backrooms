@@ -5467,7 +5467,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3c0bda85b2544734ea7d87a5b36f165c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c0bda85b2544734ea7d87a5b36f165c, type: 3}
@@ -7341,6 +7341,7 @@ GameObject:
   m_Component:
   - component: {fileID: 350549270}
   - component: {fileID: 350549271}
+  - component: {fileID: 350549272}
   m_Layer: 3
   m_Name: Flashlight
   m_TagString: Untagged
@@ -7424,6 +7425,20 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &350549272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 350549269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d2b44fdf6f43e74fa1fd954f35bc083, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BatteryLife: 3
+  IsOn: 0
 --- !u!1001 &409610301
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11432,7 +11447,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 0.18
   m_Height: 3.089386
   m_Direction: 1
   m_Center: {x: 0, y: -1.044693, z: 0}
@@ -14655,6 +14670,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Items:
+  - {fileID: 6642830172642159796, guid: 1eeeb8e78d6dc08449173b62036223eb, type: 3}
   - {fileID: 6642830172642159796, guid: 1eeeb8e78d6dc08449173b62036223eb, type: 3}
   HandItem: {fileID: 0}
   InventScreen: {fileID: 190466482}

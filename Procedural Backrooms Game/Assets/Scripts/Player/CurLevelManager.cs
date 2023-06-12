@@ -60,7 +60,7 @@ public class CurLevelManager : MonoBehaviour
                 Destroy(fs, 3);
                 if(StepFX != null)
                 {
-                StepFX.Play();
+               // StepFX.Play();
                 }
                 footTimer = 0;
             

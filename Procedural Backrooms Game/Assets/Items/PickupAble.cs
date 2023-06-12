@@ -5,10 +5,15 @@ using UnityEngine;
 public class PickupAble : MonoBehaviour
 {
     public Item ToGive;
+    public bool DontRemoveParent;
     // Start is called before the first frame update
     void Start()
     {
-        transform.parent = null;
+        if (!DontRemoveParent)
+        {
+            transform.parent = null;
+        }
+        
     }
 
     // Update is called once per frame
