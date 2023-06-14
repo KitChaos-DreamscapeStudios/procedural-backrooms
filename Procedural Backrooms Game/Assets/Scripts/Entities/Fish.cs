@@ -11,6 +11,7 @@ public class Fish : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Point = transform.position;
         body = GetComponent<Rigidbody>();
         transform.eulerAngles = new Vector3(0, 0, 0);
         SpeedSlow = Random.Range(16, 25);
@@ -23,19 +24,18 @@ public class Fish : MonoBehaviour
         Vector3 targ = Point;
 
         Vector3 objectPos = transform.position;
-        targ.x = targ.x - objectPos.x;
-        targ.y = targ.y - objectPos.y;
-        targ.z = targ.z - objectPos.z;
+        targ -= objectPos;
+      
         transform.forward = Vector3.Slerp(transform.forward, targ, 0.1f);
         body.velocity = (transform.forward.normalized*40) / SpeedSlow;
-        if(Vector3.Distance(transform.position, Point) <= 1.5f)
+        if(Vector3.Distance(transform.position, Point) <= 2f)
         {
             AssignNewPoint();
         }
     }
     void AssignNewPoint()
     {
-        var TempPoint = Random.onUnitSphere * 8;
+        var TempPoint = transform.position+ Random.onUnitSphere * 15;
         if (!AllowHeightChange)
         {
             TempPoint.y = transform.position.y;
@@ -43,9 +43,9 @@ public class Fish : MonoBehaviour
        
         RaycastHit hit;
        
-        if(Physics.Raycast(transform.position,  TempPoint- transform.position, out hit))
+        if(Physics.Linecast(transform.position,  TempPoint, out hit))
         {
-            Debug.Log(hit.collider.name);
+           // Debug.Log(hit.collider.name);
             
             TempPoint = hit.point;
             if (!AllowHeightChange)
@@ -66,6 +66,11 @@ public class Fish : MonoBehaviour
         Point = transform.position;
         Jump:;
 
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawLine(transform.position, Point);
+        Gizmos.DrawSphere(Point, 1);
     }
     private void OnCollisionEnter(Collision collision)
     {
