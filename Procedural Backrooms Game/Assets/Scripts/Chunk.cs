@@ -18,8 +18,8 @@ public class Chunk : MonoBehaviour
     public Coords coords;
     public List<GameObject> Structs;
 
-    public List<GameObject> FreeStandingObjects;//Some Furniture, Entities. (Lock to floor)
-    public List<GameObject> WallLockedObjects;//Doors, Paintings, Vents. (Lock to walls)
+   // public List<GameObject> FreeStandingObjects;//Some Furniture, Entities. (Lock to floor)
+   // public List<GameObject> WallLockedObjects;//Doors, Paintings, Vents. (Lock to walls)
     public GameObject Layout;
     public List<GameObject> SpawnedDisposables;
     public float SanityDrain;

@@ -135,13 +135,13 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _AlbedoColor: {r: 0, g: 0.09433961, b: 0.09433961, a: 0.78039217}
+    - _AlbedoColor: {r: 0, g: 0.4339623, b: 0.4339623, a: 0.7882353}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _FoamColor: {r: 0, g: 1, b: 0.69687486, a: 1}
+    - _FoamColor: {r: 0.27682447, g: 0.764151, b: 0.48739722, a: 1}
     - _FoamSoft: {r: 0.11, g: 0.5, b: 0.73, a: 0}
     - _MirrorColor: {r: 1, g: 1, b: 1, a: 0.5}
     - _MirrorDepthColor: {r: 0, g: 0, b: 0, a: 0.5}
     - _ReflectionColor: {r: 0.28, g: 0.29, b: 0.25, a: 0.5}
-    - _SpecColor: {r: 0, g: 1, b: 0.8086612, a: 1}
+    - _SpecColor: {r: 0, g: 1, b: 0.8078432, a: 1}
   m_BuildTextureStacks: []
