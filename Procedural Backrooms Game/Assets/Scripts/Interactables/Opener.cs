@@ -5,7 +5,8 @@ using UnityEngine;
 public class Opener : Interactable
 {
     public GameObject Pivot;
-    bool isOpening;
+   
+    bool IsOpen;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,13 +16,17 @@ public class Opener : Interactable
     // Update is called once per frame
     void Update()
     {
-        if (isOpening)
+        if (IsOpen)
         {
-            Pivot.transform.eulerAngles = Vector3.Lerp(Pivot.transform.eulerAngles, new Vector3(0, 90, 0), 0.05f);
-        }   
+            Pivot.transform.localEulerAngles = Vector3.Lerp(Pivot.transform.localEulerAngles, new Vector3(0, 90, 0), 0.05f);
+        }
+        else
+        {
+            Pivot.transform.localEulerAngles = Vector3.Lerp(Pivot.transform.localEulerAngles, new Vector3(0, 0, 0), 0.05f);
+        }
     }
     public override void OnInteract()
     {
-        isOpening = true;
+        IsOpen = !IsOpen;
     }
 }
