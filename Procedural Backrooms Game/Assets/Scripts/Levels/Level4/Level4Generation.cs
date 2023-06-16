@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 using System.Linq;
-public class Level34Generation : Generation
+public class Level4Generation : Generation
 {
     // Start is called before the first frame update
     float elap;
     bool StartCheck;
     float elap2;
+    public bool SpawnWalls;
     public void Start()
     {
         LastChunk = ChunkForLevel[Random.Range(0, ChunkForLevel.Count)];
@@ -45,6 +47,14 @@ public class Level34Generation : Generation
                 PlayerIn = ChunkData;
             }
             Chunks.Add(ChunkData);
+            if (!SpawnWalls)
+            {
+                foreach(GameObject Wall in ChunkData.Walls)
+                {
+                    Destroy(Wall);
+                }
+            }
+            SpawnWalls = !SpawnWalls;
             //Debug.Log("Spawnednew");
 
             // Debug.Log(ChunkData.Structs.Count);
@@ -79,8 +89,15 @@ public class Level34Generation : Generation
             {
                 PlayerIn = ChunkData;
             }
-            
             Chunks.Add(ChunkData);
+            if (!SpawnWalls)
+            {
+                foreach (GameObject Wall in ChunkData.Walls)
+                {
+                    Destroy(Wall);
+                }
+            }
+            SpawnWalls = !SpawnWalls;
             // Debug.Log(ChunkData.Structs.Count);
             try
             {

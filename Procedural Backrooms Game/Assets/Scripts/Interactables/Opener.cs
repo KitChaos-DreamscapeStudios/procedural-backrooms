@@ -10,7 +10,10 @@ public class Opener : Interactable
     // Start is called before the first frame update
     void Start()
     {
-        Pivot = transform.parent.gameObject;
+        
+            Pivot = transform.parent.gameObject;
+        
+       
     }
 
     // Update is called once per frame
@@ -18,10 +21,13 @@ public class Opener : Interactable
     {
         if (IsOpen)
         {
+            InteractText = "Close Door";
+
             Pivot.transform.localEulerAngles = Vector3.Lerp(Pivot.transform.localEulerAngles, new Vector3(0, 90, 0), 0.05f);
         }
         else
         {
+            InteractText = "Open Door";
             Pivot.transform.localEulerAngles = Vector3.Lerp(Pivot.transform.localEulerAngles, new Vector3(0, 0, 0), 0.05f);
         }
     }

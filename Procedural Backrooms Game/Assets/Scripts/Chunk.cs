@@ -28,8 +28,11 @@ public class Chunk : MonoBehaviour
     public List<Light> Lights;
     public float BedQual;
     //level specific stuff
+    //level 0
     public bool IsShiftingLightsB;
     public bool IsShiftingLightsN;
+    //level 4
+    public List<GameObject> Walls;
     public List<int> rots;//Used for if the chunk is brighting or nighting its lights for level 0
                                   // public GameObject PlayerObj;
                                   // Start is called before the first frame update

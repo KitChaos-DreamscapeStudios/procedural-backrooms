@@ -10286,7 +10286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deferredShading: {fileID: 4800000, guid: aef950fbe29d82d4ba8ad31b6887ccde, type: 3}
-  enableInverseSquareFalloff: 1
+  enableInverseSquareFalloff: 0
 --- !u!4 &930792831
 Transform:
   m_ObjectHideFlags: 0
