@@ -15,8 +15,7 @@ public class PlayerStats : MonoBehaviour
     public DepthOfField blur;
     public Vignette HurtGlow;
     public PostProcessVolume Vol;
-    public delegate void Event();
-    public List<Event> events;
+    
     public GameObject Flashlight;
     //Internal Stats
     public float MaxHealth;

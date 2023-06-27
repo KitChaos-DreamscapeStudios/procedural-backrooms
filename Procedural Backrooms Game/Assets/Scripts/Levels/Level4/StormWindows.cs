@@ -16,7 +16,7 @@ public class StormWindows : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        MeshRenderer = GetComponent<MeshRenderer>();
+        MeshRenderer = GetComponent<MeshRenderer>();    
         Thunder = GameObject.Find("Thunder").GetComponent<AudioSource>();
     }
 
