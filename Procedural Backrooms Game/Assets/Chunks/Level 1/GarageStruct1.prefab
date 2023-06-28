@@ -276,7 +276,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractText: Open Box
   Items:
-  - {fileID: 2273606950013226886, guid: 71bc1208f65373a44af354a0921b986c, type: 3}
   - {fileID: 2378724091263026445, guid: 7d1568720c8986f4da6119596ab6fe53, type: 3}
   - {fileID: 2378724091263026445, guid: 7d1568720c8986f4da6119596ab6fe53, type: 3}
   - {fileID: 2378724091263026445, guid: 7d1568720c8986f4da6119596ab6fe53, type: 3}
@@ -405,7 +404,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractText: Open Box
   Items:
-  - {fileID: 2273606950013226886, guid: 71bc1208f65373a44af354a0921b986c, type: 3}
   - {fileID: 2378724091263026445, guid: 7d1568720c8986f4da6119596ab6fe53, type: 3}
   - {fileID: 2378724091263026445, guid: 7d1568720c8986f4da6119596ab6fe53, type: 3}
   - {fileID: 2378724091263026445, guid: 7d1568720c8986f4da6119596ab6fe53, type: 3}
@@ -573,7 +571,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractText: Open Crate
   Items:
-  - {fileID: 2273606950013226886, guid: 71bc1208f65373a44af354a0921b986c, type: 3}
   - {fileID: 2106353220914411208, guid: 2b4558c1ae33d2e4e87181184ca511ce, type: 3}
   - {fileID: 2378724091263026445, guid: 7d1568720c8986f4da6119596ab6fe53, type: 3}
   - {fileID: 2378724091263026445, guid: 7d1568720c8986f4da6119596ab6fe53, type: 3}
@@ -659,7 +656,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractText: Open Crate
   Items:
-  - {fileID: 2273606950013226886, guid: 71bc1208f65373a44af354a0921b986c, type: 3}
   - {fileID: 2106353220914411208, guid: 2b4558c1ae33d2e4e87181184ca511ce, type: 3}
   - {fileID: 2378724091263026445, guid: 7d1568720c8986f4da6119596ab6fe53, type: 3}
   - {fileID: 2378724091263026445, guid: 7d1568720c8986f4da6119596ab6fe53, type: 3}
@@ -870,7 +866,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractText: Open Box
   Items:
-  - {fileID: 2273606950013226886, guid: 71bc1208f65373a44af354a0921b986c, type: 3}
   - {fileID: 2378724091263026445, guid: 7d1568720c8986f4da6119596ab6fe53, type: 3}
   - {fileID: 2378724091263026445, guid: 7d1568720c8986f4da6119596ab6fe53, type: 3}
   - {fileID: 2378724091263026445, guid: 7d1568720c8986f4da6119596ab6fe53, type: 3}
@@ -6192,7 +6187,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractText: Open Box
   Items:
-  - {fileID: 2273606950013226886, guid: 71bc1208f65373a44af354a0921b986c, type: 3}
   - {fileID: 2378724091263026445, guid: 7d1568720c8986f4da6119596ab6fe53, type: 3}
   - {fileID: 2378724091263026445, guid: 7d1568720c8986f4da6119596ab6fe53, type: 3}
   - {fileID: 2378724091263026445, guid: 7d1568720c8986f4da6119596ab6fe53, type: 3}
@@ -6360,7 +6354,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractText: Open Crate
   Items:
-  - {fileID: 2273606950013226886, guid: 71bc1208f65373a44af354a0921b986c, type: 3}
   - {fileID: 2106353220914411208, guid: 2b4558c1ae33d2e4e87181184ca511ce, type: 3}
   - {fileID: 2378724091263026445, guid: 7d1568720c8986f4da6119596ab6fe53, type: 3}
   - {fileID: 2378724091263026445, guid: 7d1568720c8986f4da6119596ab6fe53, type: 3}
@@ -6736,7 +6729,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractText: Open Box
   Items:
-  - {fileID: 2273606950013226886, guid: 71bc1208f65373a44af354a0921b986c, type: 3}
   - {fileID: 2378724091263026445, guid: 7d1568720c8986f4da6119596ab6fe53, type: 3}
   - {fileID: 2378724091263026445, guid: 7d1568720c8986f4da6119596ab6fe53, type: 3}
   - {fileID: 2378724091263026445, guid: 7d1568720c8986f4da6119596ab6fe53, type: 3}
@@ -8341,7 +8333,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractText: Open Box
   Items:
-  - {fileID: 2273606950013226886, guid: 71bc1208f65373a44af354a0921b986c, type: 3}
   - {fileID: 2378724091263026445, guid: 7d1568720c8986f4da6119596ab6fe53, type: 3}
   - {fileID: 2378724091263026445, guid: 7d1568720c8986f4da6119596ab6fe53, type: 3}
   - {fileID: 2378724091263026445, guid: 7d1568720c8986f4da6119596ab6fe53, type: 3}
@@ -34549,7 +34540,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 250
+  MaxDistance: 10
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -34614,7 +34605,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 1.1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -34650,7 +34641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94dd75dcdcaeab942a7aaa6b71db9dce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rarity: 68
+  Rarity: 88
 --- !u!114 &149291025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35117,7 +35108,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractText: Open Box
   Items:
-  - {fileID: 2273606950013226886, guid: 71bc1208f65373a44af354a0921b986c, type: 3}
   - {fileID: 2378724091263026445, guid: 7d1568720c8986f4da6119596ab6fe53, type: 3}
   - {fileID: 2378724091263026445, guid: 7d1568720c8986f4da6119596ab6fe53, type: 3}
   - {fileID: 2378724091263026445, guid: 7d1568720c8986f4da6119596ab6fe53, type: 3}
@@ -35358,7 +35348,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractText: Open Box
   Items:
-  - {fileID: 2273606950013226886, guid: 71bc1208f65373a44af354a0921b986c, type: 3}
   - {fileID: 2378724091263026445, guid: 7d1568720c8986f4da6119596ab6fe53, type: 3}
   - {fileID: 2378724091263026445, guid: 7d1568720c8986f4da6119596ab6fe53, type: 3}
   - {fileID: 2378724091263026445, guid: 7d1568720c8986f4da6119596ab6fe53, type: 3}
@@ -35561,7 +35550,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractText: Open Crate
   Items:
-  - {fileID: 2273606950013226886, guid: 71bc1208f65373a44af354a0921b986c, type: 3}
   - {fileID: 2106353220914411208, guid: 2b4558c1ae33d2e4e87181184ca511ce, type: 3}
   - {fileID: 2378724091263026445, guid: 7d1568720c8986f4da6119596ab6fe53, type: 3}
   - {fileID: 2378724091263026445, guid: 7d1568720c8986f4da6119596ab6fe53, type: 3}
@@ -36167,7 +36155,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 250
+  MaxDistance: 10
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -36232,7 +36220,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 1.1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -36284,7 +36272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94dd75dcdcaeab942a7aaa6b71db9dce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rarity: 68
+  Rarity: 88
 --- !u!1 &4260971783888250211
 GameObject:
   m_ObjectHideFlags: 0
@@ -37098,7 +37086,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractText: Open Box
   Items:
-  - {fileID: 2273606950013226886, guid: 71bc1208f65373a44af354a0921b986c, type: 3}
   - {fileID: 2378724091263026445, guid: 7d1568720c8986f4da6119596ab6fe53, type: 3}
   - {fileID: 2378724091263026445, guid: 7d1568720c8986f4da6119596ab6fe53, type: 3}
   - {fileID: 2378724091263026445, guid: 7d1568720c8986f4da6119596ab6fe53, type: 3}

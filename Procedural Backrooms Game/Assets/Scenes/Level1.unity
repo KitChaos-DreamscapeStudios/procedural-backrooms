@@ -5544,22 +5544,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 678748965, guid: 7964c6e1e001e5c43aa57f87012a2c9b, type: 3}
-      propertyPath: MaxDistance
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 678748965, guid: 7964c6e1e001e5c43aa57f87012a2c9b, type: 3}
-      propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1294304938202742857, guid: 7964c6e1e001e5c43aa57f87012a2c9b, type: 3}
-      propertyPath: MaxDistance
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 1294304938202742857, guid: 7964c6e1e001e5c43aa57f87012a2c9b, type: 3}
-      propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4774650934168693162, guid: 7964c6e1e001e5c43aa57f87012a2c9b, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -6017,22 +6001,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 339255978832664480, guid: e3d05f9c38de6f74f956ee5b39d30520, type: 3}
-      propertyPath: MaxDistance
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 339255978832664480, guid: e3d05f9c38de6f74f956ee5b39d30520, type: 3}
-      propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1532082557977408716, guid: e3d05f9c38de6f74f956ee5b39d30520, type: 3}
-      propertyPath: MaxDistance
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 1532082557977408716, guid: e3d05f9c38de6f74f956ee5b39d30520, type: 3}
-      propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5113749664987340078, guid: e3d05f9c38de6f74f956ee5b39d30520, type: 3}
       propertyPath: m_Name
       value: GarageStruct1
