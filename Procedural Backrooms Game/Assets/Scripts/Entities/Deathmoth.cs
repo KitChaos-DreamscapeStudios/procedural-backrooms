@@ -28,9 +28,13 @@ public class Deathmoth : Damager
         anim = GetComponent<Animator>();
         Chitter = GetComponent<AudioSource>();
     }
-    void PlayChitter()
+    void PlayChitter(float OvveridePitch = 0)
     {
         Chitter.pitch = 1 + Random.Range(-0.5f, 0.5f);
+        if(OvveridePitch != 0)
+        {
+            Chitter.pitch = OvveridePitch;
+        }
         Chitter.Play();
     }
     private void Update()
@@ -122,5 +126,9 @@ public class Deathmoth : Damager
     private void OnBecameVisible()
     {
         Visible = true;
+    }
+    public override void OnTakeDamage()
+    {
+        PlayChitter(10);
     }
 }

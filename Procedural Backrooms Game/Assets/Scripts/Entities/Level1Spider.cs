@@ -5,6 +5,10 @@ using UnityEngine.Experimental.AI;
 using UnityEngine.AI;
 public class Level1Spider : Damager
 {
+    public override void OnTakeDamage()
+    {
+        throw new System.NotImplementedException();
+    }
     public enum State
     {
         chasing, //Chasing the player outside of the ceiling

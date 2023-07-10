@@ -541,7 +541,7 @@ MonoBehaviour:
   - {fileID: 6274367329714814979}
   ItemTravelpoint: {x: 0.43, y: 2.39, z: 0}
   TargetItem: {fileID: 0}
-  ItemDropPoint: {x: 0, y: 0.3, z: 0}
+  ItemDropPoint: {x: 0.71, y: 1.03, z: 0}
   Shake: {fileID: 8507839705189371990}
   Vend: {fileID: 8507839705762995900}
 --- !u!1 &9051541110014345798

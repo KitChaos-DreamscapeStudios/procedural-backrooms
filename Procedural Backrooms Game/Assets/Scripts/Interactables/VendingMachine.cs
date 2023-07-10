@@ -13,12 +13,14 @@ public class VendingMachine : Interactable
     public Vector3 ItemDropPoint;
     public AudioSource Shake;
     public AudioSource Vend;
+    Vector3 BaseTravelPoint;
     // Start is called before the first frame update
     void Start()
     {
         ItemTravelpoint = transform.position + ItemTravelpoint;
+        ItemTravelpoint = BaseTravelPoint;
         ItemDropPoint = transform.position + ItemDropPoint;
-
+        
         foreach(GameObject i in Items)
         {
             EnableColliders(i, false); 
@@ -51,30 +53,33 @@ public class VendingMachine : Interactable
             Items = Items.Where(item => item != null).ToList();
             IsInUse = false;
             TargetItem = Items[0];
+            ItemTravelpoint = BaseTravelPoint;
         }
         if (IsInUse)
         {
             GameObject.Find("Player").GetComponent<Movement3D>().SoundLevel = 90;
             TargetItem.transform.position = Vector3.Lerp(TargetItem.transform.position, ItemTravelpoint, 0.08f);
-            if(Vector3.Distance(TargetItem.transform.position, ItemTravelpoint) < 0.5f)
+            if(Vector3.Distance(TargetItem.transform.position, ItemTravelpoint) < 0.1f)
             {
               
-                if (!IsStuck)
+                if (ItemTravelpoint != ItemDropPoint)
                 {
-                    var Rand = Random.Range(0, 100);
-                    if(Rand >= 65)
-                    {
-                        IsStuck = true;
-                        IsInUse = false;
-                        Vend.Stop();
-                    }
-                    else
+                   
+                   
                     {
                         ItemTravelpoint = ItemDropPoint;
                         EnableColliders(TargetItem, true);
                     }
                 }
+                else
+                {
+                    IsInUse = false;
+                }
             }
+        }
+        else
+        {
+            Vend.Stop();
         }
     }
     public override void OnInteract()
@@ -83,28 +88,10 @@ public class VendingMachine : Interactable
         {
             IsInUse = true;
             TargetItem = Items[0];
+            Vend.Play();
 
         }
-        if (IsStuck)
-        {
-            Vector3 CurPos = transform.position;
-            for (int i = 0; i < 5; i++)
-            {
-                transform.position += new Vector3(Random.Range(-2, 2), 0, Random.Range(-2, 2));
-                transform.position = CurPos;
-            }
-            transform.position = CurPos;
-           
-            Shake.Play();
-            var Rand = Random.Range(0, 100);
-            GameObject.Find("Player").GetComponent<Movement3D>().SoundLevel = 200;
-            if(Rand > 85)
-            {
-                IsInUse = true;
-                IsStuck = false;
-                ItemTravelpoint = ItemDropPoint;
-            }
-        }
+        
     }
     private void OnDrawGizmosSelected()
     {

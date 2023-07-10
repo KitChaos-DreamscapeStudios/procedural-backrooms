@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class Grind : Damager
 {
+    public override void OnTakeDamage()
+    {
+        Debug.Log("YOU CANT STOP THE GRIND");
+    }
     public AudioSource Hiss;
     GameObject Player;
    // public float Speed;
     Vector3 Target;
-    bool HasHeardPlayer;
+   
     
     // Start is called before the first frame update
     void Start()

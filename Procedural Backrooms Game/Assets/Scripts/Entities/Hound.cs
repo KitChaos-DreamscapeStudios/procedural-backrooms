@@ -6,6 +6,10 @@ using UnityEngine.Experimental.AI;
 using System.Threading.Tasks;
 public class Hound : Damager
 {
+    public override void OnTakeDamage()
+    {
+        throw new System.NotImplementedException();
+    }
     public enum State
     {
         wandering,

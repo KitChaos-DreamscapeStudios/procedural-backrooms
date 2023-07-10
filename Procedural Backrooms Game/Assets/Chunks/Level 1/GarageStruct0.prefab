@@ -14478,7 +14478,7 @@ GameObject:
   - component: {fileID: 1365978147802900253}
   m_Layer: 0
   m_Name: Light (3)
-  m_TagString: Untagged
+  m_TagString: Lights
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14898,7 +14898,7 @@ GameObject:
   - component: {fileID: 3640938152593222819}
   m_Layer: 0
   m_Name: Light (4)
-  m_TagString: Untagged
+  m_TagString: Lights
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30882,7 +30882,7 @@ GameObject:
   - component: {fileID: 4123744670530763836}
   m_Layer: 0
   m_Name: Light (1)
-  m_TagString: Untagged
+  m_TagString: Lights
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32900,7 +32900,7 @@ GameObject:
   - component: {fileID: 6523502112705902783}
   m_Layer: 0
   m_Name: Light
-  m_TagString: Untagged
+  m_TagString: Lights
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38030,7 +38030,7 @@ GameObject:
   - component: {fileID: 8962733567729406978}
   m_Layer: 0
   m_Name: Light (2)
-  m_TagString: Untagged
+  m_TagString: Lights
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
