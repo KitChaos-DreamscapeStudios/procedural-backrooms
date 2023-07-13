@@ -264,7 +264,7 @@ public class PlayerStats : MonoBehaviour
         }
         if (Sanity < 35)
         {
-            blur.focusDistance.Override(0.5f);
+            blur.focusDistance.Override(3f);
         }
         else
         {
@@ -272,12 +272,11 @@ public class PlayerStats : MonoBehaviour
         }
         if(Sanity > 20 && Sanity < 55)
         {
-            ThirstBar.color = new Color(0.3607843f, 0.5496334f, 1, 1);
-            HungerBar.color = new Color(1, 0.7781968f, 0.3622641f, 1);
+            
             GetComponent<Movement3D>().sensitivityX = 15;
             GetComponent<Movement3D>().sensitivityY = 15;
         }
-        if (Sanity < 20 && Sanity > 5)
+        if (Sanity < 20)
         {
             HungerDrain = 0.8f;
             ThirstDrain = 1f;
@@ -286,6 +285,11 @@ public class PlayerStats : MonoBehaviour
             GetComponent<Movement3D>().sensitivityY = 20;
             ThirstBar.color = new Color(0, 0, 0, 0);
             HungerBar.color = new Color(0, 0, 0, 0);
+        }
+        else
+        {
+            ThirstBar.color = new Color(0.3607843f, 0.5496334f, 1, 1);
+            HungerBar.color = new Color(1, 0.7781968f, 0.3622641f, 1);
         }
 
         if (Thirst <= ThirstDeath)
@@ -342,7 +346,7 @@ public class PlayerStats : MonoBehaviour
     {//Add some animation for death Later
         if (IsSleeping)
         {
-            Reason += "While Sleeping";
+            Reason += " While Sleeping";
         }
         var R = Instantiate(new GameObject());
         R.AddComponent<DeathReason>();
