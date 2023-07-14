@@ -43,7 +43,7 @@ public class Grind : Damager
             Target = transform.position + Random.insideUnitSphere * 40;
             Target.y = transform.position.y;
         }
-        transform.position += transform.forward.normalized / 6;
+        gameObject.MoveForward(6);
         Vector3 targ = Player.transform.position;
 
 

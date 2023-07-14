@@ -70,7 +70,7 @@ public class Deathmoth : Damager
         {
             anim.Play("Flap");
             PostFlyElap += Time.deltaTime;
-            transform.position += transform.forward.normalized/4;
+            gameObject.MoveForward(4);
             Vector3 targ = Player.transform.position;
           
 

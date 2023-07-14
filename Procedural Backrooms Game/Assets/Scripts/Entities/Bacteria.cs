@@ -50,8 +50,7 @@ public class Bacteria : Damager
                 Howl.pitch += Random.Range(-3, 3);
                 Howl.Play();
             }
-            gameObject.ShakeObject(4, 3);
-            transform.position += transform.forward / 2;
+            gameObject.MoveForward(2); 
         }
         else
         {

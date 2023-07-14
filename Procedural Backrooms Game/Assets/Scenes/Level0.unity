@@ -14817,7 +14817,7 @@ MonoBehaviour:
   StamRecoverySpeed: 1
   Health: 100
   Stamina: 10
-  Sanity: 24
+  Sanity: 100
   Thirst: 100
   Hunger: 100
   Fatigue: 0
@@ -14872,7 +14872,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Items:
-  - {fileID: 6642830172642159796, guid: 1eeeb8e78d6dc08449173b62036223eb, type: 3}
   - {fileID: 6642830172642159796, guid: 1eeeb8e78d6dc08449173b62036223eb, type: 3}
   HandItem: {fileID: 0}
   InventScreen: {fileID: 190466482}
