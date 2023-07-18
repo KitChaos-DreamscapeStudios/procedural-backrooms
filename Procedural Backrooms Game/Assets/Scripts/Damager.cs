@@ -49,7 +49,7 @@ public static class GameObjectExtensions
     }
     public static int GetNearObjectsWithTag(this GameObject gameObject, string Tag, float Range, out GameObject Nearest)
     {
-        Debug.Log(gameObject.transform.position);
+        //Debug.Log(gameObject.transform.position);
         ///Gets Nearby Objects With Tag, Range Customizable per call
         int total = 0;
         
@@ -57,15 +57,19 @@ public static class GameObjectExtensions
         GameObject CurClosestObject = null;
         foreach (GameObject obj in GameObject.FindGameObjectsWithTag(Tag))
         {
-            if(Vector3.Distance(obj.gameObject.transform.position, gameObject.transform.position)< CurClosest)
+            if (obj.activeSelf)
             {
-                CurClosest = Vector3.Distance(obj.gameObject.transform.position, gameObject.transform.position);
-                CurClosestObject = obj;
+                if (Vector3.Distance(obj.gameObject.transform.position, gameObject.transform.position) < CurClosest)
+                {
+                    CurClosest = Vector3.Distance(obj.gameObject.transform.position, gameObject.transform.position);
+                    CurClosestObject = obj;
+                }
+                if (Vector3.Distance(obj.gameObject.transform.position, gameObject.transform.position) < Range)
+                {
+                    total += 1;
+                }
             }
-            if (Vector3.Distance(obj.gameObject.transform.position, gameObject.transform.position) < Range)
-            {
-                total += 1;
-            }
+           
         }
         Nearest = CurClosestObject;
         return total;

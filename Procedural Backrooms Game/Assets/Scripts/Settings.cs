@@ -26,14 +26,14 @@ public class Settings : MonoBehaviour
         }
         if (IsPaused)
         {
-            Time.timeScale = 0;
+          //  Time.timeScale = 0;
             SettingsMenu.SetActive(true);
             GetComponent<Inventory>().InventScreen.SetActive(false);
             GetComponent<Movement3D>().CantMove = true;
         }
         else
         {
-            Time.timeScale = 1;
+            //Time.timeScale = 1;
             SettingsMenu.SetActive(false);
             GetComponent<Movement3D>().CantMove = false;
         }

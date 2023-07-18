@@ -291,6 +291,10 @@ public class PlayerStats : MonoBehaviour
             ThirstBar.color = new Color(0.3607843f, 0.5496334f, 1, 1);
             HungerBar.color = new Color(1, 0.7781968f, 0.3622641f, 1);
         }
+        if (Sanity <= 0)
+        {
+            Sanity = 0;
+        }
 
         if (Thirst <= ThirstDeath)
         {
