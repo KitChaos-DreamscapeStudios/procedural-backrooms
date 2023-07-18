@@ -34,7 +34,7 @@ public class Bacteria : Damager
             CoolDown = 0;
         }
         CoolDown += Time.deltaTime;
-        if(Player.Sanity < 20)
+        if(Player.Sanity < 35)
         {
             if (CoolDown >= Rand &&!Attacking)
             {

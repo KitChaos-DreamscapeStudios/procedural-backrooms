@@ -222,8 +222,7 @@ MonoBehaviour:
   - {fileID: 4016037651883598887, guid: c741dd52a3b32ff4daf546140ea004ad, type: 3}
   - {fileID: 332799607110177227, guid: a497289a44ed79547901e20b2f478c45, type: 3}
   - {fileID: 332799607110177227, guid: a497289a44ed79547901e20b2f478c45, type: 3}
-  FreeStandingObjects: []
-  WallLockedObjects: []
+  OffLights: {fileID: 6151071871934886045, guid: 6767b4a71c004723b61cf1c813fe0d8d, type: 3}
   Layout: {fileID: 0}
   SpawnedDisposables: []
   SanityDrain: 0.2
@@ -232,6 +231,7 @@ MonoBehaviour:
   BedQual: 1
   IsShiftingLightsB: 0
   IsShiftingLightsN: 0
+  Walls: []
   rots: 
 --- !u!114 &1934784154
 MonoBehaviour:

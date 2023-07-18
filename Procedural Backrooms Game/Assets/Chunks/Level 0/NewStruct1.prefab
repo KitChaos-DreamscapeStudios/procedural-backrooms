@@ -4495,7 +4495,7 @@ AudioSource:
   MinDistance: 1
   MaxDistance: 70
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -4602,6 +4602,7 @@ MonoBehaviour:
   Damage: 20
   Health: 10
   DeathMessage: Killed By Deathmoth
+  HasHeardPlayer: 0
   DetectedPlayer: 0
   Player: {fileID: 0}
   NotMonster:
@@ -5058,7 +5059,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7423135bdd710c40b268d05ab8efb50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractText: 
+  InteractText: Open Door
   SceneToLoad: Level1
   Steps:
   - {fileID: 8300000, guid: 42fb8ae8a7929c14eadc460582a23b4d, type: 3}
@@ -5088,7 +5089,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7423135bdd710c40b268d05ab8efb50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractText: 
+  InteractText: Open Door
   SceneToLoad: Level1
   Steps:
   - {fileID: 8300000, guid: 42fb8ae8a7929c14eadc460582a23b4d, type: 3}
@@ -5118,7 +5119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7423135bdd710c40b268d05ab8efb50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractText: 
+  InteractText: Open Door
   SceneToLoad: Level1
   Steps:
   - {fileID: 8300000, guid: 42fb8ae8a7929c14eadc460582a23b4d, type: 3}
@@ -5148,7 +5149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7423135bdd710c40b268d05ab8efb50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractText: 
+  InteractText: Open Door
   SceneToLoad: Level1
   Steps:
   - {fileID: 8300000, guid: 42fb8ae8a7929c14eadc460582a23b4d, type: 3}
@@ -5448,6 +5449,22 @@ PrefabInstance:
     - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
       propertyPath: m_Volume
       value: 0.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: MaxDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: MinDistance
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1906836680319761430, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
       propertyPath: m_Name
@@ -6035,7 +6052,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5654749327101234046, guid: 5aa2ee36ec7542a4c9e48017bfe4b955, type: 3}
       propertyPath: Rarity
-      value: 96
+      value: 94
       objectReference: {fileID: 0}
     - target: {fileID: 7437788999264545282, guid: 5aa2ee36ec7542a4c9e48017bfe4b955, type: 3}
       propertyPath: m_Enabled
@@ -6244,6 +6261,22 @@ PrefabInstance:
     - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
       propertyPath: m_Volume
       value: 0.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: MaxDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: MinDistance
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1906836680319761430, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
       propertyPath: m_Name
@@ -6536,7 +6569,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5654749327101234046, guid: 5aa2ee36ec7542a4c9e48017bfe4b955, type: 3}
       propertyPath: Rarity
-      value: 96
+      value: 94
       objectReference: {fileID: 0}
     - target: {fileID: 7437788999264545282, guid: 5aa2ee36ec7542a4c9e48017bfe4b955, type: 3}
       propertyPath: m_Enabled
@@ -6991,6 +7024,22 @@ PrefabInstance:
       propertyPath: m_Volume
       value: 0.76
       objectReference: {fileID: 0}
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: MaxDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: MinDistance
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1906836680319761430, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
       propertyPath: m_Name
       value: Light (12)
@@ -7365,7 +7414,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5654749327101234046, guid: 5aa2ee36ec7542a4c9e48017bfe4b955, type: 3}
       propertyPath: Rarity
-      value: 96
+      value: 94
       objectReference: {fileID: 0}
     - target: {fileID: 7437788999264545282, guid: 5aa2ee36ec7542a4c9e48017bfe4b955, type: 3}
       propertyPath: m_Enabled
@@ -7926,7 +7975,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5654749327101234046, guid: 5aa2ee36ec7542a4c9e48017bfe4b955, type: 3}
       propertyPath: Rarity
-      value: 96
+      value: 94
       objectReference: {fileID: 0}
     - target: {fileID: 7437788999264545282, guid: 5aa2ee36ec7542a4c9e48017bfe4b955, type: 3}
       propertyPath: m_Enabled
@@ -8409,6 +8458,22 @@ PrefabInstance:
       propertyPath: m_Volume
       value: 0.76
       objectReference: {fileID: 0}
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: MaxDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: MinDistance
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1906836680319761430, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
       propertyPath: m_Name
       value: Light (16)
@@ -8522,6 +8587,22 @@ PrefabInstance:
     - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
       propertyPath: m_Volume
       value: 0.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: MaxDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: MinDistance
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1906836680319761430, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
       propertyPath: m_Name
@@ -8894,6 +8975,22 @@ PrefabInstance:
       propertyPath: m_Volume
       value: 0.76
       objectReference: {fileID: 0}
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: MaxDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: MinDistance
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1906836680319761430, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
       propertyPath: m_Name
       value: Light (13)
@@ -9102,7 +9199,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5654749327101234046, guid: 5aa2ee36ec7542a4c9e48017bfe4b955, type: 3}
       propertyPath: Rarity
-      value: 96
+      value: 94
       objectReference: {fileID: 0}
     - target: {fileID: 7437788999264545282, guid: 5aa2ee36ec7542a4c9e48017bfe4b955, type: 3}
       propertyPath: m_Enabled
@@ -9311,6 +9408,22 @@ PrefabInstance:
     - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
       propertyPath: m_Volume
       value: 0.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: MaxDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: MinDistance
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1906836680319761430, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
       propertyPath: m_Name
@@ -9972,6 +10085,22 @@ PrefabInstance:
       propertyPath: m_Volume
       value: 0.76
       objectReference: {fileID: 0}
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: MaxDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: MinDistance
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1906836680319761430, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
       propertyPath: m_Name
       value: Light (10)
@@ -10176,6 +10305,22 @@ PrefabInstance:
     - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
       propertyPath: m_Volume
       value: 0.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: MaxDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: MinDistance
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1906836680319761430, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
       propertyPath: m_Name
@@ -10389,7 +10534,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5654749327101234046, guid: 5aa2ee36ec7542a4c9e48017bfe4b955, type: 3}
       propertyPath: Rarity
-      value: 96
+      value: 94
       objectReference: {fileID: 0}
     - target: {fileID: 7437788999264545282, guid: 5aa2ee36ec7542a4c9e48017bfe4b955, type: 3}
       propertyPath: m_Enabled
@@ -10507,6 +10652,22 @@ PrefabInstance:
     - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
       propertyPath: m_Volume
       value: 0.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: MaxDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: MinDistance
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1906836680319761430, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
       propertyPath: m_Name
@@ -10890,7 +11051,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5654749327101234046, guid: 5aa2ee36ec7542a4c9e48017bfe4b955, type: 3}
       propertyPath: Rarity
-      value: 96
+      value: 94
       objectReference: {fileID: 0}
     - target: {fileID: 7437788999264545282, guid: 5aa2ee36ec7542a4c9e48017bfe4b955, type: 3}
       propertyPath: m_Enabled
@@ -11380,7 +11541,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5654749327101234046, guid: 5aa2ee36ec7542a4c9e48017bfe4b955, type: 3}
       propertyPath: Rarity
-      value: 96
+      value: 94
       objectReference: {fileID: 0}
     - target: {fileID: 7437788999264545282, guid: 5aa2ee36ec7542a4c9e48017bfe4b955, type: 3}
       propertyPath: m_Enabled
@@ -11407,6 +11568,22 @@ PrefabInstance:
     - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
       propertyPath: m_Volume
       value: 0.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: MaxDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: MinDistance
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 169032443608959210, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
+      propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1906836680319761430, guid: b4f73e1a8033bac419692faa0983ebc3, type: 3}
       propertyPath: m_Name

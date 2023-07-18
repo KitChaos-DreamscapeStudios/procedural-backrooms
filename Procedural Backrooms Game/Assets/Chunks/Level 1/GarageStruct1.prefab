@@ -1018,9 +1018,9 @@ AudioSource:
   Priority: 20
   DopplerLevel: 1
   MinDistance: 0.1
-  MaxDistance: 20
+  MaxDistance: 55
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -8621,9 +8621,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 0.1
-  MaxDistance: 8
+  MaxDistance: 25
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -9078,9 +9078,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 0.1
-  MaxDistance: 8
+  MaxDistance: 25
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -14268,9 +14268,9 @@ AudioSource:
   Priority: 20
   DopplerLevel: 1
   MinDistance: 0.1
-  MaxDistance: 20
+  MaxDistance: 55
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -14395,9 +14395,9 @@ AudioSource:
   Priority: 20
   DopplerLevel: 1
   MinDistance: 0.1
-  MaxDistance: 20
+  MaxDistance: 55
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -24374,9 +24374,9 @@ AudioSource:
   Priority: 20
   DopplerLevel: 1
   MinDistance: 0.1
-  MaxDistance: 20
+  MaxDistance: 55
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -29321,9 +29321,9 @@ AudioSource:
   Priority: 20
   DopplerLevel: 1
   MinDistance: 0.1
-  MaxDistance: 20
+  MaxDistance: 55
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -34542,10 +34542,10 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 0.1
+  MaxDistance: 50
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -35944,9 +35944,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 0.1
-  MaxDistance: 8
+  MaxDistance: 25
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -36158,10 +36158,10 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 0.1
+  MaxDistance: 50
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -42226,9 +42226,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 0.1
-  MaxDistance: 8
+  MaxDistance: 25
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -42714,9 +42714,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 0.1
-  MaxDistance: 8
+  MaxDistance: 25
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -42827,7 +42827,11 @@ PrefabInstance:
       objectReference: {fileID: 2534964839176971238, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
     - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: MaxDistance
-      value: 0.5
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
@@ -42905,7 +42909,11 @@ PrefabInstance:
       objectReference: {fileID: 2534964839176971238, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
     - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: MaxDistance
-      value: 0.5
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
@@ -43061,6 +43069,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 339255978308182495}
     m_Modifications:
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -43123,6 +43139,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 339255978411902559}
     m_Modifications:
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -43185,6 +43209,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 339255978411902559}
     m_Modifications:
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -43249,7 +43281,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: MaxDistance
-      value: 0.5
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
@@ -43315,7 +43351,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: MaxDistance
-      value: 0.5
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
@@ -43379,6 +43419,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 339255978308182495}
     m_Modifications:
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 21
@@ -43443,7 +43491,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: MaxDistance
-      value: 0.5
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
@@ -43507,6 +43559,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 339255978411902559}
     m_Modifications:
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -43571,7 +43631,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: MaxDistance
-      value: 0.5
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
@@ -43635,6 +43699,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 339255978308182495}
     m_Modifications:
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -43697,6 +43769,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 339255978308182495}
     m_Modifications:
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -43851,6 +43931,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 339255978308182495}
     m_Modifications:
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -44005,6 +44093,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 339255978308182495}
     m_Modifications:
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -44129,6 +44225,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 339255978411902559}
     m_Modifications:
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -44271,7 +44375,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: MaxDistance
-      value: 0.5
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
@@ -44439,6 +44547,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 2534964839176971238, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -44501,6 +44617,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 339255978308182495}
     m_Modifications:
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -44563,6 +44687,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 339255978411902559}
     m_Modifications:
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 21
@@ -44625,6 +44757,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 339255978308182495}
     m_Modifications:
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -44751,7 +44891,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: MaxDistance
-      value: 0.5
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
@@ -44815,6 +44959,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 339255978308182495}
     m_Modifications:
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -44877,6 +45029,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 339255978411902559}
     m_Modifications:
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -44939,6 +45099,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 339255978308182495}
     m_Modifications:
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -45003,7 +45171,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: MaxDistance
-      value: 0.5
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
@@ -45159,6 +45331,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 339255978308182495}
     m_Modifications:
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -45313,6 +45493,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 339255978308182495}
     m_Modifications:
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -45377,7 +45565,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: MaxDistance
-      value: 0.5
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
@@ -45441,6 +45633,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 339255978308182495}
     m_Modifications:
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 20
@@ -45505,7 +45705,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: MaxDistance
-      value: 0.5
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
@@ -45569,6 +45773,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 339255978411902559}
     m_Modifications:
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -45631,6 +45843,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 339255978308182495}
     m_Modifications:
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -45705,6 +45925,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 2534964839176971238, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 19
@@ -45767,6 +45995,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 339255978308182495}
     m_Modifications:
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -45829,6 +46065,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 339255978308182495}
     m_Modifications:
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -45955,7 +46199,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: MaxDistance
-      value: 0.5
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
@@ -46019,6 +46267,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 339255978308182495}
     m_Modifications:
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 22
@@ -46083,7 +46339,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: MaxDistance
-      value: 0.5
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
@@ -46147,6 +46407,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 339255978308182495}
     m_Modifications:
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -46209,6 +46477,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 339255978308182495}
     m_Modifications:
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -46425,6 +46701,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 339255978411902559}
     m_Modifications:
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 22
@@ -46489,7 +46773,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: MaxDistance
-      value: 0.5
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
@@ -46553,6 +46841,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 339255978411902559}
     m_Modifications:
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -46615,6 +46911,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 339255978308182495}
     m_Modifications:
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -46769,6 +47073,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 339255978308182495}
     m_Modifications:
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 17

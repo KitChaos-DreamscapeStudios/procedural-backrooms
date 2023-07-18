@@ -17,6 +17,7 @@ public class Chunk : MonoBehaviour
     public LayerMask Player;
     public Coords coords;
     public List<GameObject> Structs;
+    public Material OffLights;
 
    // public List<GameObject> FreeStandingObjects;//Some Furniture, Entities. (Lock to floor)
    // public List<GameObject> WallLockedObjects;//Doors, Paintings, Vents. (Lock to walls)
@@ -125,6 +126,8 @@ public class Chunk : MonoBehaviour
                 
               
                 l.intensity = Mathf.Lerp(l.intensity, 0, 0.01f);
+                l.GetComponent<MeshRenderer>().material = OffLights;
+                l.GetComponent<AudioSource>().Stop();
             }
         }
 

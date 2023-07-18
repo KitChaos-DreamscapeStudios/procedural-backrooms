@@ -191,7 +191,7 @@ public class Level0Generation : Generation
 
             }
             //level Specific effect: The Fake Walls
-            if(Playerstats.Sanity < 30)
+            if(Playerstats.Sanity < 40)
             {
                 FakeWallTimer += Time.deltaTime;
                 if (FakeWallTimer >= WallRand)

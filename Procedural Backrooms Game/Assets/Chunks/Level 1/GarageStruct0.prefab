@@ -14661,9 +14661,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 0.1
-  MaxDistance: 8
+  MaxDistance: 25
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -14805,9 +14805,9 @@ AudioSource:
   Priority: 20
   DopplerLevel: 1
   MinDistance: 0.1
-  MaxDistance: 20
+  MaxDistance: 55
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -15083,7 +15083,7 @@ AudioSource:
   MinDistance: 0.1
   MaxDistance: 8
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -20031,9 +20031,9 @@ AudioSource:
   Priority: 20
   DopplerLevel: 1
   MinDistance: 0.1
-  MaxDistance: 20
+  MaxDistance: 55
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -29911,9 +29911,9 @@ AudioSource:
   Priority: 20
   DopplerLevel: 1
   MinDistance: 0.1
-  MaxDistance: 20
+  MaxDistance: 55
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -30038,9 +30038,9 @@ AudioSource:
   Priority: 20
   DopplerLevel: 1
   MinDistance: 0.1
-  MaxDistance: 20
+  MaxDistance: 55
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -30165,9 +30165,9 @@ AudioSource:
   Priority: 20
   DopplerLevel: 1
   MinDistance: 0.1
-  MaxDistance: 20
+  MaxDistance: 55
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -30294,7 +30294,7 @@ AudioSource:
   MinDistance: 1
   MaxDistance: 50
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -35300,7 +35300,7 @@ AudioSource:
   MinDistance: 1
   MaxDistance: 200
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -35527,10 +35527,10 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 0.1
+  MaxDistance: 50
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -36175,9 +36175,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 0.1
-  MaxDistance: 8
+  MaxDistance: 25
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -36301,10 +36301,10 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 0.1
+  MaxDistance: 50
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -38194,9 +38194,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 0.1
-  MaxDistance: 8
+  MaxDistance: 25
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -43324,9 +43324,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 0.1
-  MaxDistance: 8
+  MaxDistance: 25
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -43597,6 +43597,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 2534964839176971238, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -43663,6 +43671,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 50
@@ -43729,6 +43745,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 62
@@ -43795,6 +43819,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -43861,6 +43893,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 69
@@ -43927,6 +43967,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 29
@@ -43993,6 +44041,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 49
@@ -44055,6 +44111,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 543450653130029642}
     m_Modifications:
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -44121,6 +44185,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 32
@@ -44187,6 +44259,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 53
@@ -44253,6 +44333,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 57
@@ -44402,6 +44490,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 543450653130029642}
     m_Modifications:
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 30
@@ -44468,6 +44564,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 47
@@ -44534,6 +44638,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 65
@@ -44596,6 +44708,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 543450653130029642}
     m_Modifications:
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 27
@@ -44662,6 +44782,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 36
@@ -44728,6 +44856,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 25
@@ -44794,6 +44930,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -44868,6 +45012,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 2534964839176971238, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 55
@@ -44934,6 +45086,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 48
@@ -45000,6 +45160,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -45066,6 +45234,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 42
@@ -45132,6 +45308,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 22
@@ -45198,6 +45382,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -45264,6 +45456,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -45330,6 +45530,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 17
@@ -45484,6 +45692,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -45550,6 +45766,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 19
@@ -45612,6 +45836,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 543450653130029642}
     m_Modifications:
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 26
@@ -45686,6 +45918,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 2534964839176971238, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -45752,6 +45992,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -45818,6 +46066,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 71
@@ -45884,6 +46140,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 43
@@ -45950,6 +46214,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -46016,6 +46288,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 40
@@ -46165,6 +46445,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -46231,6 +46519,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -46297,6 +46593,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 37
@@ -46363,6 +46667,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 21
@@ -46437,6 +46749,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 2534964839176971238, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 28
@@ -46503,6 +46823,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 70
@@ -46569,6 +46897,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 52
@@ -46635,6 +46971,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 58
@@ -46709,6 +47053,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 2534964839176971238, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 39
@@ -46775,6 +47127,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: -7387706064836869012, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 63
@@ -46841,6 +47201,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 45
@@ -46907,6 +47275,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 20
@@ -46973,6 +47349,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 60
@@ -47039,6 +47423,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 35
@@ -47180,6 +47572,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: -7387706064836869012, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 24
@@ -47246,6 +47646,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: -7387706064836869012, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 33
@@ -47312,6 +47720,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -47378,6 +47794,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 61
@@ -47444,6 +47868,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 66
@@ -47510,6 +47942,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 51
@@ -47576,6 +48016,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: -7387706064836869012, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 56
@@ -47642,6 +48090,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 38
@@ -47704,6 +48160,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 543450653130029642}
     m_Modifications:
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -47770,6 +48234,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: -7387706064836869012, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -47836,6 +48308,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
       value: 0
@@ -47906,6 +48386,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 59
@@ -47968,6 +48456,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 543450653130029642}
     m_Modifications:
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -48034,6 +48530,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: -7387706064836869012, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -48100,6 +48604,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 23
@@ -48166,6 +48678,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 67
@@ -48232,6 +48752,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: -7387706064836869012, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 34
@@ -48298,6 +48826,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 68
@@ -48364,6 +48900,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 41
@@ -48430,6 +48974,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: -7387706064836869012, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 46
@@ -48492,6 +49044,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 543450653130029642}
     m_Modifications:
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 31
@@ -48558,6 +49118,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 44
@@ -48624,6 +49192,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8691780276856062721, guid: 1227aba8015b03a45b1b837960bfb137, type: 3}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: MaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288456232813303759, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4800501179874452762, guid: f1a154659aa896e40b1457c86fe9faeb, type: 3}
       propertyPath: m_RootOrder
       value: 54

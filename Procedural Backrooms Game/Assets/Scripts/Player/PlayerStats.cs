@@ -331,9 +331,9 @@ public class PlayerStats : MonoBehaviour
         Hunger /= 1.3f;
         Thirst /= 1.5f;
 
-        VisFatigue -= BedQuality*2.5f; //Make sure to set visfatigue anytime you mess with fatigue
+        VisFatigue -= BedQuality*5f; //Make sure to set visfatigue anytime you mess with fatigue
 
-        Sanity += BedQuality * 10 / (SanityDrain + 1);
+        Sanity += BedQuality * 20 / (SanityDrain + 1);
     }
     
     private void OnCollisionEnter(Collision col)
