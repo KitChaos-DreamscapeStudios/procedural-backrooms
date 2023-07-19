@@ -735,7 +735,7 @@ ParticleSystem:
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
     donutRadius: 0.2
-    m_Position: {x: 0, y: 0, z: 0}
+    m_Position: {x: 0, y: -4.5, z: 0}
     m_Rotation: {x: 90, y: 0, z: 0}
     m_Scale: {x: -6.06, y: 1, z: 1}
     placementMode: 0
@@ -4823,6 +4823,8 @@ MonoBehaviour:
   Burst: {fileID: 0}
   Hiss: {fileID: 3288456232813303759}
   LoopHiss: {fileID: 1906381628143574328}
+  Hallu: {fileID: 2100000, guid: f7f477bb2f921f24eb71205b2c4c767a, type: 2}
+  Tranq: {fileID: 2100000, guid: 16438e2cd3abc1e408d5276aea22990c, type: 2}
 --- !u!82 &3288456232813303759
 AudioSource:
   m_ObjectHideFlags: 0
