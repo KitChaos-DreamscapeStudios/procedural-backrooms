@@ -6,22 +6,38 @@ public class PipeBurst : MonoBehaviour
 {
     public ParticleSystem Burst;
     public AudioSource Hiss;
+    bool AlwaysActive;
+    public AudioSource LoopHiss;
     // Start is called before the first frame update
     void Start()
     {
         Burst = GetComponent<ParticleSystem>();
-        transform.eulerAngles = new Vector3(0, 0, Random.Range(-50,50));
+        transform.eulerAngles = new Vector3(0, 0, Random.Range(-80,80));
+        var IsAlwaysBurst = Random.Range(0, maxInclusive:100.1f);
+        if (IsAlwaysBurst > 99.9)
+        {
+            var m = Burst.main;
+            m.loop = true;
+            Burst.Play();
+            AlwaysActive = true;
+            LoopHiss.Play();
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        var Rand = Random.Range(0, 500000);
-        if(Rand == 3)
+        if (!AlwaysActive)
         {
-            Hiss.Play();
-            Invoke("BurstPipe", 4);
+            var Rand = Random.Range(0, 500000);
+            if (Rand == 3)
+            {
+                Hiss.Play();
+                Invoke("BurstPipe", 4);
+
+            }
         }
+       
     }
     void BurstPipe()
     {
@@ -30,9 +46,12 @@ public class PipeBurst : MonoBehaviour
     }
     private void OnParticleCollision(GameObject other)
     {
-       
-       
-            GameObject.Find("Player").GetComponent<PlayerStats>().TakeDamage(0.4f, "Died of Steam Burns");
+
+        if (other.name.Contains("Player"))
+        {
+            other.GetComponent<PlayerStats>().TakeDamage(0.4f, "Died of Steam Burns");
+        }
+            
         
     }
 }
