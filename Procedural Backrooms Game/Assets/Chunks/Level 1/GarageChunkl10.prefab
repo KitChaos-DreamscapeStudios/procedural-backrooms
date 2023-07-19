@@ -154,6 +154,7 @@ MonoBehaviour:
   Structs:
   - {fileID: 4774650934168693163, guid: 7964c6e1e001e5c43aa57f87012a2c9b, type: 3}
   - {fileID: 5113749664987340078, guid: e3d05f9c38de6f74f956ee5b39d30520, type: 3}
+  OffLights: {fileID: 0}
   Layout: {fileID: 0}
   SpawnedDisposables: []
   SanityDrain: 0.05
@@ -225,7 +226,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d1428f55e6a7b91409cfcd16fd42eee2, type: 2}
+  - {fileID: 2100000, guid: 055db1836d53f0249b918893accddb35, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
