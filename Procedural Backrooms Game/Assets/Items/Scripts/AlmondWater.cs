@@ -15,16 +15,13 @@ public class AlmondWater : Item
     {
         
     }
-    public override void UseHeld()
-    {
-        Debug.LogError("This Item Does not have a UseHeld!");
-
-    }
-    public override void UseInInventory()
+  
+    public override void Use()
     {
         playerStats.Health += 5;
         playerStats.Thirst += 25;
         playerStats.Sanity += 5;
         playerStats.gameObject.GetComponent<Inventory>().Items.Remove(this);
+        Destroy(gameObject);
     }
 }

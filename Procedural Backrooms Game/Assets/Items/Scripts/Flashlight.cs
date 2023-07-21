@@ -10,7 +10,8 @@ public class Flashlight : Item
     // Start is called before the first frame update
     void Start()
     {
-       
+        playerStats = GameObject.Find("Player").GetComponent<PlayerStats>();
+        Light = playerStats.Flashlight;
     }
 
     // Update is called once per frame
@@ -18,26 +19,27 @@ public class Flashlight : Item
     {
       
     }
-    public override void UseInInventory()
+    public override void Use()
     {
         // throw new System.NotImplementedException();
-        
-       
-
-        playerStats.GetComponent<Inventory>().HandItem = this;
-        playerStats = GameObject.Find("Player").GetComponent<PlayerStats>();
-        Light = playerStats.Flashlight;
-        Light.GetComponent<FlashlightData>().BatteryLife = 10;
 
 
-    }
-    public override void UseHeld()
-    {
-        playerStats = GameObject.Find("Player").GetComponent<PlayerStats>();
 
-        Light = playerStats.Flashlight;
-        Light.GetComponent<FlashlightData>().IsOn = !Light.activeSelf;
+
+
+
+
+      
+      
         Debug.Log("Use");
         Light.SetActive(!Light.activeSelf);
+
+
+
+
     }
+    //public override void UseHeld()
+    //{
+    //   
+    //}
 }

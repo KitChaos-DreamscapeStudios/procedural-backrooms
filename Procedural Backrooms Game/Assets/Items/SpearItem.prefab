@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 9216486308315049486}
   - component: {fileID: 9216486308315049487}
+  - component: {fileID: -7306286865236122314}
+  - component: {fileID: 2825617907456602122}
   m_Layer: 0
   m_Name: SpearItem
   m_TagString: Untagged
@@ -49,7 +51,58 @@ MonoBehaviour:
   Icon: {fileID: 21300000, guid: da6f1ea2c14dd374489bae1b54cc96d4, type: 3}
   playerStats: {fileID: 0}
   ItemName: Cement Spear
-  HeldGFX: {fileID: 21300000, guid: 05bbd189d7cd21742b46fa19bbb677f1, type: 3}
+  HeldPos: {x: 1, y: 0, z: 0.5}
+  PointForward: 1
   Projectile: {fileID: 8531642052156244813, guid: a58346799b6333c439b7c5c2f10df3fd, type: 3}
   slotIn: {fileID: 0}
-  Damage: 5
+  Velocity: 65
+--- !u!33 &-7306286865236122314
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9216486308315049485}
+  m_Mesh: {fileID: -6280669117017369944, guid: 730bb1cc8d7760a4fbd71caca264093e, type: 3}
+--- !u!23 &2825617907456602122
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9216486308315049485}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 257
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: c5c701d0497a9154899777ff36e7aef1, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}

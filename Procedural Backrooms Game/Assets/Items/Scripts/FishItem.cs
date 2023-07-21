@@ -15,14 +15,12 @@ public class FishItem : Item
     {
         
     }
-    public override void UseHeld()
-    {
-        throw new System.NotImplementedException();
-    }
-    public override void UseInInventory()
+    
+    public override void Use()
     {
         playerStats.Hunger += 30;
         playerStats.Sanity -= 5;
         playerStats.gameObject.GetComponent<Inventory>().Items.Remove(this);
+        Destroy(gameObject);
     }
 }

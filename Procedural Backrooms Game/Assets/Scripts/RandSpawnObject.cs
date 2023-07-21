@@ -25,7 +25,7 @@ public class RandSpawnObject : MonoBehaviour
         // var hit = new RaycastHit();
         // Physics.Raycast(transform.position + fordir, fordir, out hit);
         // transform.position = hit.point;
-        var rand = Random.Range(0, 100);
+        var rand = Random.Range(0, maxInclusive:100.1f);
         if(rand < Rarity)
         {
             Destroy(gameObject);

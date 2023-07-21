@@ -68,7 +68,7 @@ public class smiler : Damager
             }
             else
             {
-                gameObject.MoveForward(6);
+                gameObject.MoveForward(8);
             }
 
            
@@ -82,13 +82,17 @@ public class smiler : Damager
         }
         if(state == State.Stalking)
         {
-            if(Vector3.Distance(transform.position, Player.transform.position) > 200 ||!Player.Flashlight.activeSelf)
+            if(Vector3.Distance(transform.position, Player.transform.position) > 300 || Vector3.Distance(transform.position, Player.transform.position) > 200 && !Player.Flashlight.activeSelf)
             {
                 SetState(State.Wandering);
             }
-            if(Hunger < 30 || Vector3.Distance(transform.position, Player.transform.position) < 20)
+            if((Hunger < 30 || Vector3.Distance(transform.position, Player.transform.position) < 20)&&Player.Flashlight.activeSelf)
             {
                 SetState(State.Charging);
+            }
+            if(Hunger < 20)
+            {
+                SetState(State.Grazing);
             }
             Vector3 targ = Targ;
 
@@ -147,7 +151,7 @@ public class smiler : Damager
                 }
                 else
                 {
-                    gameObject.MoveForward(6);
+                    gameObject.MoveForward(8);
                 }
                
 
@@ -282,11 +286,13 @@ public class smiler : Damager
     {
         Destroy(gameObject);
         Player.Sanity -= 5;
-        if (Player.GetComponent<Inventory>().Items.Contains(FlashLightItem))
+        if (Player.GetComponent<Inventory>().HandItem.ItemName == "Flashlight")
         {
-         
-         //   NearestLight.GetComponent<LightFlicker>().BurstNoise.Play();
-            Player.GetComponent<Inventory>().Items.Remove(FlashLightItem);
+
+            //   NearestLight.GetComponent<LightFlicker>().BurstNoise.Play();
+            Destroy(Player.GetComponent<Inventory>().HandItem.gameObject);
+            
+            Destroy(gameObject);
             Player.Flashlight.SetActive(false);
             Player.GetComponent<Inventory>().HandItem = null;
             //FlashBreak.play

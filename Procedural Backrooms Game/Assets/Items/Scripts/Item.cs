@@ -10,7 +10,16 @@ public abstract class Item : MonoBehaviour
     public Sprite Icon;
     public PlayerStats playerStats;
     public string ItemName;
-    public Sprite HeldGFX;
-    public abstract void UseInInventory();
-    public abstract void UseHeld();
+    //public Sprite HeldGFX;
+    public Vector3 HeldPos;
+    public bool PointForward;
+    private void LateUpdate()
+    {
+        if (PointForward)
+        {
+            transform.forward = Camera.main.transform.forward;
+        }
+    }
+    public abstract void Use();
+   // public abstract void UseHeld();
 }

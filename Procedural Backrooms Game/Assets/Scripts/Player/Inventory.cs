@@ -14,7 +14,7 @@ public class Inventory : MonoBehaviour
     public Image handItemSprite;
     public AudioSource PickupNoise;
     public TMPro.TextMeshProUGUI PickUpTooltip;
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -35,19 +35,18 @@ public class Inventory : MonoBehaviour
         {
             InventScreen.SetActive(!InventScreen.activeSelf);
         }
-        if (Input.GetMouseButtonUp(1) && HandItem!= null&& HandItem.isHoldable)
+        if (Input.GetMouseButtonUp(1) && HandItem!= null)
         {
-            HandItem.UseHeld();
+            HandItem.Use();
         }
         if(HandItem != null)
         {
-            handItemSprite.sprite = HandItem.HeldGFX;
-            handItemSprite.color = new Color(1, 1, 1, 1);
+            HandItem.transform.position = Camera.main.transform.TransformPoint(Vector3.forward + HandItem.HeldPos);
+            
         }
         else
         {
-            handItemSprite.sprite = null;
-            handItemSprite.color = new Color(0, 0, 0, 0);
+           
         }
        var Pickup= Physics.Raycast(GetComponent<Movement3D>().cam.transform.transform.position + GetComponent<Movement3D>().cam.transform.forward, GetComponent<Movement3D>().cam.transform.forward, out Grabby, maxDistance: GrabDistance);
         if (Pickup)
@@ -67,13 +66,13 @@ public class Inventory : MonoBehaviour
                             PickupNoise.Play();
                             SelFX.Stop();
                             Grabby.collider.transform.parent.GetComponent<PickupAble>().ToGive.playerStats = GetComponent<PlayerStats>();
-                            Items.Add(Grabby.collider.transform.parent.GetComponent<PickupAble>().ToGive);
+                            var NewInvItem = Instantiate(Grabby.collider.transform.parent.GetComponent<PickupAble>().ToGive.gameObject);
+                            NewInvItem.transform.position = transform.position + new Vector3(0, 100, 0);//will
+                            DontDestroyOnLoad(NewInvItem);
+                            Items.Add(NewInvItem.GetComponent<Item>());
                             
                             Destroy(Grabby.collider.transform.parent.gameObject);
-                            if(!Input.GetKey(KeyCode.Q) && Grabby.collider.transform.parent.GetComponent<PickupAble>().ToGive.isHoldable && !HandItem)
-                            {
-                                HandItem = Grabby.collider.transform.parent.GetComponent<PickupAble>().ToGive;
-                            }
+                           
                         }
                     }
                 }

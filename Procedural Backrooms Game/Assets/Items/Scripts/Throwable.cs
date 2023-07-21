@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spear : Item
+public class Throwable : Item
 {
     public GameObject Projectile;
     public InventorySlot slotIn;
-   
+    public float Velocity;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,25 +18,19 @@ public class Spear : Item
     {
         
     }
-    public override void UseInInventory()
+    public override void Use()
     {
-        if (playerStats.GetComponent<Inventory>().HandItem = this)
-        {
-            playerStats.GetComponent<Inventory>().HandItem = null;
-        }
-        playerStats.GetComponent<Inventory>().HandItem = this;
-    }
-    public override void UseHeld()
-    {
-
+       
         var DirectObject = GameObject.Find("Main Camera");
-        
-        var NewObj = Instantiate(Projectile, DirectObject.transform.position + DirectObject.transform.forward*4, Quaternion.identity);
+
+        var NewObj = Instantiate(Projectile, DirectObject.transform.position + DirectObject.transform.forward * 4, Quaternion.identity);
         NewObj.transform.eulerAngles = DirectObject.transform.eulerAngles;
-        NewObj.GetComponent<Rigidbody>().velocity = (DirectObject.transform.forward*65);
+        NewObj.GetComponent<Rigidbody>().velocity = (DirectObject.transform.forward * Velocity);
         //slotIn.heldItem = null;
         playerStats.GetComponent<Inventory>().HandItem = null;
+        
         playerStats.gameObject.GetComponent<Inventory>().Items.Remove(this);
-
+        Destroy(gameObject);
     }
+   
 }

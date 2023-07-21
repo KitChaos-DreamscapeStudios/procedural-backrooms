@@ -15,16 +15,14 @@ public class Chips : Item
     {
         
     }
-    public override void UseHeld()
-    {
-        throw new System.NotImplementedException();
-    }
-    public override void UseInInventory()
+   
+    public override void Use()
     {
         playerStats.Thirst -= 5;
         playerStats.Hunger += 10;
         playerStats.Sanity += 3;
         playerStats.gameObject.GetComponent<Inventory>().Items.Remove(this);
+        Destroy(gameObject);
 
     }
 }

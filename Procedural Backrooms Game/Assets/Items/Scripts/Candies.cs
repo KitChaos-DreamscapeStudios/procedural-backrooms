@@ -4,16 +4,14 @@ using UnityEngine;
 
 public class Candies : Item
 {
-    public override void UseInInventory()
+    public override void Use()
     {
         playerStats.Hunger += 18;
         playerStats.Sanity -= 2;
         playerStats.gameObject.GetComponent<Inventory>().Items.Remove(this);
+        Destroy(gameObject);
     }
-    public override void UseHeld()
-    {
-        throw new System.NotImplementedException();
-    }
+    
     // Start is called before the first frame update
     void Start()
     {

@@ -310,9 +310,13 @@ public class PlayerStats : MonoBehaviour
             VisFatigue = 0;
         }
     }
-    public void TakeDamage(float DMG, string Type)
+    public void TakeDamage(float DMG, string Type, bool IsSilent = false)
     {
-        Hurt.Play();
+        if(!IsSilent)
+        {
+            Hurt.Play();
+        }
+       
         Health -= DMG;
         if(Health <= 0)
         {

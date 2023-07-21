@@ -250,16 +250,16 @@ MonoBehaviour:
     Z: 0
   Structs:
   - {fileID: 7107025541794961834, guid: 8f15814ad9578be438a1dc9f2f35d879, type: 3}
-  FreeStandingObjects: []
-  WallLockedObjects: []
+  OffLights: {fileID: 0}
   Layout: {fileID: 0}
   SpawnedDisposables: []
-  SanityDrain: 0.25
+  SanityDrain: 0.2
   ItemSpawnLocales: []
   Lights: []
   BedQual: 0.1
   IsShiftingLightsB: 0
   IsShiftingLightsN: 0
+  Walls: []
   rots: 
 --- !u!1 &4367199569707551810
 GameObject:
