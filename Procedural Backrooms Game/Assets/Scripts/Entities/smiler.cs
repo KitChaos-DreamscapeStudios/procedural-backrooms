@@ -26,9 +26,10 @@ public class smiler : Damager
     // Start is called before the first frame update
     void Start()
     {
+        Player = GameObject.Find("Player").GetComponent<PlayerStats>();
         Screech = GetComponent<AudioSource>();
         transform.parent = null;
-        Player = GameObject.Find("Player").GetComponent<PlayerStats>();
+       
         
       
     }

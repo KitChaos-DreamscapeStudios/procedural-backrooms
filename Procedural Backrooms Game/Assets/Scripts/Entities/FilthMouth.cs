@@ -21,7 +21,7 @@ public class FilthMouth : Damager
     {
         playerStats = GameObject.Find("Player").GetComponent<PlayerStats>();
         playerStats.Sanity -= 2f;
-        playerStats.TakeDamage(10, "Died of Floor water Poisoning");
+       // playerStats.TakeDamage(10, "Died of Floor water Poisoning");
         //playerStats.Hunger -= 10;
         effect = new FilthVenom();
         effect.player = playerStats;
