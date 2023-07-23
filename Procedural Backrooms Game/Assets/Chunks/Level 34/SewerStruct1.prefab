@@ -14383,9 +14383,9 @@ ParticleSystem:
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 8
+      m_Bits: 2147483647
     maxCollisionShapes: 256
-    quality: 2
+    quality: 0
     voxelSize: 0.5
     collisionMessages: 0
     collidesWithDynamic: 1
@@ -21714,6 +21714,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7107025541794961833}
     m_Modifications:
+    - target: {fileID: 3791610348671073859, guid: cdc3cffc7eea0c24ea8a12fb01e4fb6b, type: 3}
+      propertyPath: CollisionModule.quality
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3791610348671073859, guid: cdc3cffc7eea0c24ea8a12fb01e4fb6b, type: 3}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3791610348671073868, guid: cdc3cffc7eea0c24ea8a12fb01e4fb6b, type: 3}
       propertyPath: m_RootOrder
       value: 21

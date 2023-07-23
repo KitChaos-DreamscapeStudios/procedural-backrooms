@@ -27,15 +27,8 @@ public class FungalOrb : Damager
     public override void OnDamage()
     {
         SporeBurst.Play();
-    }
-    public override void OnTakeDamage()
-    {
-        SporeBurst.Play();
-
-    }
-    private void OnParticleCollision(GameObject other)
-    {
-        if (other.GetComponent<PlayerStats>())
+        var Rand = Random.Range(0, 100);
+        if(Rand > 20)
         {
             playerStats.Sanity -= 2f;
             // playerStats.TakeDamage(10, "Died of Floor water Poisoning");
@@ -45,6 +38,20 @@ public class FungalOrb : Damager
             effect.FungalOrb = Prefab;
             effect.TimeLeft = Random.Range(40, 360);
             playerStats.statuses.Add(effect);
+        }
+       
+    }
+    public override void OnTakeDamage()
+    {
+        SporeBurst.Play();
+
+    }
+    private void OnParticleCollision(GameObject other)
+    {
+        if (other.layer == 3)
+        {
+            Debug.Log("Gnoncks");
+           
         }
     }
 }
