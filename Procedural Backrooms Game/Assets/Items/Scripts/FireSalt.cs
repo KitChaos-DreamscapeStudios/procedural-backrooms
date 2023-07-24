@@ -7,6 +7,7 @@ public class FireSalt : DamageSpear
     public ParticleSystem Explosion;
     GameObject Player;
     public bool IsItem;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +22,7 @@ public class FireSalt : DamageSpear
     }
     private void OnCollisionEnter(Collision col)
     {
-        if(Vector3.Distance((GetComponent<Rigidbody>().velocity),new Vector3(0, 0, 0)) > 5 && col.gameObject.layer != 3)
+        if(Vector3.Distance((GetComponent<Rigidbody>().velocity),new Vector3(0, 0, 0)) > 10 && col.gameObject.layer != 3)
         {
            
             Explosion.transform.parent = null;
