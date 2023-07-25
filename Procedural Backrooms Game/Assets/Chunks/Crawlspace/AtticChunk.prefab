@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4056c56c30d09214fb7e36064bef6e35, type: 2}
+  - {fileID: 2100000, guid: 3ab3a63ae8ce68a4e82dd59a4bde7a45, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -217,7 +217,7 @@ MonoBehaviour:
     Y: 0
     Z: 0
   Structs:
-  - {fileID: 7107025541794961834, guid: 8f15814ad9578be438a1dc9f2f35d879, type: 3}
+  - {fileID: 7291785519423793849, guid: b8056543c49a453458d9afcabdf8b855, type: 3}
   OffLights: {fileID: 0}
   Layout: {fileID: 0}
   SpawnedDisposables: []

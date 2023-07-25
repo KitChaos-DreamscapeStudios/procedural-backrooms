@@ -13,6 +13,7 @@ public class LightFlicker : MonoBehaviour
     public Light L;
     bool IsDoFlick;
     float BaseIntenisty;
+    bool DontBurst;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +24,7 @@ public class LightFlicker : MonoBehaviour
         BaseIntenisty = L.intensity;
       
         var Rand = Random.Range(0, 5);
-        if(Rand == 3)
+        if(Rand == 3 &&!DontBurst)
         {
             CanBurst = true;
         }
