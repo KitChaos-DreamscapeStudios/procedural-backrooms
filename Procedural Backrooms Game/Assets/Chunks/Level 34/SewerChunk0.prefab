@@ -253,10 +253,10 @@ MonoBehaviour:
   OffLights: {fileID: 0}
   Layout: {fileID: 0}
   SpawnedDisposables: []
-  SanityDrain: 0.2
+  SanityDrain: 0.18
   ItemSpawnLocales: []
   Lights: []
-  BedQual: 0.1
+  BedQual: 0.4
   IsShiftingLightsB: 0
   IsShiftingLightsN: 0
   Walls: []

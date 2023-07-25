@@ -14878,7 +14878,7 @@ MonoBehaviour:
   StamRecoverySpeed: 1
   Health: 100
   Stamina: 10
-  Sanity: 100
+  Sanity: 35
   Thirst: 100
   Hunger: 100
   Fatigue: 0
@@ -14891,6 +14891,7 @@ MonoBehaviour:
   FatigueBar: {fileID: 1201519117}
   SanityDrain: 0
   StatusTick: 0
+  SleepButtonTimer: 0
   BedQuality: 0
   SleepShade: {fileID: 12236059}
   IsSleeping: 0
@@ -14898,6 +14899,9 @@ MonoBehaviour:
   ExtraSanityDrain: 0
   ExtraHuntingPoints: 0
   ExtraPoints: 0
+  SleepPrevented: 0
+  CantSleepText: 
+  CantSleepReasons: []
 --- !u!114 &2068203911
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -55,7 +55,7 @@ public class PlayerStats : MonoBehaviour
     public float StatusTick;
 
 
-    float SleepButtonTimer;
+    public float SleepButtonTimer;
     public float BedQuality;
     public Image SleepShade;
     public bool IsSleeping;
@@ -65,6 +65,9 @@ public class PlayerStats : MonoBehaviour
     public float ExtraSanityDrain;
     public float ExtraHuntingPoints;
     public float ExtraPoints;
+    public bool SleepPrevented;
+    public string CantSleepText;
+    public List<string> CantSleepReasons;
     // Start is called before the first frame update
     void Start()
     {
@@ -104,10 +107,14 @@ public class PlayerStats : MonoBehaviour
         {
             SleepButtonTimer = 0;
         }
-        if(SleepButtonTimer > 3)
+        if(SleepButtonTimer > 3 && !SleepPrevented)
         {
             Sleep();
             SleepButtonTimer = 0;
+        }
+        else if (SleepPrevented && SleepButtonTimer > 3)
+        {
+            GetComponent<Inventory>().PickUpTooltip.text = CantSleepText;
         }
         StatusTick += Time.deltaTime;
         List<StatusEffect> RemStat = new List<StatusEffect>();
@@ -217,11 +224,7 @@ public class PlayerStats : MonoBehaviour
         {
             Stamina = 0;
         }
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            transform.position = new Vector3(0, 3.47000003f, 4.5999999f);
-            SceneManager.LoadScene("Level1");
-        }
+        
         Score += Time.deltaTime + (Time.deltaTime*ExtraPoints);
         //Sanity Effects
         if(Sanity > 70)
@@ -350,6 +353,25 @@ public class PlayerStats : MonoBehaviour
             EZCameraShake.CameraShaker.Instance.ShakeOnce(50, 15, 0.1f, 0.5f);
         }
     }
+    public void TryModSleepCon(string Con, bool Rem = false)
+    {
+        if (!Rem)
+        {
+            if (!CantSleepReasons.Contains(Con))
+            {
+                CantSleepReasons.Add(Con);
+            }
+        }
+        else
+        {
+            if (CantSleepReasons.Contains(Con))
+            {
+                CantSleepReasons.Remove(Con);
+            }
+        }
+       
+    }
+    
     void Die(string Reason)
     {//Add some animation for death Later
         if (IsSleeping)
@@ -376,5 +398,24 @@ public class DeathReason : MonoBehaviour
     {
         this.Reason = reason;
         this.Score = score;
+    }
+}
+[System.Serializable]
+public struct SanityTier
+{
+    public float HungerDrain;
+    public float ThirstDrain;
+    public bool BarsActive;
+    public int Sensitivity;
+    public float SpeedBoost;
+    public float Abberation;
+    public SanityTier(float HS, float TS, bool BarsActive, int Sense, float Speed, float Abber)
+    {
+        this.HungerDrain = HS;
+        this.ThirstDrain = HS;
+        this.BarsActive = BarsActive;
+        this.Sensitivity = Sense;
+        this.SpeedBoost = Speed;
+        this.Abberation = Abber;
     }
 }

@@ -79,7 +79,11 @@ public class Inventory : MonoBehaviour
                 else if(!Grabby.collider.gameObject.GetComponent<Interactable>())
                 {
                     SelFX.Stop();
-                    PickUpTooltip.text = "";
+                    if (GetComponent<PlayerStats>().SleepButtonTimer > 2)
+                    {
+                        PickUpTooltip.text = "";
+                    }
+                    
                 }
                 else
                 {

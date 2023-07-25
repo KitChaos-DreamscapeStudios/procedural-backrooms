@@ -8,6 +8,8 @@ public class Level34Generation : Generation
     float elap;
     bool StartCheck;
     float elap2;
+    public GameObject Level0HalluCination;
+    float WaitTillHallu;
     public void Start()
     {
         LastChunk = ChunkForLevel[Random.Range(0, ChunkForLevel.Count)];
@@ -155,6 +157,19 @@ public class Level34Generation : Generation
 
     public void Update()
     {
+        if(Playerstats.Sanity < 30)
+        {
+            WaitTillHallu += Time.deltaTime;
+            if(WaitTillHallu> 60)
+            {
+                WaitTillHallu = 0;
+              var NewStruct =  Instantiate(Level0HalluCination, PlayerIn.transform.position + new Vector3(0, 5.8337f, 0), Quaternion.identity);
+                
+                NewStruct.GetComponent<HalluChunk>().In = PlayerIn;
+                NewStruct.GetComponent<HalluChunk>().Parent = this;
+                
+            }
+        }
         elap += Time.deltaTime;
 
         if (elap > 2)
@@ -170,7 +185,7 @@ public class Level34Generation : Generation
 
 
     }
-
+    
     float DifferenceInCoords(Coords a, Coords b)
     {
         var xDist = Mathf.Abs(a.X - b.X);

@@ -82,6 +82,8 @@ public static class GameObjectExtensions
             gameObject.transform.position += gameObject.transform.forward / Slowness;
         }
     }
+    
+    
 
 }
 
