@@ -163,10 +163,7 @@ public class CrawlGen :  Generation
     {
         elap += Time.deltaTime;
         elapForWood += Time.deltaTime;
-       if(Playerstats.Sanity > 50)
-        {
-            BeastActive = true;
-        }
+     
         
         if(Playerstats.Sanity > 70)
         {
