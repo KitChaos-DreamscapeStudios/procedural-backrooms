@@ -6,9 +6,17 @@ public class CrawlGen :  Generation
 {
     float elap;
     bool StartCheck;
-    float elap2;
+    float elapForWood;
+    public List<AudioSource> Creaks;
+    public AudioSource HumNoise;
+    float BurstRand;
+    float ElapForWoodBurst;
+    public GameObject WoodenBeast;
+    public AudioSource WoodenBeastScreech;
+    public bool BeastActive;
     public void Start()
     {
+        BurstRand = Random.Range(10, 25);
         LastChunk = ChunkForLevel[Random.Range(0, ChunkForLevel.Count)];
         Center = new Coords(0, 0, 0);
         for (int x = -2; x < 3; x++)
@@ -154,7 +162,25 @@ public class CrawlGen :  Generation
     public void Update()
     {
         elap += Time.deltaTime;
-
+        elapForWood += Time.deltaTime;
+       if(Playerstats.Sanity > 50)
+        {
+            BeastActive = true;
+        }
+        
+        if(Playerstats.Sanity > 70)
+        {
+            ElapForWoodBurst += Time.deltaTime;
+            if(ElapForWoodBurst > BurstRand + (Playerstats.Sanity / 3))
+            {
+                for (int i = 0; i < 8; i++)
+                {
+                    MoveWood();
+                }
+                ElapForWoodBurst = 0;
+                BurstRand = Random.Range(10, 25);
+            }
+        }
         if (elap > 2)
         {
             StartCheck = true;
@@ -165,8 +191,24 @@ public class CrawlGen :  Generation
             Center = PlayerIn.coords;
             Playerstats.SanityDrain = SanityDrain;
         }
+        
+            if (elapForWood > Playerstats.Sanity / 2)
+            {
+            MoveWood();
 
+                elapForWood = 0;
+            }
+        
 
+    }
+    void MoveWood()
+    {
+
+        Creaks[Random.Range(0, Creaks.Count)].Play();
+        var Pillar = GetRandomWithTag("Pillars");
+        Vector3 NewPos = Playerstats.transform.position + (Random.onUnitSphere * Playerstats.Sanity);
+        NewPos.y = -2.5537f;
+        Pillar.transform.position = NewPos;
     }
 
     float DifferenceInCoords(Coords a, Coords b)
@@ -174,5 +216,10 @@ public class CrawlGen :  Generation
         var xDist = Mathf.Abs(a.X - b.X);
         var zDist = Mathf.Abs(a.Z - b.Z);
         return (xDist + zDist);
+    }
+    GameObject GetRandomWithTag(string Tag)
+    {
+        var TaggedObjs = GameObject.FindGameObjectsWithTag(Tag);
+        return TaggedObjs[Random.Range(0, TaggedObjs.Length)];
     }
 }

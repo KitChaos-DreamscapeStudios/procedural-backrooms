@@ -24,6 +24,7 @@
         public float SoundLevel;
         public NavMeshSurface nav;
     public float SpeedBoost;
+    public LayerMask CrouchBlock;
         #region Stolen Camera Script
         public enum RotationAxes { MouseXAndY = 0, MouseX = 1, MouseY = 2 }
         public RotationAxes axes = RotationAxes.MouseXAndY;
@@ -97,18 +98,31 @@
                 }
                 else
                 {
-                GetComponentInChildren<CapsuleCollider>().height = (3.089386f);
-
-                gameObject.transform.localScale = new Vector3(1, 1, 1);
-                    if (FB != 0)
+                    if(!Physics.Raycast(transform.position, new Vector3(0, 1),maxDistance:0.5f))
                     {
-                        cam.transform.eulerAngles = new Vector3(cam.transform.eulerAngles.x, cam.transform.eulerAngles.y, Mathf.Sin(TimerBob));
+                       GetComponentInChildren<CapsuleCollider>().height = (3.089386f);
+
+                        gameObject.transform.localScale = new Vector3(1, 1, 1);
+                            if (FB != 0)
+                        {
+                            cam.transform.eulerAngles = new Vector3(cam.transform.eulerAngles.x, cam.transform.eulerAngles.y, Mathf.Sin(TimerBob));
+                        }
+                        else
+                        {
+                            cam.transform.localPosition = new Vector3(0, (Mathf.Sin(TimerBreathe) * 0.13f), 0);
+                            SoundLevel = 35;
+                        }
                     }
                     else
                     {
-                        cam.transform.localPosition = new Vector3(0, (Mathf.Sin(TimerBreathe) * 0.13f), 0);
-                        SoundLevel = 35;
+                        cam.transform.localPosition = new Vector3(cam.transform.localPosition.x, -2.5f, cam.transform.localPosition.z);
+                        gameObject.transform.localScale = new Vector3(1, 0.5f, 1);
+                        GetComponentInChildren<CapsuleCollider>().height = (3.089386f / 3);
+                    speed = 5 + SpeedBoost;
+                    SoundLevel = 25;
+                    Debug.Log("TryGetUpWhileCant");
                     }
+                   
                 }
 
                 #region Stolen Camera Script

@@ -14976,6 +14976,9 @@ MonoBehaviour:
   SoundLevel: 0
   nav: {fileID: 0}
   SpeedBoost: 0
+  CrouchBlock:
+    serializedVersion: 2
+    m_Bits: 2048
   axes: 0
   sensitivityX: 5
   sensitivityY: 5

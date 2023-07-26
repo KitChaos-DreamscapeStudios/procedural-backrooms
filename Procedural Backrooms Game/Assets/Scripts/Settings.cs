@@ -22,7 +22,11 @@ public class Settings : MonoBehaviour
         Volume = VolSlider.value;
         foreach(AudioSource a in GameObject.FindObjectsOfType<AudioSource>())
         {
-            a.volume = Volume;
+            if(a.tag != "OwnVolume")
+            {
+                a.volume = Volume;
+            }
+           
         }
         if (IsPaused)
         {
