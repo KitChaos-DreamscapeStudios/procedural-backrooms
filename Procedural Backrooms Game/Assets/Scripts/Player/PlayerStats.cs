@@ -352,12 +352,7 @@ public class PlayerStats : MonoBehaviour
             col.gameObject.GetComponent<Damager>().OnDamage();
             EZCameraShake.CameraShaker.Instance.ShakeOnce(50, 15, 0.1f, 0.5f);
         }
-        if (col.gameObject.transform.parent.GetComponent<Damager>())
-        {
-            TakeDamage(col.gameObject.transform.parent.GetComponent<Damager>().Damage, col.gameObject.GetComponent<Damager>().DeathMessage);
-            col.gameObject.transform.parent.GetComponent<Damager>().OnDamage();
-            EZCameraShake.CameraShaker.Instance.ShakeOnce(50, 15, 0.1f, 0.5f);
-        }
+       
     }
     public void TryModSleepCon(string Con, bool Rem = false)
     {

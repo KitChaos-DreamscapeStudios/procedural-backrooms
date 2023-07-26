@@ -23,8 +23,8 @@ public class WoodenBeast : Damager
     public AudioSource Creaker;
     public List<GameObject> MovedWood;
     float WaitToMoveTarg;
-
-
+    bool Chasing;
+    float LongElap;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,12 +32,19 @@ public class WoodenBeast : Damager
         Creaker = GetComponent<AudioSource>();
         //BehindWoods = new List<GameObject>(ContainedWood);
     }
-
+    new private void OnCollisionEnter(Collision collision)
+    {
+       if(collision.gameObject.layer == 3)
+        {
+            collision.gameObject.GetComponent<PlayerStats>().TakeDamage(4, DeathMessage);
+            Debug.Log("ShouldHurstPlayer");
+        }
+    }
     Vector3 SetTarget()
     {
         Orient.LookAt(Player.transform);
-
-        if(Physics.Raycast(Orient.transform.position, Orient.forward, layerMask:3, maxDistance: 10))
+        
+        if (Physics.Raycast(Orient.transform.position, Orient.forward, layerMask:3, maxDistance: 4))
         {
             
             LockedOnToPlayer = true;
@@ -45,24 +52,24 @@ public class WoodenBeast : Damager
         }
         else
         {
-            if(Vector3.Distance(Orient.transform.position, Player.transform.position) < 3)
-            {
-                Debug.Log("ShouldHurstPlayer");
-                Player.GetComponent<PlayerStats>().TakeDamage(15, DeathMessage);
-                return Player.transform.position;
-            }
+          
             LockedOnToPlayer = false;
-            return Orient.transform.position + (Orient.transform.forward * 5);
+            return Orient.transform.position + (Orient.transform.forward * 4);
         }
     }
     // Update is called once per frame
     void Update()
     {
-        if (Player.GetComponent<PlayerStats>().Sanity > 100)
+        if (Player.GetComponent<PlayerStats>().Sanity < 70)
         {
             state = State.hunting;
         }
-        if (state != State.inactive)
+        LongElap += Time.deltaTime;
+        if(LongElap > 180)
+        {
+            Chasing = !Chasing;
+        }
+        if (state != State.inactive &&Chasing)
         {
            
             if (!IsVis)
@@ -70,8 +77,10 @@ public class WoodenBeast : Damager
                 WaitToMoveTarg += Time.deltaTime;
                 awaitWoodMove += Time.deltaTime;
             }
-            if (awaitWoodMove > 0.8f && MovedWood.Count < ContainedWood.Count)
+            if (awaitWoodMove > 0.2f && MovedWood.Count < ContainedWood.Count)
             {
+                awaitWoodMove = 0;
+                WaitToMoveTarg = 0;
                 var moveWood = ContainedWood[Random.Range(0, ContainedWood.Count)];
                 if (!MovedWood.Contains(moveWood))
                 {
@@ -81,7 +90,7 @@ public class WoodenBeast : Damager
                 
             }
             
-            if (WaitToMoveTarg> 8)
+            if (WaitToMoveTarg> 12)
             {
                 MovedWood = new List<GameObject>();
                 WaitToMoveTarg = 0;
@@ -106,12 +115,18 @@ public class WoodenBeast : Damager
     }
     void MoveWood(GameObject wood)
     {
-        Creaker.pitch = Random.Range(-1.5f, 1.5f);
+       
         Creaker.PlayOneShot(Creaks[Random.Range(0, Creaks.Count)]);
        
       wood.transform.eulerAngles = new Vector3(0, Random.Range(-180, 180), Random.Range(-45, 45));
         wood.transform.position = Target + new Vector3(Random.Range(-1.8f,1.8f), 0, Random.Range(-1.8f, 1.8f));
         Orient.transform.position = wood.transform.position;
+        if (Vector3.Distance(Orient.transform.position, Player.transform.position) < 1)
+        {
+
+            Player.GetComponent<PlayerStats>().TakeDamage(15, DeathMessage);
+           
+        }
     }
     public override void OnDamage()
     {

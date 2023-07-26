@@ -203,7 +203,7 @@ public class CrawlGen :  Generation
 
         Creaks[Random.Range(0, Creaks.Count)].Play();
         var Pillar = GetRandomWithTag("Pillars");
-        Vector3 NewPos = Playerstats.transform.position + (Random.onUnitSphere * Playerstats.Sanity);
+        Vector3 NewPos = Playerstats.transform.position + (Random.onUnitSphere * (Playerstats.Sanity/4));
         NewPos.y = -2.5537f;
         Pillar.transform.position = NewPos;
     }

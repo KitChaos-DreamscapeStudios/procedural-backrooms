@@ -87,11 +87,15 @@
                 {
                     cam.transform.localPosition = new Vector3(cam.transform.localPosition.x, -2.5f, cam.transform.localPosition.z);
                     gameObject.transform.localScale = new Vector3(1, 0.5f, 1);
-                    GetComponentInChildren<CapsuleCollider>().height = (3.089386f / 3);
-               
-               
-                
-                        speed = 5 + SpeedBoost;
+                    GetComponentInChildren<CapsuleCollider>().height = (3.089386f / 2);
+                if (FB != 0)
+                {
+                    cam.transform.eulerAngles = new Vector3(cam.transform.eulerAngles.x, cam.transform.eulerAngles.y, Mathf.Sin(TimerBob)*2);
+                }
+
+
+
+                speed = 5 + SpeedBoost;
                         SoundLevel = 25;
                 
                 
@@ -117,7 +121,7 @@
                     {
                         cam.transform.localPosition = new Vector3(cam.transform.localPosition.x, -2.5f, cam.transform.localPosition.z);
                         gameObject.transform.localScale = new Vector3(1, 0.5f, 1);
-                        GetComponentInChildren<CapsuleCollider>().height = (3.089386f / 3);
+                        GetComponentInChildren<CapsuleCollider>().height = (3.089386f / 2);
                     speed = 5 + SpeedBoost;
                     SoundLevel = 25;
                     Debug.Log("TryGetUpWhileCant");

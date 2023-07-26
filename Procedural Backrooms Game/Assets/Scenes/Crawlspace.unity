@@ -2100,10 +2100,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 2
   Health: 10000000
-  DeathMessage: Consumed By The Wooden Beast
+  DeathMessage: Consumed By The Living Floorboards
   HasHeardPlayer: 0
   Growl: {fileID: 0}
-  state: 0
+  state: 2
   ContainedWood:
   - {fileID: 1291222791}
   - {fileID: 605711266}
