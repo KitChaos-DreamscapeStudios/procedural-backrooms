@@ -5,7 +5,7 @@ using UnityEngine;
 public class Opener : Interactable
 {
     public GameObject Pivot;
-   
+    public bool AlreadyAligned;
     bool IsOpen;
     // Start is called before the first frame update
     void Start()
@@ -22,13 +22,28 @@ public class Opener : Interactable
         if (IsOpen)
         {
             InteractText = "Close Door";
-
-            Pivot.transform.localEulerAngles = Vector3.Lerp(Pivot.transform.localEulerAngles, new Vector3(0, 90, 0), 0.05f);
+            if (!AlreadyAligned)
+            {
+                Pivot.transform.localEulerAngles = Vector3.Lerp(Pivot.transform.localEulerAngles, new Vector3(0, 90, 0), 0.05f);
+            }
+            else
+            {
+                transform.localEulerAngles = Vector3.Lerp(transform.localEulerAngles, new Vector3(0, 90, 0), 0.05f);
+            }
+           
         }
         else
         {
             InteractText = "Open Door";
-            Pivot.transform.localEulerAngles = Vector3.Lerp(Pivot.transform.localEulerAngles, new Vector3(0, 0, 0), 0.05f);
+            if (AlreadyAligned)
+            {
+                Pivot.transform.localEulerAngles = Vector3.Lerp(Pivot.transform.localEulerAngles, new Vector3(0, 0, 0), 0.05f);
+            }
+            else
+            {
+                transform.localEulerAngles = Vector3.Lerp(transform.localEulerAngles, new Vector3(0, 0, 0), 0.05f);
+            }
+          
         }
     }
     public override void OnInteract()

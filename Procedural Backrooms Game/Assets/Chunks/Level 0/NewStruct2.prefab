@@ -632,6 +632,7 @@ MonoBehaviour:
   InteractText: Drink Carpet Juice
   playerStats: {fileID: 0}
   effect: {fileID: 6303562428773603418, guid: c675d677fd2ab594e805bc685c574ca8, type: 3}
+  MightBeSafe: 0
 --- !u!114 &3685496514827598485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1113,6 +1114,7 @@ MonoBehaviour:
   InteractText: Drink Carpet Juice
   playerStats: {fileID: 0}
   effect: {fileID: 6303562428773603418, guid: c675d677fd2ab594e805bc685c574ca8, type: 3}
+  MightBeSafe: 0
 --- !u!114 &3685496514011510209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1704,6 +1706,7 @@ MonoBehaviour:
   InteractText: Drink Carpet Juice
   playerStats: {fileID: 0}
   effect: {fileID: 6303562428773603418, guid: c675d677fd2ab594e805bc685c574ca8, type: 3}
+  MightBeSafe: 0
 --- !u!1 &603269780393590518
 GameObject:
   m_ObjectHideFlags: 0
@@ -2302,6 +2305,7 @@ MonoBehaviour:
   InteractText: Drink Carpet Juice
   playerStats: {fileID: 0}
   effect: {fileID: 6303562428773603418, guid: c675d677fd2ab594e805bc685c574ca8, type: 3}
+  MightBeSafe: 0
 --- !u!114 &3685496515469537413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3327,6 +3331,7 @@ MonoBehaviour:
   InteractText: Drink Carpet Juice
   playerStats: {fileID: 0}
   effect: {fileID: 6303562428773603418, guid: c675d677fd2ab594e805bc685c574ca8, type: 3}
+  MightBeSafe: 0
 --- !u!1 &603269781053199767
 GameObject:
   m_ObjectHideFlags: 0
@@ -5900,8 +5905,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.9605274, g: 1, b: 0.50377357, a: 1}
-  m_Intensity: 1.8
-  m_Range: 28
+  m_Intensity: 2.1
+  m_Range: 35
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -6156,8 +6161,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.9605274, g: 1, b: 0.50377357, a: 1}
-  m_Intensity: 1.8
-  m_Range: 28
+  m_Intensity: 2.1
+  m_Range: 35
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -6412,8 +6417,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.9605274, g: 1, b: 0.50377357, a: 1}
-  m_Intensity: 1.8
-  m_Range: 28
+  m_Intensity: 2.1
+  m_Range: 35
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -6668,8 +6673,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.9605274, g: 1, b: 0.50377357, a: 1}
-  m_Intensity: 1.8
-  m_Range: 28
+  m_Intensity: 2.1
+  m_Range: 35
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -6924,8 +6929,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.9605274, g: 1, b: 0.50377357, a: 1}
-  m_Intensity: 1.8
-  m_Range: 28
+  m_Intensity: 2.1
+  m_Range: 35
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -7180,8 +7185,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.9605274, g: 1, b: 0.50377357, a: 1}
-  m_Intensity: 1.8
-  m_Range: 28
+  m_Intensity: 2.1
+  m_Range: 35
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -7436,8 +7441,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.9605274, g: 1, b: 0.50377357, a: 1}
-  m_Intensity: 1.8
-  m_Range: 28
+  m_Intensity: 2.1
+  m_Range: 35
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -7692,8 +7697,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.9605274, g: 1, b: 0.50377357, a: 1}
-  m_Intensity: 1.8
-  m_Range: 28
+  m_Intensity: 2.1
+  m_Range: 35
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -7948,8 +7953,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.9605274, g: 1, b: 0.50377357, a: 1}
-  m_Intensity: 1.8
-  m_Range: 28
+  m_Intensity: 2.1
+  m_Range: 35
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -8204,8 +8209,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.9605274, g: 1, b: 0.50377357, a: 1}
-  m_Intensity: 1.8
-  m_Range: 28
+  m_Intensity: 2.1
+  m_Range: 35
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -8460,8 +8465,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.9605274, g: 1, b: 0.50377357, a: 1}
-  m_Intensity: 1.8
-  m_Range: 28
+  m_Intensity: 2.1
+  m_Range: 35
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -16244,6 +16249,7 @@ MonoBehaviour:
   InteractText: Drink Carpet Juice
   playerStats: {fileID: 0}
   effect: {fileID: 6303562428773603418, guid: c675d677fd2ab594e805bc685c574ca8, type: 3}
+  MightBeSafe: 0
 --- !u!114 &3685496515472667835
 MonoBehaviour:
   m_ObjectHideFlags: 0

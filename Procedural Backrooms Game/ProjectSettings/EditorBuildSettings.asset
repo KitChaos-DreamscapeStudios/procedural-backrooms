@@ -33,6 +33,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Crawlspace.unity
     guid: 7f1f14f4bcc85e74d99f6359237aa3b6
   - enabled: 1
-    path: Assets/Scenes/Otherworldy.unity
+    path: Assets/Scenes/Otherworldly.unity
     guid: 07bcc4ce8db708249989a544977a8f3b
   m_configObjects: {}
