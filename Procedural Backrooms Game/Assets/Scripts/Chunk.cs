@@ -110,6 +110,11 @@ public class Chunk : MonoBehaviour
             Parent.PlayerIn = this;
             Parent.SanityDrain = SanityDrain;
             Parent.BedQual = BedQual;
+
+        }
+        if (Parent.GetComponent<WarehouseGen>())
+        {
+           
         }
         //Light Shifts level 0
         if (IsShiftingLightsB)

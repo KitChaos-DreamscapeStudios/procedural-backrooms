@@ -10,7 +10,7 @@ Material:
   m_Name: 4
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _EMISSION _GLOSSYREFLECTIONS_OFF _SPECULARHIGHLIGHTS_OFF
-  m_LightmapFlags: 1
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -55,6 +55,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - _BumpScale: 0.2
     - _Cutoff: 0.5
@@ -75,3 +76,4 @@ Material:
     m_Colors:
     - _Color: {r: 0.818, g: 0.818, b: 0.818, a: 1}
     - _EmissionColor: {r: 1.9766746, g: 1.8110893, b: 1.5937586, a: 1}
+  m_BuildTextureStacks: []

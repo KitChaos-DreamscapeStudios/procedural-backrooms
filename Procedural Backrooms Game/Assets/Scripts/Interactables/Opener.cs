@@ -35,7 +35,7 @@ public class Opener : Interactable
         else
         {
             InteractText = "Open Door";
-            if (AlreadyAligned)
+            if (!AlreadyAligned)
             {
                 Pivot.transform.localEulerAngles = Vector3.Lerp(Pivot.transform.localEulerAngles, new Vector3(0, 0, 0), 0.05f);
             }
