@@ -69,7 +69,11 @@ public class Chunk : MonoBehaviour
         Layout.transform.eulerAngles = new Vector3(0, rots[Random.Range(0, 4)], 0);
         foreach (Light light in Layout.GetComponentsInChildren<Light>())
         {
-            Lights.Add(light);
+            if(light.tag != "DontDoLightFX")
+            {
+                Lights.Add(light);
+            }
+          
         }
         // Invoke("BuildMesh", 2);
 

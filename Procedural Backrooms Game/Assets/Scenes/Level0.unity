@@ -10511,7 +10511,8 @@ MonoBehaviour:
   InteractText: Enter Hatch
   SceneToLoad: WareHouse
   Steps:
-  - {fileID: 8300000, guid: 42fb8ae8a7929c14eadc460582a23b4d, type: 3}
+  - {fileID: 8300000, guid: 3c6669f157fb29040a2c1e3c4cdceb4b, type: 3}
+  - {fileID: 8300000, guid: e96b74eb0e1fe5447ba6b1a69a035df8, type: 3}
 --- !u!65 &928166026
 BoxCollider:
   m_ObjectHideFlags: 0

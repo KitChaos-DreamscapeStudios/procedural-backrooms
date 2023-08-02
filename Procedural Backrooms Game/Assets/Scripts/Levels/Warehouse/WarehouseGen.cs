@@ -15,6 +15,8 @@ public class WarehouseGen : Generation
     public AudioSource Siren;
     public float SirenSin;
     public List<AudioSource> Ambs;
+    public GameObject Smiler;
+    public GameObject Clanker;
     public void Start()
     {
         LastChunk = ChunkForLevel[Random.Range(0, ChunkForLevel.Count)];
@@ -200,6 +202,7 @@ public class WarehouseGen : Generation
                     ElapTillBoxKnock = 0;
                     BoxKnock.transform.position = Playerstats.transform.position + Random.insideUnitSphere * 20;
                     BoxKnock.Play();
+                    Instantiate(Smiler, BoxKnock.transform.position, Quaternion.identity);
                     ThreatLevel += 20 - Vector3.Distance(BoxKnock.transform.position, Playerstats.transform.position);
                 }
                 foreach (AudioSource item in Ambs)
@@ -228,6 +231,10 @@ public class WarehouseGen : Generation
                     {
                         light.color = new Color(1, Mathf.Sin(SirenSin), Mathf.Sin(SirenSin));
                     }
+                    else
+                    {
+                        light.color = new Color(1, 1, 1);
+                    }
                     
                         
                    
@@ -240,12 +247,19 @@ public class WarehouseGen : Generation
                 {
                     Siren.Play();
                 }
+                // SanityDrain = 0.2f;
+                if (!Clanker.activeSelf)
+                {
+                    Clanker.SetActive(true);
+                }
                    
 
             }
             else
             {
+                Clanker.SetActive(false);
                 Siren.Stop();
+               
             }
         }
 

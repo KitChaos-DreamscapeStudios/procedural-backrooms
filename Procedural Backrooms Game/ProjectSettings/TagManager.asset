@@ -8,6 +8,7 @@ TagManager:
   - Lights
   - Pillars
   - OwnVolume
+  - DontDoLightFX
   layers:
   - Default
   - TransparentFX
