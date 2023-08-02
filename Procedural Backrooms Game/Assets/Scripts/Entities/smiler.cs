@@ -7,7 +7,7 @@ public class smiler : Damager
     public PlayerStats Player;
     public Item FlashLightItem;
     public float Hunger;
-    public AudioSource Scream;
+    //public AudioSource Scream;
     Vector3 Targ;
     public int NumNearLights;
     public GameObject NearestLight;
@@ -26,12 +26,17 @@ public class smiler : Damager
     // Start is called before the first frame update
     void Start()
     {
+        
         Player = GameObject.Find("Player").GetComponent<PlayerStats>();
         Screech = GetComponent<AudioSource>();
         transform.parent = null;
        
         
       
+    }
+   public void Activate()
+    {
+        gameObject.SetActive(true);
     }
 
     // Update is called once per frame

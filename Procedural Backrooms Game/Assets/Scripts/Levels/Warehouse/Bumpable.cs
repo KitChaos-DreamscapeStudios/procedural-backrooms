@@ -24,8 +24,12 @@ public class Bumpable : MonoBehaviour
     {
        
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision col)
     {
+        if (col.gameObject.GetComponent<Movement3D>())
+        {
+            col.gameObject.GetComponent<Movement3D>().SoundLevel = 126;
+        }
         Rigidbody body = null;
         if (!GetComponent<Rigidbody>())
         {

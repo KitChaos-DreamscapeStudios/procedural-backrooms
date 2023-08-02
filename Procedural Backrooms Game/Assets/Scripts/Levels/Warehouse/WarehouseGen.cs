@@ -202,7 +202,12 @@ public class WarehouseGen : Generation
                     ElapTillBoxKnock = 0;
                     BoxKnock.transform.position = Playerstats.transform.position + Random.insideUnitSphere * 20;
                     BoxKnock.Play();
-                    Instantiate(Smiler, BoxKnock.transform.position, Quaternion.identity);
+                    var Smil =Instantiate(Smiler, BoxKnock.transform.position, Quaternion.identity);
+
+                    Smil.transform.position = new Vector3(Smil.transform.position.x, Playerstats.transform.position.y-1, Smil.transform.position.z);
+                    Smil.SetActive(false);
+                    Smil.GetComponent<smiler>().Invoke("Activate", 2);
+                    Smil.GetComponent<smiler>().Player = Playerstats;
                     ThreatLevel += 20 - Vector3.Distance(BoxKnock.transform.position, Playerstats.transform.position);
                 }
                 foreach (AudioSource item in Ambs)
@@ -265,6 +270,7 @@ public class WarehouseGen : Generation
 
 
     }
+    
 
     float DifferenceInCoords(Coords a, Coords b)
     {
