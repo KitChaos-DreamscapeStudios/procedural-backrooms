@@ -19,10 +19,24 @@ public abstract class Damager : MonoBehaviour
     
     public void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.GetComponent<DamageSpear>())
+        if (col.gameObject)
         {
-            Health -= col.gameObject.GetComponent<DamageSpear>().Damage;
-            OnTakeDamage();
+            if (col.gameObject.transform)
+            {
+                if (col.gameObject.transform.parent)
+                {
+                    if (col.gameObject.transform.parent.GetComponent<DamageSpear>())
+                    {
+                        Health -= col.gameObject.transform.parent.GetComponent<DamageSpear>().Damage;
+                        OnTakeDamage();
+                    }
+                }
+            }
+        }
+        
+        //if (col.gameObject.transform.parent.GetComponent<DamageSpear>())
+        {
+          
         }
     }
    

@@ -47,6 +47,10 @@ public class Deathmoth : Damager
             PlayChitter();
             
         }
+        if(Health <= 0)
+        {
+            Die();
+        }
         var Hit = new RaycastHit();
       
         if(Player.GetComponent<Movement3D>().SoundLevel > (Vector3.Distance(transform.position, Player.transform.position)*3) && state != State.Flying)

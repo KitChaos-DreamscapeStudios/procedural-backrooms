@@ -312,6 +312,11 @@ public class PlayerStats : MonoBehaviour
             Fatigue = 0;
             VisFatigue = 0;
         }
+        if (VisFatigue > 10 || Fatigue > 10)
+        {
+            VisFatigue = 10;
+            Fatigue = 10;
+        }
     }
     public void TakeDamage(float DMG, string Type, bool IsSilent = false)
     {

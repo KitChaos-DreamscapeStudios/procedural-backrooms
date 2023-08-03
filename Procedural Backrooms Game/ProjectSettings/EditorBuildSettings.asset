@@ -38,4 +38,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WareHouse.unity
     guid: 57bc1aa14b37f7b4e8efd59962a6c54d
+  - enabled: 1
+    path: Assets/Scenes/Rosemary.unity
+    guid: 995bc30c474046247bcaacc4cd2c9d94
   m_configObjects: {}

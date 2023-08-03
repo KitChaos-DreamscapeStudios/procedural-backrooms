@@ -324,6 +324,6 @@ public class smiler : Damager
     }
     public override void OnTakeDamage()
     {
-        throw new System.NotImplementedException();
+       
     }
 }
