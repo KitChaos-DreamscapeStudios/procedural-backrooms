@@ -11,6 +11,7 @@ public class Clanker : Damager
     Vector3 Target;
     Vector3 BaseAngle;
     float ResetCharge;
+    float OriginChargeElap;
     public enum State
     {
         Looking,
@@ -27,76 +28,82 @@ public class Clanker : Damager
     // Update is called once per frame
     void Update()
     {
+        OriginChargeElap += Time.deltaTime;
         transform.position = new Vector3(transform.position.x, 1.66f, transform.position.z);
-        
-            if(state == State.Wandering)
+        Target.y = 1.66f;
+        if (OriginChargeElap > 2)
+        {
+            if (state == State.Wandering)
             {
-            transform.LookAt(Target);
+                transform.LookAt(Target);
 
-            if(Vector3.Distance(transform.position, Target) < 1)
-            {
-                state = State.Looking;
-               
+                if (Vector3.Distance(transform.position, Target) < 1)
+                {
+                    state = State.Looking;
+
+                }
+                transform.position += transform.forward / 5;
+
             }
-            transform.position += transform.forward / 5;
-            
-            }
-        
+
             if (!Cry.isPlaying && gameObject.activeSelf)
             {
-                if(state == State.Charging)
+                if (state == State.Charging)
                 {
                     Cry.Play();
                 }
-            
-               
+
+
             }
-            if(Vector3.Distance(transform.position, Player.transform.position) > 200)
+            if (Vector3.Distance(transform.position, Player.transform.position) > 200)
             {
                 Vector3 Warppos = Player.transform.position + Random.onUnitSphere * 30;
                 Warppos.y = 1.66f;
                 transform.position = Warppos;
             }
-            if ((CheckPlayer()||Player.GetComponent<Movement3D>().SoundLevel>Vector3.Distance(transform.position, Player.transform.position)) && state != State.Charging)
+            if ((CheckPlayer() || Player.GetComponent<Movement3D>().SoundLevel > Vector3.Distance(transform.position, Player.transform.position)) && state != State.Charging)
             {
                 Speed = 20;
                 FootStep.Play();
-            Target = Player.transform.position;
+                Target = Player.transform.position;
                 state = State.Charging;
-                
+
             }
-            if(state == State.Charging)
+            if (state == State.Charging)
             {
-                if(Vector3.Distance(transform.position, Target) > 1)
+                if (Vector3.Distance(transform.position, Target) > 1)
                 {
                     transform.LookAt(Target);
-                    transform.position += transform.forward/1.5f;
+                    transform.position += transform.forward / 1.5f;
                 }
                 else
                 {
                     state = State.Looking;
                 }
-           
+
             }
-            if(state == State.Looking)
+            if (state == State.Looking)
             {
-                if(Vector3.Distance(transform.eulerAngles, BaseAngle) < 50)
+                if (Vector3.Distance(transform.eulerAngles, BaseAngle) < 50)
                 {
                     transform.eulerAngles += new Vector3(0, 0.5f, 0);
                 }
                 else
                 {
-                Vector3 newPos = transform.position + Random.insideUnitSphere * 20;
-                newPos.y = transform.position.y;
-                Target = newPos;
-                state = State.Wandering;
+                    Vector3 newPos = transform.position + Random.insideUnitSphere * 20;
+                    newPos.y = transform.position.y;
+                    Target = newPos;
+                    state = State.Wandering;
                 }
             }
 
+        }
 
-           
-        
-       
+
+
+
+
+
     }
     bool CheckPlayer()
     {

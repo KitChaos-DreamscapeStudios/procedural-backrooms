@@ -68,16 +68,24 @@ public class smiler : Damager
             {
                 AssignNewPoint();
             }
-            if (NearestLight.name == "Flashlight" && Player.Flashlight.activeSelf && Hunger < 80 || NearLights < 2 && Vector3.Distance(transform.position, Player.transform.position) < 80 && Player.Flashlight.activeSelf)
+            if (NearestLight)
             {
-                SetState(State.Stalking);
+                if (NearestLight.name == "Flashlight" && Player.Flashlight.activeSelf && Hunger < 80 || NearLights < 2 && Vector3.Distance(transform.position, Player.transform.position) < 80 && Player.Flashlight.activeSelf)
+                {
+                    SetState(State.Stalking);
+                }
+                else
+                {
+                    gameObject.MoveForward(8);
+                }
             }
             else
             {
                 gameObject.MoveForward(8);
             }
 
-           
+
+
             if (Vector3.Distance(transform.position, Targ) > 1)
             {
                 transform.LookAt(Targ);
