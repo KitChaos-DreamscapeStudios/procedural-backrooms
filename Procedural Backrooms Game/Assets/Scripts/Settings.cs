@@ -8,6 +8,7 @@ public class Settings : MonoBehaviour
     public Slider VolSlider;
     bool IsPaused;
     public GameObject SettingsMenu;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -46,4 +47,5 @@ public class Settings : MonoBehaviour
             IsPaused = !IsPaused;
         }
     }
+    
 }
