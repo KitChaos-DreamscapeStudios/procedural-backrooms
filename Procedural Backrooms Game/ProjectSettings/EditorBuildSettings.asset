@@ -23,10 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level34.unity
     guid: 938f3c56105f9294da034416525742d6
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level37.unity
     guid: 42cbb2fd3dc56ce4889e09a84d3539e4
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level4.unity
     guid: 1dfb9d6fb7f4c844c89814505137c415
   - enabled: 1
@@ -41,4 +41,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Rosemary.unity
     guid: 995bc30c474046247bcaacc4cd2c9d94
+  - enabled: 1
+    path: Assets/Scenes/HeliumHalls.unity
+    guid: 952a008522f8f394aa6893c631836cf2
   m_configObjects: {}

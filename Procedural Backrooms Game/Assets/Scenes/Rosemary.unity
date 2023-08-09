@@ -592,10 +592,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TheLayoute
       objectReference: {fileID: 0}
-    - target: {fileID: 6649424922000117227, guid: 0a954fed63be60a419a373b1cea08374, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6649424922000117228, guid: 0a954fed63be60a419a373b1cea08374, type: 3}
       propertyPath: m_RootOrder
       value: 0
