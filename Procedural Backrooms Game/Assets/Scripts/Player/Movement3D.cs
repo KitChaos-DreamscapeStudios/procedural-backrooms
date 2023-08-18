@@ -102,7 +102,7 @@
                 }
                 else
                 {
-                    if(!Physics.Raycast(transform.position, new Vector3(0, 1),maxDistance:2.5f))
+                    if(!Physics.Raycast(transform.position, new Vector3(0, 1),maxDistance:0.5f))
                     {
                        GetComponentInChildren<CapsuleCollider>().height = (3.089386f);
 

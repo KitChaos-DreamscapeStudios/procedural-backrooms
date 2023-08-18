@@ -10434,11 +10434,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7423135bdd710c40b268d05ab8efb50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractText: Enter Hatch
-  SceneToLoad: Rosemary
+  InteractText: Continue Down Hallway
+  SceneToLoad: HeliumHalls
   Steps:
-  - {fileID: 8300000, guid: 4502e47d6ba40334b8d187dfb00a08d1, type: 3}
-  - {fileID: 8300000, guid: 84604ef2d4d859140b47d9a2de5cd0e4, type: 3}
+  - {fileID: 8300000, guid: 949a03244ed12194e81bd516b5933849, type: 3}
+  - {fileID: 8300000, guid: e96b74eb0e1fe5447ba6b1a69a035df8, type: 3}
 --- !u!65 &928166026
 BoxCollider:
   m_ObjectHideFlags: 0
