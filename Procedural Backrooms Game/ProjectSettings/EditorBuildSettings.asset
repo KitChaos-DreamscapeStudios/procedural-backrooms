@@ -44,4 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HeliumHalls.unity
     guid: 952a008522f8f394aa6893c631836cf2
+  - enabled: 1
+    path: Assets/Scenes/Nycto.unity
+    guid: e016d1afabfa98046898d9174f555de9
   m_configObjects: {}

@@ -107,7 +107,7 @@ public class Chunk : MonoBehaviour
     void Update()
     {
         SpawnedDisposables = SpawnedDisposables.Where(item => item != null).ToList();
-        PlayerIn = Physics.CheckBox(transform.position, new Vector3(40, 200, 40), new Quaternion(0, 0, 0, 0), Player);
+        PlayerIn = Physics.CheckBox(transform.position, new Vector3(40, 40, 40), new Quaternion(0, 0, 0, 0), Player);
        
         if (PlayerIn)
         {
