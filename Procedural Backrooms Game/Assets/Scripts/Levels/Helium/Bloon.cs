@@ -15,7 +15,7 @@ public class Bloon : MonoBehaviour
     void Start()
     {
         body = GetComponent<Rigidbody>();
-        body.isKinematic = true;
+       
         meshRenderer = GetComponent<MeshRenderer>();
         meshRenderer.material = PossibleMats[Random.Range(0, PossibleMats.Count)];
         Pop = GetComponent<AudioSource>();
@@ -23,6 +23,7 @@ public class Bloon : MonoBehaviour
         EditPos.y =Random.Range(-2, 3);
         transform.position += EditPos;
         Player = GameObject.Find("Player");
+        //body.isKinematic = true;
     }
 
     // Update is called once per frame
@@ -43,6 +44,7 @@ public class Bloon : MonoBehaviour
         if (!body.isKinematic)
         {
             PendDestroyBody = true;
+            elapDestroyBody = 0;
         }
         else
         {
@@ -58,6 +60,7 @@ public class Bloon : MonoBehaviour
 
     private void OnCollisionEnter(Collision col)
     {
+        body = GetComponent<Rigidbody>();
         if (col.gameObject.GetComponentInParent<DamageSpear>())
         {
             Pop.Play();
@@ -67,8 +70,10 @@ public class Bloon : MonoBehaviour
         if (!col.gameObject.GetComponent<Bloon>())
         {
             body.isKinematic = false;
+
         }
        
       
     }
+    
 }

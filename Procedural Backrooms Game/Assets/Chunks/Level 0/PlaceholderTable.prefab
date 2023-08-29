@@ -513,7 +513,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: PickUpData
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5635706158784884679, guid: 8bb7b912c469f604ea1e55c1ee38411a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8bb7b912c469f604ea1e55c1ee38411a, type: 3}
 --- !u!1 &8321408964688406694 stripped
 GameObject:

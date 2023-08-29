@@ -30481,7 +30481,7 @@ MonoBehaviour:
   Items:
   - {fileID: 2378724091263026445, guid: 7d1568720c8986f4da6119596ab6fe53, type: 3}
   - {fileID: 2378724091263026445, guid: 7d1568720c8986f4da6119596ab6fe53, type: 3}
-  - {fileID: 2378724091263026445, guid: 7d1568720c8986f4da6119596ab6fe53, type: 3}
+  - {fileID: 6109671815802955833, guid: b72470f703ff04849b0c70b0252049ac, type: 3}
 --- !u!114 &2569738680260730713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35472,7 +35472,6 @@ MonoBehaviour:
   Player: {fileID: 0}
   FlashLightItem: {fileID: 6642830172642159796, guid: 1eeeb8e78d6dc08449173b62036223eb, type: 3}
   Hunger: 80
-  Scream: {fileID: 0}
   NumNearLights: 0
   NearestLight: {fileID: 0}
   WaitToEatNormLight: 0
@@ -35859,7 +35858,7 @@ MonoBehaviour:
   Items:
   - {fileID: 2378724091263026445, guid: 7d1568720c8986f4da6119596ab6fe53, type: 3}
   - {fileID: 2378724091263026445, guid: 7d1568720c8986f4da6119596ab6fe53, type: 3}
-  - {fileID: 2378724091263026445, guid: 7d1568720c8986f4da6119596ab6fe53, type: 3}
+  - {fileID: 6109671815802955833, guid: b72470f703ff04849b0c70b0252049ac, type: 3}
 --- !u!114 &2053652803799816095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35901,8 +35900,6 @@ MonoBehaviour:
   InteractText: Open Crate
   Items:
   - {fileID: 2106353220914411208, guid: 2b4558c1ae33d2e4e87181184ca511ce, type: 3}
-  - {fileID: 2378724091263026445, guid: 7d1568720c8986f4da6119596ab6fe53, type: 3}
-  - {fileID: 2378724091263026445, guid: 7d1568720c8986f4da6119596ab6fe53, type: 3}
   - {fileID: 2273606950013226886, guid: 71bc1208f65373a44af354a0921b986c, type: 3}
   - {fileID: 6554958438405120135, guid: 3e25a22f3db4ac147a9cb8aeacacfaf6, type: 3}
   - {fileID: 6554958438405120135, guid: 3e25a22f3db4ac147a9cb8aeacacfaf6, type: 3}
@@ -37982,7 +37979,7 @@ MonoBehaviour:
   Items:
   - {fileID: 2378724091263026445, guid: 7d1568720c8986f4da6119596ab6fe53, type: 3}
   - {fileID: 2378724091263026445, guid: 7d1568720c8986f4da6119596ab6fe53, type: 3}
-  - {fileID: 2378724091263026445, guid: 7d1568720c8986f4da6119596ab6fe53, type: 3}
+  - {fileID: 6109671815802955833, guid: b72470f703ff04849b0c70b0252049ac, type: 3}
 --- !u!114 &4464523113790060647
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -8,6 +8,7 @@ public class Fish : MonoBehaviour
     float SpeedSlow;
     Rigidbody body;
     public bool AllowHeightChange;
+    float Checkdist;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,14 +23,16 @@ public class Fish : MonoBehaviour
     void Update()
     {
         Vector3 targ = Point;
-
+        Checkdist = Mathf.Lerp(Checkdist, 2, 0.1f);
         Vector3 objectPos = transform.position;
         targ -= objectPos;
-      
-        transform.forward = Vector3.Slerp(transform.forward, targ, 0.1f);
+        //var CheckNear = Physics.CheckSphere(transform.position, Checkdist);
+
+        transform.forward = Vector3.Slerp(transform.forward, targ, 1f);
         body.velocity = (transform.forward.normalized*40) / SpeedSlow;
         if(Vector3.Distance(transform.position, Point) <= 2f)
         {
+            Checkdist = 0;
             AssignNewPoint();
         }
     }

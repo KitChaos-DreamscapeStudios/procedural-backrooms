@@ -4,23 +4,20 @@ using UnityEngine;
 
 public class FlashLag : MonoBehaviour
 {
-    Quaternion LastPos;
-    public GameObject Orient;
+
+    public GameObject Player;
     // Start is called before the first frame update
     void Start()
     {
-      //  DontDestroyOnLoad(gameObject);
-        LastPos = transform.parent.rotation;
-        InvokeRepeating("UpdatePos", 0.5f, 0.5f);
+        DontDestroyOnLoad(gameObject);
+        gameObject.SetActive(false);
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-         transform.rotation = Quaternion.Slerp(transform.rotation, LastPos, 0.1f);
-    }
-    void UpdatePos()
-    {
-        LastPos = transform.parent.rotation;
+        transform.forward = Vector3.Slerp(transform.forward, Camera.main.transform.forward, 0.2f);
+        transform.position = Camera.main.transform.position;
     }
 }
