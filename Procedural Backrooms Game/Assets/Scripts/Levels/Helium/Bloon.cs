@@ -33,14 +33,23 @@ public class Bloon : MonoBehaviour
         {
             elapDestroyBody += Time.deltaTime;
         }
-        if(Vector3.Distance(transform.position, Player.transform.position) >= 50)
+        try
         {
-           meshRenderer.enabled = false;
+            if (Vector3.Distance(transform.position, Player.transform.position) >= 50)
+            {
+                meshRenderer.enabled = false;
+            }
+            else
+            {
+                meshRenderer.enabled = true;
+            }
         }
-        else
+        catch
         {
-           meshRenderer.enabled = true;
+
         }
+        
+       
         if (!body.isKinematic)
         {
             PendDestroyBody = true;

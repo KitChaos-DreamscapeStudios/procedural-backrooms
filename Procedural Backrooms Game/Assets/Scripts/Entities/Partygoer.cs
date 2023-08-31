@@ -87,18 +87,24 @@ public class Partygoer : Damager
                     AssignNewPoint();
                 }
                 Physics.Raycast(transform.position, direction: EyeOrient.forward, out CanSeePlayer, maxDistance: Mathf.Infinity, layerMask: NotMe);
-                if (CanSeePlayer.collider.gameObject.layer == 3)
+                if (CanSeePlayer.collider)
                 {
-                    LastSeenPLayerPoint = Player.transform.position;
-                    State = PartyState.Chasing;
+                    if (CanSeePlayer.collider.gameObject.layer == 3)
+                    {
+                        LastSeenPLayerPoint = Player.transform.position;
+                        State = PartyState.Chasing;
+                    }
                 }
+                    
+                
+               
                 Vector3 targ = Point;
                 //Checkdist = Mathf.Lerp(Checkdist, 2, 0.1f);
                 Vector3 objectPos = transform.position;
                 targ -= objectPos;
                 //var CheckNear = Physics.CheckSphere(transform.position, Checkdist);
 
-                transform.forward = Vector3.Slerp(transform.forward, targ, 1f);
+                transform.forward = Vector3.Slerp(transform.forward, targ, 0.7f);
                 body.velocity = (transform.forward.normalized * 40) / 20;
                 if (Vector3.Distance(transform.position, Point) <= 3f)
                 {
@@ -114,21 +120,35 @@ public class Partygoer : Damager
             }
             if(State == PartyState.Warping)
             {
-                
+                Warptime += Time.deltaTime;
+               
+                Bloons.Play();
+                if (!IsActiveWarp)
+                {
+                    transform.position = Player.transform.position - new Vector3(0, 20, 0);
+                    Bloons.transform.position = Player.transform.position;
+                    if (!Vocalizations.isPlaying)
+                    {
+                        Vocalizations.clip = AngryNoises[Random.Range(0, AngryNoises.Count)];
+                        Vocalizations.Play();
+                    }
+                }
+               
                 if (Warptime > 3 &&!IsActiveWarp)
                 {
                     IsActiveWarp = true;
-                    Bloons.Play();
-                    transform.position = Player.transform.position - new Vector3(0, 3, 0);
+                    Warptime = 0;
+                    
                     UptargPos = Player.transform.position;  
                 }
                
-                if(transform.position != UptargPos && IsActiveWarp)
+                if(Warptime <3 && IsActiveWarp)
                 {
                     transform.position = Vector3.Lerp(transform.position, UptargPos, 0.3f);
                 }
                 else if (IsActiveWarp)
                 {
+                    Warptime = 0;
                     IsActiveWarp = false;
                     State = PartyState.Chasing;
                 }
@@ -137,6 +157,7 @@ public class Partygoer : Damager
             }
             if(State == PartyState.Chasing)
             {
+                Bloons.Stop();
                 if (!Vocalizations.isPlaying)
                 {
                     Vocalizations.clip = AngryNoises[Random.Range(0, AngryNoises.Count)];
@@ -153,9 +174,9 @@ public class Partygoer : Damager
                 targ -= objectPos;
                 //var CheckNear = Physics.CheckSphere(transform.position, Checkdist);
 
-                transform.forward = Vector3.Slerp(transform.forward, targ, 1f);
-                body.velocity = (transform.forward.normalized * 40) / 5;
-                if(Vector3.Distance(transform.position, LastSeenPLayerPoint) <= 3)
+                transform.forward = Vector3.Slerp(transform.forward, targ, 0.8f);
+                body.velocity = (transform.forward.normalized * 40)/2;
+                if(Vector3.Distance(transform.position, LastSeenPLayerPoint) <= 0.4f)
                 {
                     State = PartyState.Wandering;
                 }
@@ -200,7 +221,7 @@ public class Partygoer : Damager
     }
     public override void OnDamage()
     {
-        throw new System.NotImplementedException();
+        //throw new System.NotImplementedException();
     }
     public override void OnTakeDamage()
     {
@@ -208,6 +229,6 @@ public class Partygoer : Damager
     }
     public override void Die()
     {
-        throw new System.NotImplementedException();
+        Destroy(gameObject);
     }
 }

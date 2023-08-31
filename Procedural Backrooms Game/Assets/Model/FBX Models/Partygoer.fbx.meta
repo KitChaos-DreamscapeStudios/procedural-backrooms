@@ -27,6 +27,12 @@ ModelImporter:
   - first:
       74: -167814886002320886
     second: Laugh
+  - first:
+      74: 5522812681064789136
+    second: Run
+  - first:
+      74: -7551964380084998518
+    second: Armature|Run
   externalObjects: {}
   materials:
     materialImportMode: 2

@@ -9,6 +9,7 @@ TagManager:
   - Pillars
   - OwnVolume
   - DontDoLightFX
+  - Party
   layers:
   - Default
   - TransparentFX
