@@ -10,6 +10,7 @@ TagManager:
   - OwnVolume
   - DontDoLightFX
   - Party
+  - Exit
   layers:
   - Default
   - TransparentFX

@@ -96,8 +96,25 @@ public static class GameObjectExtensions
             gameObject.transform.position += gameObject.transform.forward / Slowness;
         }
     }
-    
-    
+    public static GameObject GetClosestEnemy(this GameObject gameObject,GameObject[] enemies)
+    {
+        Transform tMin = null;
+        float minDist = Mathf.Infinity;
+        Vector3 currentPos = gameObject.transform.position;
+        foreach (GameObject t in enemies)
+        {
+            float dist = Vector3.Distance(t.transform.position, currentPos);
+            if (dist < minDist)
+            {
+                tMin = t.transform;
+                minDist = dist;
+            }
+        }
+       
+        return tMin.gameObject;
+    }
+
+
 
 }
 

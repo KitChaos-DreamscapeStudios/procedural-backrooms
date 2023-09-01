@@ -44,6 +44,10 @@ public class Partygoer : Damager
         //EyePoint = transform.position + EyePoint;
        
         Point = transform.position;
+        if(Vector3.Distance(transform.position, new Vector3(0,0,0)) < 10)
+        {
+            Destroy(gameObject);
+        }
     }
     //Partygoer AI
     //
@@ -71,7 +75,11 @@ public class Partygoer : Damager
     // Update is called once per frame
     void Update()
     {
-       
+        if(Vector3.Distance(transform.position, Player.transform.position) > 500)
+        {
+            Destroy(gameObject);
+        }
+        transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, transform.eulerAngles.z);
         if(State != PartyState.Stunned)
         {
             if(State == PartyState.Wandering)

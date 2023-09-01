@@ -29,32 +29,21 @@ public class GiftBox : Interactable
         {
          
             
-                var Attacker = GetClosestEnemy(GameObject.FindGameObjectsWithTag("Party"));
-            
-            if(Vector3.Distance(transform.position, Attacker.transform.position)<200)
+                var Attacker = gameObject.GetClosestEnemy(GameObject.FindGameObjectsWithTag("Party"));
+            if (Attacker)
             {
-                Attacker.GetComponent<Partygoer>().State = Partygoer.PartyState.Warping;
+                if (Vector3.Distance(transform.position, Attacker.transform.position) < 200)
+                {
+                    Attacker.GetComponent<Partygoer>().State = Partygoer.PartyState.Warping;
+                }
             }
+            
+           
             
            
         }
     }
-    GameObject GetClosestEnemy(GameObject[] enemies)
-    {
-        Transform tMin = null;
-        float minDist = Mathf.Infinity;
-        Vector3 currentPos = transform.position;
-        foreach (GameObject t in enemies)
-        {
-            float dist = Vector3.Distance(t.transform.position, currentPos);
-            if (dist < minDist)
-            {
-                tMin = t.transform;
-                minDist = dist;
-            }
-        }
-        return tMin.gameObject;
-    }
+   
 
 }
 

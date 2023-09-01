@@ -72,9 +72,9 @@ public class Bloon : MonoBehaviour
         body = GetComponent<Rigidbody>();
         if (col.gameObject.GetComponentInParent<DamageSpear>())
         {
-            Pop.Play();
-            Destroy(meshRenderer);
-            Destroy(gameObject, 5);
+            //Pop.Play();
+            
+            Destroy(gameObject);
         }
         if (!col.gameObject.GetComponent<Bloon>())
         {
