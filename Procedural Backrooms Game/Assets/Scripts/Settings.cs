@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEditor.Rendering.PostProcessing;
+//using .Rendering.PostProcessing;
 public class Settings : MonoBehaviour
 {
     public float Volume;

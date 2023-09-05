@@ -44,10 +44,7 @@ public class Partygoer : Damager
         //EyePoint = transform.position + EyePoint;
        
         Point = transform.position;
-        if(Vector3.Distance(transform.position, new Vector3(0,0,0)) < 10)
-        {
-            Destroy(gameObject);
-        }
+       
     }
     //Partygoer AI
     //
@@ -79,7 +76,7 @@ public class Partygoer : Damager
         {
             Destroy(gameObject);
         }
-        transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, transform.eulerAngles.z);
+        
         if(State != PartyState.Stunned)
         {
             if(State == PartyState.Wandering)
@@ -172,14 +169,28 @@ public class Partygoer : Damager
                     Vocalizations.Play();
                 }
                 Physics.Raycast(transform.position, direction: EyeOrient.forward, out CanSeePlayer, maxDistance: Mathf.Infinity, layerMask: NotMe);
-                if(CanSeePlayer.collider.gameObject.layer == 3)
+                if (CanSeePlayer.collider)
                 {
-                    LastSeenPLayerPoint = Player.transform.position;
+                    if (CanSeePlayer.collider.gameObject.layer == 3)
+                    {
+                        LastSeenPLayerPoint = Player.transform.position;
+                    }
+                    else
+                    {
+                        OverrideWaitPoint += Time.deltaTime;
+                        if(OverrideWaitPoint > 20)
+                        {
+                            State = PartyState.Wandering;
+                            AssignNewPoint();   
+                        }
+                    }
                 }
+                
                 Vector3 targ = LastSeenPLayerPoint;
                 //Checkdist = Mathf.Lerp(Checkdist, 2, 0.1f);
                 Vector3 objectPos = transform.position;
                 targ -= objectPos;
+                targ.y = transform.position.y;
                 //var CheckNear = Physics.CheckSphere(transform.position, Checkdist);
 
                 transform.forward = Vector3.Slerp(transform.forward, targ, 0.8f);
@@ -191,6 +202,7 @@ public class Partygoer : Damager
 
             }
             EyeOrient.transform.LookAt(Player.transform.position);
+            transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, transform.eulerAngles.z);
         }
     }
     void AssignNewPoint()

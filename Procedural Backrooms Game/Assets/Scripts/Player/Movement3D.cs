@@ -143,7 +143,7 @@
                     rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
                     rotationY = Mathf.Clamp(rotationY, minimumY, maximumY);
                
-                        Camera.main.transform.eulerAngles = new Vector3(-rotationY, rotationX, Camera.main.transform.eulerAngles.z);
+                        Camera.main.transform.eulerAngles =  new Vector3(-rotationY, rotationX, Camera.main.transform.eulerAngles.z);
 
                                     Orient.transform.eulerAngles = new Vector3(0, rotationX, 0);
                 }

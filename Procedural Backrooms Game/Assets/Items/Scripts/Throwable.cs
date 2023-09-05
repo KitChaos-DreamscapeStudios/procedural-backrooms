@@ -7,6 +7,7 @@ public class Throwable : Item
     public GameObject Projectile;
     public InventorySlot slotIn;
     public float Velocity;
+    public bool DontDestroyThrower;//turn on for re-usable items, like guns or party poppers
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +21,7 @@ public class Throwable : Item
     }
     public override void Use()
     {
-       
+        
         var DirectObject = GameObject.Find("Main Camera");
 
         var NewObj = Instantiate(Projectile, DirectObject.transform.position + DirectObject.transform.forward * 4, Quaternion.identity);
@@ -30,7 +31,12 @@ public class Throwable : Item
         playerStats.GetComponent<Inventory>().HandItem = null;
         
         playerStats.gameObject.GetComponent<Inventory>().Items.Remove(this);
-        Destroy(gameObject);
+        if (!DontDestroyThrower)
+        {
+            Destroy(gameObject);
+        }
+        
     }
+    
    
 }
