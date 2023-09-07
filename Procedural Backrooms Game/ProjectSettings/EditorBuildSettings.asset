@@ -47,4 +47,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Nycto.unity
     guid: e016d1afabfa98046898d9174f555de9
+  - enabled: 1
+    path: Assets/Scenes/Firebrick.unity
+    guid: 6dd56afd559823345ab0d96a146274af
   m_configObjects: {}

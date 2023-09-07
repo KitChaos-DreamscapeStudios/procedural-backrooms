@@ -11,6 +11,8 @@ public class Bloon : MonoBehaviour
     bool PendDestroyBody;
     public Rigidbody body;
     float elapDestroyBody;
+    PlayerStats stats;
+    float AwaitGatherance;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,12 +25,25 @@ public class Bloon : MonoBehaviour
         EditPos.y =Random.Range(-2, 3);
         transform.position += EditPos;
         Player = GameObject.Find("Player");
+        stats = Player.GetComponent<PlayerStats>();
         //body.isKinematic = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(stats.Sanity < 50)
+        {
+            AwaitGatherance += Time.deltaTime / Random.Range(1, 4);
+            if(AwaitGatherance > 20)
+            {
+                transform.position = Vector3.Lerp(transform.position, Player.transform.position, 0.02f);
+                if(AwaitGatherance > 23 || Vector3.Distance(transform.position, Player.transform.position) < 2)
+                {
+                    AwaitGatherance = 0;
+                }
+            }
+        }
         if (PendDestroyBody)
         {
             elapDestroyBody += Time.deltaTime;
