@@ -49,7 +49,7 @@ public class Flashlight : Item
         // throw new System.NotImplementedException();
 
 
-
+        GetComponent<AudioSource>().Play();
 
 
 

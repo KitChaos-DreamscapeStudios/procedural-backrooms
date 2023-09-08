@@ -91,7 +91,7 @@ public class Inventory : MonoBehaviour
                     Debug.Log("Touching Interactable");
                     SelFX.transform.position = Grabby.point;
                     SelFX.Play();
-                    if (Input.GetKeyDown(KeyCode.E))
+                    if (Input.GetKeyDown(KeyCode.E) && !Grabby.collider.gameObject.GetComponent<Interactable>().DoNotAllowInteraction)
                     {
                         Grabby.collider.gameObject.GetComponent<Interactable>().OnInteract();
                     }

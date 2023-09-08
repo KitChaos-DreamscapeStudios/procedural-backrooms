@@ -5502,6 +5502,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InteractText: Open Door
+  DoNotAllowInteraction: 0
   SceneToLoad: Level1
   Steps:
   - {fileID: 8300000, guid: 42fb8ae8a7929c14eadc460582a23b4d, type: 3}
@@ -5532,6 +5533,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InteractText: Open Door
+  DoNotAllowInteraction: 0
   SceneToLoad: Level1
   Steps:
   - {fileID: 8300000, guid: 42fb8ae8a7929c14eadc460582a23b4d, type: 3}
@@ -7350,6 +7352,7 @@ GameObject:
   - component: {fileID: 350549270}
   - component: {fileID: 350549271}
   - component: {fileID: 350549272}
+  - component: {fileID: 350549273}
   m_Layer: 3
   m_Name: Flashlight
   m_TagString: Lights
@@ -7446,6 +7449,102 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 2068203906}
+--- !u!82 &350549273
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 350549269}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 7e326e97e88ee36429197015ade28940, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &409610301
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10377,6 +10476,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InteractText: Enter Hatch
+  DoNotAllowInteraction: 0
   SceneToLoad: Firebrick
   Steps:
   - {fileID: 8300000, guid: e96b74eb0e1fe5447ba6b1a69a035df8, type: 3}
@@ -11232,6 +11332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InteractText: Climb Into Hole
+  DoNotAllowInteraction: 0
   SceneToLoad: Crawlspace
   Steps:
   - {fileID: 8300000, guid: 824cf1d65641b7549a7b0bece284bbc0, type: 3}
@@ -15043,7 +15144,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 116
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &2068203909
 MonoBehaviour:
   m_ObjectHideFlags: 0

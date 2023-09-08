@@ -4,13 +4,22 @@ using UnityEngine;
 using System.Linq;
 public class FirebrickGen : Generation
 {
-    public float FlickerTimer;
+    //public float FlickerTimer;
     bool HasGeneratedMap;
-    public GameObject FakeWalls;
-    float FakeWallTimer;
+    public bool IsEnflamen;
+    public float FlameTimer;
+    //public AudioSource Amb;
+    public AudioSource HeatAmb;
+    public SpriteRenderer HeatFX;
+    public bool IsSafe;
+    float AwaitNewCook;
+    public List<ClosableDoor> SafeDoors;
+    
+    
     public void Start()
     {
-        Invoke("Generate", 2);
+        HeatAmb = GetComponent<AudioSource>();
+        Invoke("Generate", 0.5f);
     }
     public void Generate()
     {
@@ -160,45 +169,55 @@ public class FirebrickGen : Generation
     {
         if (HasGeneratedMap)
         {
+            if(SafeDoors.Count > 0)
+            {
+                IsSafe = true;
+            }
+            else
+            {
+                IsSafe = false;
+            }
             Chunks = Chunks.Where(item => item != null).ToList();
             Center = PlayerIn.coords;
             Playerstats.SanityDrain = SanityDrain;
             Playerstats.BedQuality = BedQual;
-
+            if (IsEnflamen)
+            {
+                FlameTimer += Time.deltaTime;
+            }
+            
+            HeatAmb.volume = (FlameTimer / 80);
+            HeatFX.color = new Color(1, 0.2f, 0, (FlameTimer / 80) - 0.3f);
+            HeatFX.transform.position = Camera.main.transform.position + Camera.main.transform.forward;
+            HeatFX.transform.LookAt(Camera.main.transform);
+            if (IsSafe)
+            {
+                HeatFX.gameObject.SetActive(false);
+            }
+            else
+            {
+                HeatFX.gameObject.SetActive(true);
+            }
+            if(FlameTimer > 120)
+            {
+                AwaitNewCook = 0;
+                FlameTimer = 0;
+                IsEnflamen = false;
+            }
+            if (!IsEnflamen)
+            {
+                AwaitNewCook += Time.deltaTime;
+            }
+            if(AwaitNewCook > 30)
+            {
+                IsEnflamen = true;
+            }
+            if(FlameTimer>80 && !IsSafe)
+            {
+                Playerstats.TakeDamage(4 * Time.deltaTime, "Cooked");
+            }
             //level specific event: The light shift
-            if (Playerstats.Sanity < 50)
-            {
-                FlickerTimer += Time.deltaTime;
-                if (FlickerTimer >= Rand)
-                {
-                    FlickerTimer = 0;
-                    Rand = Random.Range(20, 40);
-                    var BrightorNight = Random.Range(0, 2);
-                    if (BrightorNight == 0)
-                    {
-                        //bright
-                        PlayerIn.IsShiftingLightsB = true;
-                    }
-                    else
-                    {
-                        //Night
-                        PlayerIn.IsShiftingLightsN = true;
-                    }
-                }
-
-            }
-            //level Specific effect: The Fake Walls
-            if (Playerstats.Sanity < 40)
-            {
-                FakeWallTimer += Time.deltaTime;
-                if (FakeWallTimer >= WallRand)
-                {
-                    FakeWallTimer = 0;
-                    WallRand = Random.Range(30, 60);
-                    Instantiate(FakeWalls, Playerstats.transform.position - new Vector3(0, 10, 0), Quaternion.identity);
-                }
-            }
-
+           
         }
 
 
