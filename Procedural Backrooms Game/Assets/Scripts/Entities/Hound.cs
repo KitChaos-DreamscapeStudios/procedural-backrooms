@@ -45,13 +45,16 @@ public class Hound : Damager
     public GameObject Growl;
     public LayerMask PlayerMask;
     public bool CanSeePlayer;
-    public Animator anim;
+    //public Animator anim;
     // Start is called before the first frame update
     void Start()
     {
-        anim = GetComponentInChildren<Animator>();
+
+        //anim = GetComponentInChildren<Animator>();
         agent = GetComponent<NavMeshAgent>();
         Player = GameObject.Find("Player");
+        //transform.parent = null;
+        
     }
     public override void OnDamage()
     {
@@ -103,12 +106,12 @@ public class Hound : Damager
         }
         if(state == State.preparing)
         {
-            anim.Play("Pause");
+            //anim.Play("Pause");
         }
         else
         {
-            anim.Play("Walk");
-            anim.speed = 5;
+            //anim.Play("Walk");
+            //anim.speed = 5;
         }
         if (state == State.preparing)
         {

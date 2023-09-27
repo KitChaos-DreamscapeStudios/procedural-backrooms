@@ -68,6 +68,8 @@ public class PlayerStats : MonoBehaviour
     public bool SleepPrevented;
     public string CantSleepText;
     public List<string> CantSleepReasons;
+    public TMPro.TextMeshProUGUI Alert;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -82,9 +84,18 @@ public class PlayerStats : MonoBehaviour
     {
         Specialization = GameObject.Find("SpecHolder").GetComponent<SpecHolder>().Specialization;
     }
+    public void PingAlert(string Text, Color color)
+    {
+        Alert.text = Text;
+        Alert.color = color;
+    }
     // Update is called once per frame
+    /// <summary>
+    /// 
+    /// </summary>
     void Update()
     {
+        Alert.color = Color.Lerp(Alert.color, new Color(0, 0, 0, 0), 0.01f);
         HurtGlow.opacity.Override(100);
         HurtGlow.intensity.Override((100 - Health) / 100);
        // InvokeRepeating("GetSpecial", 0.1f, 0.1f);
@@ -114,7 +125,7 @@ public class PlayerStats : MonoBehaviour
         }
         else if (SleepPrevented && SleepButtonTimer > 3)
         {
-            GetComponent<Inventory>().PickUpTooltip.text = CantSleepText;
+            PingAlert(CantSleepText, new Color(1, 1, 1));
         }
         StatusTick += Time.deltaTime;
         List<StatusEffect> RemStat = new List<StatusEffect>();

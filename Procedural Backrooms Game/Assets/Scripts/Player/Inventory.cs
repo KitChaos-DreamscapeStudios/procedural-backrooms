@@ -14,16 +14,24 @@ public class Inventory : MonoBehaviour
     public Image handItemSprite;
     public AudioSource PickupNoise;
     public TMPro.TextMeshProUGUI PickUpTooltip;
+    public Dictionary<string, bool> HasReadScripts;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        HasReadScripts = new Dictionary<string, bool>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        foreach (Decipherable d in Items)
+        {
+            if (HasReadScripts[d.HasWonKey])
+            {
+                d.HasWon = true;
+            }
+        }
         if (Input.GetKeyDown(KeyCode.Q))
         {
             if(HandItem != null)

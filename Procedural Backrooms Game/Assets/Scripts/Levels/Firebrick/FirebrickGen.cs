@@ -14,6 +14,7 @@ public class FirebrickGen : Generation
     public bool IsSafe;
     float AwaitNewCook;
     public List<ClosableDoor> SafeDoors;
+    public float AshPoison;
     
     
     public void Start()
@@ -167,8 +168,21 @@ public class FirebrickGen : Generation
     float WallRand;
     public void Update()
     {
+
         if (HasGeneratedMap)
         {
+            AshPoison += Time.deltaTime;
+            if(AshPoison > 60)
+            {
+                if(Playerstats.MaxHealth > 20)
+                {
+                    Playerstats.MaxHealth -= 2;
+                }
+              
+
+                AshPoison = 0;
+                //Add a cough noise later
+            }
             if(SafeDoors.Count > 0)
             {
                 IsSafe = true;

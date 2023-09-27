@@ -3,14 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using System.IO;
-
+using UnityEngine.AI;
+using UnityEngine.Experimental.AI;
+using Unity.AI.Navigation;
+using System.Threading.Tasks;
+using Unity.Jobs;
 public class Level0Generation : Generation
 {
+   
 
     public float FlickerTimer;
     bool HasGeneratedMap;
     public GameObject FakeWalls;
     float FakeWallTimer;
+
     public void Start()
     {
         Invoke("Generate", 2);  
@@ -36,6 +42,7 @@ public class Level0Generation : Generation
         Playerstats.LevelStats = this;
 
         HasGeneratedMap = true;
+        
         InvokeRepeating("CheckDespawn", 1, 1);
         InvokeRepeating(nameof(GenerateFromCenter), 1.1f, 1.1f);
     }
@@ -119,6 +126,7 @@ public class Level0Generation : Generation
     }
     void GenerateFromCenter()
     {
+        
         for (int x = -2; x < 3; x++)
         {
             for (int z = -2; z < 3; z++)
@@ -140,8 +148,14 @@ public class Level0Generation : Generation
 
             }
         }
-       
+        
+        //Surface.transform.position = PlayerIn.transform.position;
+        
+
+
     }
+
+   
     //Check if the player is far enough away to spawn new chunks
     void CheckDespawn()
     {

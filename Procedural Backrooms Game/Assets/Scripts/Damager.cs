@@ -8,15 +8,16 @@ public abstract class Damager : MonoBehaviour
     public float Health;
     public string DeathMessage;
     public bool HasHeardPlayer;
-    
+    public bool DontPreventSleep;
     // Start is called before the first frame update
     void Start()
     {
         
     }
+    
 
     // Update is called once per frame
-    
+
     public void OnCollisionEnter(Collision col)
     {
         if (col.gameObject)

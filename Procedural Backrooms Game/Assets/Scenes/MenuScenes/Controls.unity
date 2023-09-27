@@ -365,37 +365,27 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'WASD To Move
+  m_text: 'WASD To Move, Mouse to Look
 
-    Mouse to Look
-
-    E to interact/pick up objects
+    E To Interact or Pick up Items.
 
     Hold
-    Q while picking up a spear to prevent automatically equipping it
+    M to sleep, reducing fatigue
 
-    Right Click
-    to use equipped item
+    C to sneak
 
-    Tab for Inventory.
+    Shift to sprint
 
-    Click an item in the inventory
-    to use it.
-
-    C to Crouch
-
-    Shift to Sprint
-
-    Hold M to Sleep
+    Right
+    click to use your held item.
 
 
-    Sleeping
-    is the most consistent way to restore stability, but costs a lot of thirst and
-    hunger.
+    Sleeping is the most consistent way to restore
+    stability, but costs a lot of thirst and hunger.
 
 
-    If you hear chittering nearby, do not sprint. It is likely a deathmoth,
-    which attack when they feel threatened by loud sounds and sudden movements'
+    Stay Quiet if you think
+    it hasn''t seen you.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

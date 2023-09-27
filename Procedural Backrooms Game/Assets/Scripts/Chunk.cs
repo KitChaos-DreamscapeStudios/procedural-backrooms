@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 public class Chunk : MonoBehaviour
 {
     public NavMeshSurface NavSurf;
+    public bool LevelHasPathedthings;
 
 
     public bool PlayerIn;
@@ -45,9 +46,10 @@ public class Chunk : MonoBehaviour
     public async Task BuildNav()
     {
         
-        NavSurf = GetComponentInChildren<NavMeshSurface>();
+        NavSurf = GetComponent<NavMeshSurface>();
+      
         await Task.Run(NavSurf.BuildNavMesh);
-            NavSurf.UpdateNavMesh(NavSurf.navMeshData);
+        NavSurf.UpdateNavMesh(NavSurf.navMeshData);
         
         //sTask.Run(NavSurf.AddData);
         //BuildNav();
@@ -75,9 +77,10 @@ public class Chunk : MonoBehaviour
             }
           
         }
+        BuildNav();
         // Invoke("BuildMesh", 2);
-
-     //  BuildNav();
+     
+       
 
        
 

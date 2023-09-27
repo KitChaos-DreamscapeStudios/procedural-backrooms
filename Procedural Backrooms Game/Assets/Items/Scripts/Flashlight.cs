@@ -9,7 +9,7 @@ public class Flashlight : Item
     public Inventory inventory;
     public Battery AttatchedBattery;
     public bool Active;
-    TMPro.TextMeshProUGUI Alert;
+    
     
     // Start is called before the first frame update
     void Start()
