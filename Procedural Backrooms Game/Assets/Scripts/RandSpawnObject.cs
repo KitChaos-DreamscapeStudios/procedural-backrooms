@@ -10,22 +10,8 @@ public class RandSpawnObject : MonoBehaviour
     void Start()
     {
 
-        // Vector3 fordir = transform.right;
-        // switch (ForDirect)
-        // {
-        //     case "Forward":
-        //         fordir = transform.forward;
-        //         break;
-        //     case "Right":
-        //         fordir = transform.right;
-        //         break;
-
-        // }
-        //// transform.eulerAngles = new Vector3(0, Rotations[Random.Range(0, Rotations.Count)], 0);
-        // var hit = new RaycastHit();
-        // Physics.Raycast(transform.position + fordir, fordir, out hit);
-        // transform.position = hit.point;
-        var rand = Random.Range(0, maxInclusive:100.1f);
+        
+        var rand = Random.Range(0, maxInclusive:100f);
         if(rand < Rarity)
         {
             Destroy(gameObject);

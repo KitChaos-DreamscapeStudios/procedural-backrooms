@@ -14,6 +14,7 @@ public class Deathmoth : Damager
     public AudioSource Chitter;
     float ChitterTime;
     int Rand = 3;
+    public GameObject Meat;
     public enum State 
     {
         Resting,
@@ -105,7 +106,10 @@ public class Deathmoth : Damager
     public override void Die()
     {
         Player.GetComponent<PlayerStats>().Score += 60;
-        
+        for (int i = 0; i < Random.Range(1, 4); i++)
+        {
+            Instantiate(Meat, transform.position, Quaternion.identity);
+        }
         Destroy(gameObject);
     }
     public override void OnDamage()

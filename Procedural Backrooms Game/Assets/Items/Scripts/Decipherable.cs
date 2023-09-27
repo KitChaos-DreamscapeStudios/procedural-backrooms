@@ -10,7 +10,7 @@ public abstract class Decipherable : Item
     public string FailText;
     public bool HasWon;
     public float WinChance;
-    float TryCooldown;
+    public float TryCooldown;
     public float TotalCooldown;
     public bool WinOnce;
     public bool IsBeingRead;
@@ -37,10 +37,9 @@ public abstract class Decipherable : Item
             }
            if(TryCooldown >= TotalCooldown)
            {
-                TryCooldown = 0;
+               
                 float Rand = Random.Range(0, 100);
-                if (TryCooldown > TotalCooldown)
-                {
+                
                     if (Rand < WinChance)
                     {
                         SuccessEffect();
@@ -51,7 +50,7 @@ public abstract class Decipherable : Item
                     {
                         FailEffect();
                     }
-                }
+                
            }
         }
         else
@@ -62,11 +61,19 @@ public abstract class Decipherable : Item
         {
             playerStats.GetComponent<Inventory>().HasReadScripts[HasWonKey] = false;
         }
+        else
+        {
+            if (playerStats.GetComponent<Inventory>().HasReadScripts[HasWonKey])
+            {
+                HasWon = true;
+            }
+        }
         
         if (HasWon&&!WinOnce)
         {
             SuccessEffect();
         }
+        
     }
     public override void Use()
     {

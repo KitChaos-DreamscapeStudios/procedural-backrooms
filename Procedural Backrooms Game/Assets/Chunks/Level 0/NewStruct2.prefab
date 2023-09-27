@@ -3508,6 +3508,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   Visible: 0
   Chitter: {fileID: 0}
+  Meat: {fileID: 8781393015293982337, guid: 98f557dc859fc9e4180c9266fb5daacc, type: 3}
   state: 0
 --- !u!114 &8430631990892232170
 MonoBehaviour:

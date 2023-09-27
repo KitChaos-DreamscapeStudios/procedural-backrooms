@@ -95,7 +95,7 @@ public class PlayerStats : MonoBehaviour
     /// </summary>
     void Update()
     {
-        Alert.color = Color.Lerp(Alert.color, new Color(0, 0, 0, 0), 0.01f);
+        Alert.color = Color.Lerp(Alert.color, new Color(0, 0, 0, 0), 0.005f);
         HurtGlow.opacity.Override(100);
         HurtGlow.intensity.Override((100 - Health) / 100);
        // InvokeRepeating("GetSpecial", 0.1f, 0.1f);

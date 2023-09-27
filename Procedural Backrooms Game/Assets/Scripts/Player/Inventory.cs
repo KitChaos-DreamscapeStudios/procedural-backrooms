@@ -25,13 +25,8 @@ public class Inventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        foreach (Decipherable d in Items)
-        {
-            if (HasReadScripts[d.HasWonKey])
-            {
-                d.HasWon = true;
-            }
-        }
+       
+            
         if (Input.GetKeyDown(KeyCode.Q))
         {
             if(HandItem != null)

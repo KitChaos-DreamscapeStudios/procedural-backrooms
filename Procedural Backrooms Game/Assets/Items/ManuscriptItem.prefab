@@ -52,7 +52,7 @@ MonoBehaviour:
   playerStats: {fileID: 0}
   ItemName: Oil-Scrawled Wallpaper Manuscript
   HeldPos: {x: 1.35, y: -0.68, z: 1.19}
-  PointForward: 0
+  PointForward: 1
   StartReading: The scroll is scrawled in an oily black ink on a piece of old wallpaper.
     You begin reading...
   SuccessText: 'You have deciphered the text! It is a guide on "The Bactal", an inky
@@ -62,7 +62,8 @@ MonoBehaviour:
     crazy trying to study them...
   HasWon: 0
   WinChance: 25
-  TotalCooldown: 100
+  TryCooldown: 0
+  TotalCooldown: 20
   WinOnce: 0
   IsBeingRead: 0
   HasWonKey: HasWonBactalScript
